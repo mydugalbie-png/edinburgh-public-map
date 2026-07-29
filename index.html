@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Open Scotland – Council & Ward Intelligence Map</title>
+  <title>Open Scotland – Glasgow & Edinburgh Map</title>
   <style>
     :root {
       --bg: #0f172a; --card: #1e293b; --border: #334155; --text: #e2e8f0;
@@ -14,233 +14,213 @@
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.5; min-height: 100vh; }
     header { background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%); border-bottom: 1px solid var(--border); padding: 1.5rem 1rem; text-align: center; }
     header h1 { font-size: 1.7rem; color: var(--accent); margin-bottom: 0.3rem; }
-    header p { color: var(--muted); font-size: 0.95rem; max-width: 640px; margin: 0 auto; }
+    header p { color: var(--muted); font-size: 0.95rem; max-width: 680px; margin: 0 auto; }
     .container { max-width: 1100px; margin: 0 auto; padding: 1.25rem; }
-    .search-box { display: flex; gap: 0.75rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
-    .search-box input { flex: 1; min-width: 220px; padding: 0.75rem 1rem; border-radius: 8px; border: 1px solid var(--border); background: var(--card); color: var(--text); font-size: 1rem; }
+    .search-box { margin-bottom: 1.25rem; }
+    .search-box input { width: 100%; padding: 0.75rem 1rem; border-radius: 8px; border: 1px solid var(--border); background: var(--card); color: var(--text); font-size: 1rem; }
     .search-box input:focus { outline: none; border-color: var(--accent); }
     .tabs { display: flex; gap: 0.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
-    .tab { padding: 0.5rem 1rem; border-radius: 6px; border: 1px solid var(--border); background: var(--card); color: var(--muted); cursor: pointer; font-size: 0.9rem; transition: all 0.15s; }
+    .tab { padding: 0.5rem 1rem; border-radius: 6px; border: 1px solid var(--border); background: var(--card); color: var(--muted); cursor: pointer; font-size: 0.9rem; }
     .tab:hover, .tab.active { background: var(--blue); color: white; border-color: var(--blue); }
     .panel { display: none; } .panel.active { display: block; }
     .card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.1rem; margin-bottom: 1rem; }
-    .card h3 { color: var(--accent); font-size: 1.1rem; margin-bottom: 0.35rem; }
-    .card .meta { font-size: 0.85rem; color: var(--muted); margin-bottom: 0.6rem; }
-    .tag { display: inline-block; font-size: 0.75rem; padding: 0.2rem 0.5rem; border-radius: 4px; margin-right: 0.4rem; margin-bottom: 0.3rem; }
+    .card h3 { color: var(--accent); font-size: 1.05rem; margin-bottom: 0.3rem; }
+    .card .meta { font-size: 0.85rem; color: var(--muted); margin-bottom: 0.5rem; }
+    .tag { display: inline-block; font-size: 0.72rem; padding: 0.18rem 0.45rem; border-radius: 4px; margin-right: 0.35rem; margin-bottom: 0.25rem; }
     .tag-blue { background: #1e3a8a; color: #93c5fd; }
     .tag-green { background: #134e4a; color: #5eead4; }
     .tag-amber { background: #78350f; color: #fcd34d; }
     .tag-red { background: #7f1d1d; color: #fca5a5; }
     .tag-purple { background: #4c1d95; color: #c4b5fd; }
-    .money-row { display: grid; grid-template-columns: 1.3fr 1.4fr 0.9fr 1.2fr; gap: 0.75rem; align-items: center; padding: 0.65rem 0; border-bottom: 1px solid var(--border); font-size: 0.88rem; }
-    .money-row:last-child { border-bottom: none; }
-    .money-row .amount { color: var(--amber); font-weight: 700; }
-    .money-row .from { color: var(--blue); } .money-row .to { color: var(--green); }
-    .contract-row { display: grid; grid-template-columns: 1.6fr 1.8fr 0.9fr; gap: 0.6rem; padding: 0.5rem 0; border-bottom: 1px solid var(--border); font-size: 0.85rem; }
-    .contract-row:last-child { border-bottom: none; }
-    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
-    .stat-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.2rem; text-align: center; }
-    .stat-card .label { color: var(--muted); font-size: 0.85rem; margin-bottom: 0.4rem; }
-    .stat-card .value { color: var(--amber); font-size: 1.5rem; font-weight: 700; }
-    .stat-card .sub { color: var(--muted); font-size: 0.8rem; margin-top: 0.3rem; }
-    .tree-level { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; margin: 0.8rem 0; }
-    .tree-node { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 0.6rem 0.9rem; font-size: 0.85rem; text-align: center; min-width: 140px; }
+    .tag-gray { background: #334155; color: #94a3b8; }
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+    .stat-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.1rem; text-align: center; }
+    .stat-card .label { color: var(--muted); font-size: 0.85rem; }
+    .stat-card .value { color: var(--amber); font-size: 1.4rem; font-weight: 700; margin: 0.3rem 0; }
+    .stat-card .sub { color: var(--muted); font-size: 0.8rem; }
+    .tree-level { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin: 0.6rem 0; }
+    .tree-node { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 0.55rem 0.8rem; font-size: 0.82rem; text-align: center; min-width: 130px; }
     .tree-node.parent { background: #1e40af; border-color: #3b82f6; }
     .tree-node.holding { background: #1e3a8a; }
     .tree-node.op { background: #0f766e; border-color: #14b8a6; }
-    .tree-node.assoc { background: #7c2d12; border-color: #ea580c; }
-    .arrow { text-align: center; color: var(--muted); font-size: 1.2rem; margin: 0.2rem 0; }
-    .entity-contracts { margin-top: 0.8rem; padding-top: 0.7rem; border-top: 1px solid var(--border); }
-    .entity-contracts h4 { font-size: 0.85rem; color: var(--amber); margin-bottom: 0.4rem; }
-    .ward-section { margin-top: 0.9rem; padding-top: 0.7rem; border-top: 1px solid var(--border); }
-    .ward-section h4 { font-size: 0.88rem; color: var(--purple); margin-bottom: 0.35rem; }
-    .ward-section p, .ward-section li { font-size: 0.86rem; color: var(--text); margin-bottom: 0.3rem; }
+    .tree-node.jv { background: #7c2d12; border-color: #ea580c; }
+    .tree-node.dormant { background: #334155; color: #94a3b8; }
+    .arrow { text-align: center; color: var(--muted); margin: 0.15rem 0; }
+    .ward-section { margin-top: 0.8rem; padding-top: 0.65rem; border-top: 1px solid var(--border); }
+    .ward-section h4 { font-size: 0.86rem; color: var(--purple); margin-bottom: 0.3rem; }
+    .ward-section p, .ward-section li { font-size: 0.85rem; margin-bottom: 0.25rem; }
     .pressure { color: var(--amber); font-weight: 600; }
-    .intro-box { background: #1e293b; border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.2rem; margin-bottom: 1.25rem; font-size: 0.92rem; color: var(--muted); }
+    .intro-box { background: #1e293b; border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.15rem; margin-bottom: 1.2rem; font-size: 0.9rem; color: var(--muted); }
     .intro-box strong { color: var(--accent); }
+    .money-row { display: grid; grid-template-columns: 1.3fr 1.5fr 1fr; gap: 0.6rem; padding: 0.55rem 0; border-bottom: 1px solid var(--border); font-size: 0.86rem; }
+    .money-row .from { color: var(--blue); } .money-row .to { color: var(--green); } .money-row .type { color: var(--muted); }
     footer { text-align: center; padding: 2rem 1rem; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--border); margin-top: 2rem; }
-    @media (max-width: 700px) {
-      .money-row, .contract-row { grid-template-columns: 1fr; gap: 0.2rem; padding: 0.8rem 0; }
-      header h1 { font-size: 1.35rem; }
-    }
+    @media (max-width: 700px) { .money-row { grid-template-columns: 1fr; } header h1 { font-size: 1.35rem; } }
   </style>
 </head>
 <body>
   <header>
     <h1>Open Scotland</h1>
-    <p>Transparent maps of Scottish councils, their entities, money trails, and ward-level community intelligence — so residents can organise around real local needs.</p>
+    <p>Glasgow & Edinburgh – Council entities, money trails and ward intelligence for community transparency</p>
   </header>
 
   <div class="container">
     <div class="search-box">
-      <input type="text" id="search" placeholder="Search entities, wards, contractors, trails..." oninput="filterAll()" />
+      <input type="text" id="search" placeholder="Search entities, wards, trails..." oninput="filterAll()" />
     </div>
 
     <div class="tabs">
       <button class="tab active" onclick="showPanel('overview')">Overview</button>
+      <button class="tab" onclick="showPanel('glasgow-entities')">Glasgow Entities</button>
+      <button class="tab" onclick="showPanel('glasgow-tree')">Glasgow Ownership</button>
       <button class="tab" onclick="showPanel('wards')">Ward Intelligence</button>
-      <button class="tab" onclick="showPanel('entities')">Council Entities</button>
       <button class="tab" onclick="showPanel('trails')">Money Trails</button>
-      <button class="tab" onclick="showPanel('contracts')">Contracts</button>
-      <button class="tab" onclick="showPanel('tree')">Ownership Tree</button>
+      <button class="tab" onclick="showPanel('edinburgh')">Edinburgh (detail)</button>
     </div>
 
     <div id="overview" class="panel active">
       <div class="intro-box">
-        <strong>Open Scotland</strong> combines two layers:<br>
-        1. <strong>Money & Power</strong> — Council-controlled entities, ownership trees and directed money trails (Edinburgh detailed).<br>
-        2. <strong>Place & People</strong> — Ward-level intelligence on housing, crime, health, environment and community action routes (Glasgow priority wards starting).
+        <strong>Open Scotland – Glasgow priority build</strong><br>
+        Basic working model of Glasgow City Council controlled entities and three priority wards. Built for external testing. Edinburgh detail remains available. Data from Group Accounts, Companies House and FOI work.
       </div>
       <div class="grid-3">
-        <div class="stat-card"><div class="label">Lothian Buses 2025</div><div class="value">£210.7m</div><div class="sub">Revenue · Net loss £4.2m</div></div>
-        <div class="stat-card"><div class="label">Edinburgh Trams 2025</div><div class="value">£32.9m</div><div class="sub">Revenue · Loss £9.3m</div></div>
-        <div class="stat-card"><div class="label">Edinburgh Leisure 2026/27</div><div class="value">£8.04m</div><div class="sub">Service payment</div></div>
-        <div class="stat-card"><div class="label">Priority Glasgow Wards</div><div class="value">3</div><div class="sub">Southside Central · Govan · Calton</div></div>
-        <div class="stat-card"><div class="label">Mapped Contracts</div><div class="value">20</div><div class="sub">Material contracts linked</div></div>
-        <div class="stat-card"><div class="label">FOIs in flight</div><div class="value">10+</div><div class="sub">Financial + Ward intelligence</div></div>
+        <div class="stat-card"><div class="label">Glasgow core entities</div><div class="value">14</div><div class="sub">Mapped for v1</div></div>
+        <div class="stat-card"><div class="label">Priority wards</div><div class="value">3</div><div class="sub">Southside Central · Govan · Calton</div></div>
+        <div class="stat-card"><div class="label">City Building</div><div class="value">50% JV</div><div class="sub">With Wheatley Housing Group</div></div>
+        <div class="stat-card"><div class="label">Glasgow Life</div><div class="value">Sole member</div><div class="sub">Culture, sport, libraries</div></div>
+        <div class="stat-card"><div class="label">SEC</div><div class="value">Principal</div><div class="sub">Shareholder GCC</div></div>
+        <div class="stat-card"><div class="label">Deadline</div><div class="value">31 Jul</div><div class="sub">19:00 testable model</div></div>
+      </div>
+    </div>
+
+    <div id="glasgow-entities" class="panel">
+      <div class="intro-box">Core Glasgow City Council controlled and related entities. Financial figures will be strengthened as accounts are fully extracted.</div>
+      <div id="g-entities-list"></div>
+    </div>
+
+    <div id="glasgow-tree" class="panel">
+      <div class="card" style="text-align:center;">
+        <p style="color:var(--muted);margin-bottom:0.8rem;font-size:0.9rem;">Glasgow City Council – Control / Ownership Tree (v1)</p>
+        <div class="tree-level"><div class="tree-node parent">Glasgow City Council</div></div>
+        <div class="arrow">▼</div>
+        <div class="tree-level">
+          <div class="tree-node holding">GCC LLP Investments<br><small>SC304909 · 100%</small></div>
+        </div>
+        <div class="arrow">▼</div>
+        <div class="tree-level">
+          <div class="tree-node op">City Building (Contracts) LLP<br><small>SO301080 · 100%</small></div>
+          <div class="tree-node jv">City Building (Glasgow) LLP<br><small>SO300990 · 50% JV Wheatley</small></div>
+          <div class="tree-node op">City Property (Glasgow) LLP<br><small>SO302223</small></div>
+        </div>
+        <div class="arrow">▼</div>
+        <div class="tree-level">
+          <div class="tree-node op">Glasgow Life<br><small>SC313851 · Sole member</small></div>
+          <div class="tree-node op">Jobs & Business Glasgow<br><small>SC108565 · Sole member</small></div>
+          <div class="tree-node op">Scottish Event Campus<br><small>SC082081 · Principal shareholder</small></div>
+        </div>
+        <div class="arrow">▼</div>
+        <div class="tree-level">
+          <div class="tree-node dormant">City Parking LLP<br><small>SO301266 · Dormant</small></div>
+          <div class="tree-node op">Property by JBG Ltd<br><small>SC142446</small></div>
+        </div>
       </div>
     </div>
 
     <div id="wards" class="panel">
-      <div class="intro-box">Priority Glasgow wards partially populated. Full numbers depend on FOIs sent 29 July 2026 (housing, asylum/LTR, cleansing, empty properties, crime). Edinburgh wards structure ready for data.</div>
+      <div class="intro-box">Priority Glasgow wards. Exact housing, crime and cleansing numbers pending FOIs sent 29 July 2026.</div>
       <div id="wards-list"></div>
     </div>
-
-    <div id="entities" class="panel"><div id="entities-list"></div></div>
 
     <div id="trails" class="panel">
       <div class="card">
         <div class="money-row" style="font-weight:600;color:var(--muted);border-bottom:2px solid var(--border);">
-          <div>From</div><div>To</div><div>Amount</div><div>Type / Period</div>
+          <div>From</div><div>To</div><div>Type</div>
         </div>
         <div id="trails-list"></div>
       </div>
     </div>
 
-    <div id="contracts" class="panel">
-      <div class="card">
-        <div class="contract-row" style="font-weight:600;color:var(--muted);border-bottom:2px solid var(--border);">
-          <div>Contractor</div><div>Contract</div><div>Value</div>
-        </div>
-        <div id="contracts-list"></div>
+    <div id="edinburgh" class="panel">
+      <div class="intro-box">Edinburgh remains available in detail (entities, contracts, ownership tree, money trails). Full Edinburgh view was built earlier in this project.</div>
+      <div class="grid-3">
+        <div class="stat-card"><div class="label">Lothian Buses</div><div class="value">£210.7m</div><div class="sub">2025 Revenue</div></div>
+        <div class="stat-card"><div class="label">Edinburgh Trams</div><div class="value">£32.9m</div><div class="sub">2025 Revenue</div></div>
+        <div class="stat-card"><div class="label">Edinburgh Leisure</div><div class="value">£8.04m</div><div class="sub">Service payment</div></div>
       </div>
-    </div>
-
-    <div id="tree" class="panel">
-      <div class="card" style="text-align:center;">
-        <p style="color:var(--muted);margin-bottom:1rem;font-size:0.9rem;">City of Edinburgh Council – Controlled Entities (detailed)</p>
-        <div class="tree-level"><div class="tree-node parent">City of Edinburgh Council</div></div>
-        <div class="arrow">▼</div>
-        <div class="tree-level">
-          <div class="tree-node holding">CEC Holdings<br><small>SC135444</small></div>
-          <div class="tree-node holding">Edinburgh Transport Holdings<br><small>SC443895</small></div>
-          <div class="tree-node holding">Edinburgh Living MMR<br><small>SO306071 · 99.999%</small></div>
-        </div>
-        <div class="arrow">▼</div>
-        <div class="tree-level">
-          <div class="tree-node op">EICC<br><small>SC131773</small></div>
-          <div class="tree-node op">EDI Group<br><small>SC110956</small></div>
-          <div class="tree-node op">Lothian Buses<br><small>SC096849</small></div>
-          <div class="tree-node op">Edinburgh Trams<br><small>SC451434</small></div>
-        </div>
-        <div class="arrow">▼</div>
-        <div class="tree-level">
-          <div class="tree-node assoc">Edinburgh Leisure<br><small>SC179259</small></div>
-          <div class="tree-node assoc">Capital Theatres<br><small>SC134619</small></div>
-        </div>
-      </div>
+      <p style="color:var(--muted);margin-top:1rem;font-size:0.9rem;">Key Edinburgh entities: CEC Holdings, Edinburgh Transport Holdings, Lothian Buses, Edinburgh Trams, Edinburgh Leisure, EICC, Capital Theatres, Edinburgh Living MMR.</p>
     </div>
   </div>
 
   <footer>
-    Open Scotland – built from public accounts, Companies House, contract registers and FOI responses.<br>
-    For transparency and community organising. Not an official government publication.
+    Open Scotland – public accounts, Companies House, contract registers and FOI responses.<br>
+    Glasgow v1 model for external testing. Not an official government publication.
   </footer>
 
   <script>
-    const wards = [
-      {council:"Glasgow",number:"8",name:"Southside Central",neighbourhoods:"Gorbals, Hutchesontown, Laurieston, Oatlands",simd:"High deprivation – multiple data zones in 10–20% most deprived",housing:"Significant temporary accommodation and homelessness demand. Exact ward numbers pending FOI.",asylum:"Part of wider Glasgow high LTR homelessness presentations. Ward-level data outstanding.",crime:"Elevated violent crime and ASB in parts. Sexual crime and full counts pending Police data.",drugs:"High drug-related harm and mental health pressure (city-wide pattern, local intensity high).",environment:"Fly-tipping and street cleanliness problems reported around high-density housing.",pressures:["Housing & temporary accommodation","Drug-related harm & community safety","Street cleanliness / fly-tipping"],actions:"Resident clean-ups; demand ward-level housing data; support recovery groups; push enforcement on fly-tipping",funding:"Area Partnership funds, Glasgow community grants, recovery funding, environmental grants",gaps:"Exact homelessness apps, temp accom numbers, crime counts, fly-tipping stats, empty properties (FOIs sent 29/07/2026)",updated:"2026-07-29"},
-      {council:"Glasgow",number:"5",name:"Govan",neighbourhoods:"Govan, Ibrox, Cessnock, Kinning Park, Plantation",simd:"Very high deprivation – large share in most deprived 10–20%",housing:"Long-standing housing pressure + city-wide temp accommodation impact. Exact numbers pending.",asylum:"Affected by city-wide dispersal and LTR placements. Ward-level data outstanding.",crime:"Historically higher violent crime and ongoing ASB/drug issues in places. Full counts pending.",drugs:"Visible drug-related harm and high need for recovery services.",environment:"Regular fly-tipping and back-court dumping complaints. Some problem sites.",pressures:["Deep deprivation & drug-related harm","Housing pressure","Community safety & ASB"],actions:"Support recovery & community safety initiatives; clean-up campaigns; demand transparency on placements",funding:"Area Partnership, recovery & employability funds, environmental grants, participatory budgeting",gaps:"Same core gaps – FOIs sent 29/07/2026 covering all three wards",updated:"2026-07-29"},
-      {council:"Glasgow",number:"9",name:"Calton",neighbourhoods:"Calton, Bridgeton, Dalmarnock, Gallowgate",simd:"Extremely high deprivation – many data zones among Scotland’s worst",housing:"High housing need. East End has carried significant homelessness pressure. Exact numbers pending.",asylum:"East End has absorbed significant numbers. Ward-level data outstanding.",crime:"Elevated violent crime and significant drug-related harm. Full recorded crime data pending.",drugs:"Very high drug-related deaths and poor health outcomes. Major pressure.",environment:"Long-standing fly-tipping, abandoned properties and cleanliness issues.",pressures:["Extreme deprivation & drug-related harm","Community safety & ASB","Housing pressure & environmental quality"],actions:"Focus on community safety & recovery partnerships; resident reporting; demand full transparency on placements",funding:"East End Area Partnership, recovery/justice funds, environmental & regeneration grants",gaps:"Same core gaps – FOIs sent 29/07/2026 covering all three wards",updated:"2026-07-29"}
+    const gEntities = [
+      {name:"City Building (Glasgow) LLP", number:"SO300990", type:"50% Joint Venture with Wheatley Housing Group", role:"Repairs, maintenance, construction, manufacturing", tags:["JV","Major employer"], financials:"Major workforce; pension arrangements with GCC"},
+      {name:"City Building (Contracts) LLP", number:"SO301080", type:"100% subsidiary", role:"Construction and capital works (non-JV)", tags:["Subsidiary"], financials:"See own accounts"},
+      {name:"City Property (Glasgow) LLP", number:"SO302223", type:"Controlling interest", role:"Manage, develop and dispose of non-operational property", tags:["Property"], financials:"Fees ~£3.2m (2024); Profit ~£272k"},
+      {name:"City Property Glasgow (Investments) LLP", number:"SO302466", type:"Via City Property", role:"Investment property portfolio", tags:["Property"], financials:"Holds investment portfolio"},
+      {name:"Culture and Sport Glasgow (Glasgow Life)", number:"SC313851", type:"Sole member = GCC", role:"Arts, heritage, culture, sport, libraries, community programmes", tags:["Culture","Sole member"], financials:"Significant mixed income; primary funder GCC"},
+      {name:"Jobs and Business Glasgow", number:"SC108565", type:"Sole member = GCC", role:"Employability, economic development, regeneration", tags:["Economic","Sole member"], financials:"Primarily public funding"},
+      {name:"Property by Jobs & Business Glasgow Ltd", number:"SC142446", type:"100% subsidiary of JBG", role:"Property investment, development and rental", tags:["Property"], financials:"Rental income"},
+      {name:"Scottish Event Campus Limited (SEC)", number:"SC082081", type:"Principal shareholder GCC", role:"SEC Centre, Armadillo, OVO Hydro", tags:["Events"], financials:"Historically strong commercial performance"},
+      {name:"GCC LLP Investments Limited", number:"SC304909", type:"100% GCC", role:"Intermediate holding / designated member vehicle", tags:["Holding"], financials:"Minimal trading"},
+      {name:"City Parking (Glasgow) LLP", number:"SO301266", type:"100% – Dormant", role:"Historical parking operations", tags:["Dormant"], financials:"Ceased trading 31 Jul 2021"}
     ];
 
-    const entities = [
-      {name:"Lothian Buses Limited",number:"SC096849",type:"Subsidiary (via Transport Holdings)",financials:"2025 Revenue £210.7m · Op profit £1.65m · Net loss £4.21m · Equity £144.5m",notes:"UK's largest municipal bus company. Fleet >700. No dividend paid in 2025.",tags:["Transport","High materiality"],contracts:["Journeo Passenger Systems – Bus Station CMS & Bustracker (£4.77m)","Supported Bus Services – multiple routes","DPS for Supported Bus Services (framework up to £10m)"]},
-      {name:"Edinburgh Trams Limited",number:"SC451434",type:"Subsidiary (via Transport Holdings)",financials:"2025 Revenue £32.92m · Op loss £7.74m · Loss £9.29m · 12.46m passengers",notes:"Supported by £9.14m Operating Services Agreement + £10.5m share capital injection in 2025.",tags:["Transport","Loss-making"],contracts:["CAF Rail UK Ltd – Maintenance (£69m to 2043)","Operating Services Agreement (£9.14m)","Flowbird Ticketing (£1.59m)","Aon Insurance (~£3.8m)"]},
-      {name:"Edinburgh Leisure",number:"SC179259",type:"Associate / ALEO (board influence)",financials:"2026/27 Service payment £8.035m + £165k capital",notes:"Operates 50+ facilities. School lets surplus returned to Council.",tags:["Leisure","Core funding"],contracts:["Physical Activity Programme(s) (£500k)","AtkinsRealis professional services"]},
-      {name:"Edinburgh International Conference Centre (EICC)",number:"SC131773",type:"Subsidiary (via CEC Holdings)",financials:"2024 Turnover £11.134m (+20%) · No dividend",notes:"Parent loans not enforced until company can afford repayment.",tags:["Conference"],contracts:["Venue Hire – Tour de France 2027 (£265k)"]},
-      {name:"Capital Theatres",number:"SC134619",type:"Associate / company limited by guarantee",financials:"Core funding + landlord relationship · King's Theatre redevelopment",notes:"Max 2 Council trustees.",tags:["Culture"],contracts:["Aon UK – Property Insurance (Leased-out Theatres) (£438k)"]},
-      {name:"Edinburgh Living MMR LLP",number:"SO306071",type:"LLP (99.999% Council)",financials:"594 homes · Facility up to £248m",notes:"Mid-market rent vehicle with Scottish Futures Trust.",tags:["Housing"],contracts:[]}
+    const wards = [
+      {council:"Glasgow",number:"8",name:"Southside Central",neighbourhoods:"Gorbals, Hutchesontown, Laurieston, Oatlands",simd:"High deprivation – multiple data zones in 10–20% most deprived",housing:"Significant temporary accommodation and homelessness demand. Exact numbers pending FOI.",asylum:"Part of wider Glasgow high LTR presentations. Ward-level data outstanding.",crime:"Elevated violent crime and ASB in parts. Full counts pending.",drugs:"High drug-related harm and mental health pressure.",environment:"Fly-tipping and street cleanliness problems around high-density housing.",pressures:["Housing & temporary accommodation","Drug-related harm & community safety","Street cleanliness / fly-tipping"],actions:"Resident clean-ups; demand ward-level housing data; support recovery groups; push enforcement on fly-tipping",funding:"Area Partnership funds, Glasgow community grants, recovery funding, environmental grants",gaps:"FOIs sent 29/07/2026 – housing, asylum/LTR, cleansing, empty properties, crime",updated:"2026-07-29"},
+      {council:"Glasgow",number:"5",name:"Govan",neighbourhoods:"Govan, Ibrox, Cessnock, Kinning Park, Plantation",simd:"Very high deprivation – large share in most deprived 10–20%",housing:"Long-standing housing pressure + city-wide temp accommodation impact.",asylum:"Affected by city-wide dispersal and LTR placements.",crime:"Historically higher violent crime and ongoing ASB/drug issues.",drugs:"Visible drug-related harm; high need for recovery services.",environment:"Regular fly-tipping and back-court dumping complaints.",pressures:["Deep deprivation & drug-related harm","Housing pressure","Community safety & ASB"],actions:"Support recovery & community safety initiatives; clean-up campaigns; demand transparency on placements",funding:"Area Partnership, recovery & employability funds, environmental grants, participatory budgeting",gaps:"FOIs sent 29/07/2026",updated:"2026-07-29"},
+      {council:"Glasgow",number:"9",name:"Calton",neighbourhoods:"Calton, Bridgeton, Dalmarnock, Gallowgate",simd:"Extremely high deprivation – many data zones among Scotland’s worst",housing:"High housing need. East End has carried significant homelessness pressure.",asylum:"East End has absorbed significant numbers.",crime:"Elevated violent crime and significant drug-related harm.",drugs:"Very high drug-related deaths and poor health outcomes.",environment:"Long-standing fly-tipping, abandoned properties and cleanliness issues.",pressures:["Extreme deprivation & drug-related harm","Community safety & ASB","Housing pressure & environmental quality"],actions:"Community safety & recovery partnerships; resident reporting; demand transparency on placements",funding:"East End Area Partnership, recovery/justice funds, environmental & regeneration grants",gaps:"FOIs sent 29/07/2026",updated:"2026-07-29"}
     ];
 
     const trails = [
-      {from:"City of Edinburgh Council",to:"Edinburgh Leisure",amount:"£8.04m",type:"Service Payment 2026/27"},
-      {from:"City of Edinburgh Council",to:"Edinburgh Trams Ltd",amount:"£9.14m",type:"Operating Services Agreement"},
-      {from:"City of Edinburgh Council",to:"CAF Rail UK Ltd",amount:"£69m",type:"Tram Maintenance (to 2043)"},
-      {from:"Customers",to:"Lothian Buses Group",amount:"£210.7m",type:"Group Revenue 2025"},
-      {from:"Customers",to:"Edinburgh Trams",amount:"£32.9m",type:"Revenue 2025"},
-      {from:"Edinburgh Transport Holdings",to:"Edinburgh Trams",amount:"£10.5m",type:"Share capital injection 2025"},
-      {from:"EICC Operations",to:"CEC Holdings Group",amount:"£11.1m",type:"Turnover 2024"},
-      {from:"Edinburgh Integration Joint Board",to:"Third sector providers",amount:"£27m",type:"Block contracts + SLAs"},
-      {from:"City of Edinburgh Council",to:"Edinburgh Living MMR",amount:"Up to £248m",type:"Facility Agreement"},
-      {from:"City of Edinburgh Council",to:"Journeo Passenger Systems",amount:"£4.77m",type:"Bus Station CMS & Bustracker"}
+      {from:"Glasgow City Council", to:"Glasgow Life (Culture & Sport Glasgow)", type:"Core service funding (annual)"},
+      {from:"Glasgow City Council", to:"Jobs and Business Glasgow", type:"Core / project funding"},
+      {from:"Glasgow City Council", to:"City Building entities", type:"Works orders, contracts, pension support"},
+      {from:"Glasgow City Council", to:"City Property (Glasgow) LLP", type:"Management fees / property related (~£3.2m fees)"},
+      {from:"City Property structures", to:"Glasgow City Council", type:"Capital receipts from disposals"},
+      {from:"Scottish Event Campus Ltd", to:"GCC (shareholder)", type:"Dividends / returns when declared"}
     ];
 
-    const contracts = [
-      {entity:"Edinburgh Trams",supplier:"CAF Rail UK Ltd",name:"Tram Maintenance Services Agreement",value:"£69,000,000"},
-      {entity:"Edinburgh Trams",supplier:"Edinburgh Trams Ltd",name:"Operating Services Agreement",value:"£9,142,038"},
-      {entity:"Edinburgh Trams",supplier:"Flowbird Transport Limited",name:"Ticketing Maintenance Services",value:"£1,588,000"},
-      {entity:"Edinburgh Trams",supplier:"Aon UK Limited",name:"Insurance packages",value:"~£3.8m"},
-      {entity:"Lothian Buses",supplier:"Journeo Passenger Systems",name:"Bus Station CMS and Bustracker RTPI",value:"£4,768,704"},
-      {entity:"Lothian Buses",supplier:"Framework suppliers",name:"DPS for Supported Bus Services",value:"£10,000,000"},
-      {entity:"Edinburgh Leisure",supplier:"Edinburgh Leisure",name:"Physical Activity Programme(s)",value:"£500,000"},
-      {entity:"Capital Theatres",supplier:"Aon UK Limited",name:"Property Insurance (Leased-out Theatres)",value:"£438,186"}
-    ];
-
-    function renderWards(filter="") {
-      const list = document.getElementById("wards-list");
-      const q = filter.toLowerCase();
-      list.innerHTML = wards.filter(w => !q || w.name.toLowerCase().includes(q) || w.neighbourhoods.toLowerCase().includes(q) || w.council.toLowerCase().includes(q) || w.pressures.some(p => p.toLowerCase().includes(q)))
-        .map(w => `<div class="card">
-          <h3>${w.name} <span style="color:var(--muted);font-size:0.9rem;">(Ward ${w.number} · ${w.council})</span></h3>
-          <div class="meta">${w.neighbourhoods}</div>
-          <div style="margin-bottom:0.5rem;"><span class="tag tag-red">High pressure</span><span class="tag tag-purple">Priority ward</span></div>
-          <div class="ward-section"><h4>SIMD / Deprivation</h4><p>${w.simd}</p></div>
-          <div class="ward-section"><h4>Top 3 Pressures</h4><ol style="margin-left:1.2rem;">${w.pressures.map(p => `<li class="pressure">${p}</li>`).join("")}</ol></div>
-          <div class="ward-section"><h4>Housing & Asylum/LTR</h4><p>${w.housing}</p><p style="color:var(--muted);">${w.asylum}</p></div>
-          <div class="ward-section"><h4>Crime, Drugs & Environment</h4><p>${w.crime}</p><p>${w.drugs}</p><p>${w.environment}</p></div>
-          <div class="ward-section"><h4>Suggested Community Actions</h4><p>${w.actions}</p></div>
-          <div class="ward-section"><h4>Funding Routes</h4><p>${w.funding}</p></div>
-          <div class="ward-section"><h4>Data Gaps</h4><p style="color:var(--muted);font-size:0.84rem;">${w.gaps}</p><p style="color:var(--muted);font-size:0.8rem;margin-top:0.3rem;">Last updated: ${w.updated}</p></div>
-        </div>`).join("") || "<p style='color:var(--muted)'>No matching wards.</p>";
-    }
-
-    function renderEntities(filter="") {
-      const list = document.getElementById("entities-list");
-      const q = filter.toLowerCase();
-      list.innerHTML = entities.filter(e => !q || e.name.toLowerCase().includes(q) || e.number.includes(q) || e.notes.toLowerCase().includes(q) || e.tags.some(t => t.toLowerCase().includes(q)))
+    function renderGEntities(f="") {
+      const q = f.toLowerCase();
+      document.getElementById("g-entities-list").innerHTML = gEntities
+        .filter(e => !q || e.name.toLowerCase().includes(q) || e.number.includes(q) || e.role.toLowerCase().includes(q) || e.tags.some(t => t.toLowerCase().includes(q)))
         .map(e => `<div class="card">
           <h3>${e.name}</h3>
           <div class="meta">${e.number} · ${e.type}</div>
-          <div style="margin-bottom:0.5rem;">${e.tags.map(t => `<span class="tag tag-blue">${t}</span>`).join("")}</div>
-          <p style="font-size:0.9rem;margin-bottom:0.4rem;"><strong>Financials:</strong> ${e.financials}</p>
-          <p style="font-size:0.85rem;color:var(--muted);">${e.notes}</p>
-          ${e.contracts && e.contracts.length ? `<div class="entity-contracts"><h4>Linked Contracts / Suppliers</h4><ul style="margin-left:1.1rem;font-size:0.84rem;">${e.contracts.map(c => `<li style="margin-bottom:0.25rem;">${c}</li>`).join("")}</ul></div>` : ""}
-        </div>`).join("") || "<p style='color:var(--muted)'>No matching entities.</p>";
+          <div>${e.tags.map(t => `<span class="tag tag-blue">${t}</span>`).join("")}</div>
+          <p style="font-size:0.9rem;margin:0.4rem 0;"><strong>Role:</strong> ${e.role}</p>
+          <p style="font-size:0.85rem;color:var(--muted);">${e.financials}</p>
+        </div>`).join("") || "<p style='color:var(--muted)'>No matches</p>";
     }
 
-    function renderTrails(filter="") {
-      const list = document.getElementById("trails-list");
-      const q = filter.toLowerCase();
-      list.innerHTML = trails.filter(t => !q || t.from.toLowerCase().includes(q) || t.to.toLowerCase().includes(q) || t.type.toLowerCase().includes(q))
-        .map(t => `<div class="money-row"><div class="from">${t.from}</div><div class="to">${t.to}</div><div class="amount">${t.amount}</div><div>${t.type}</div></div>`).join("") || "<p style='color:var(--muted);padding:1rem 0;'>No matching trails.</p>";
+    function renderWards(f="") {
+      const q = f.toLowerCase();
+      document.getElementById("wards-list").innerHTML = wards
+        .filter(w => !q || w.name.toLowerCase().includes(q) || w.neighbourhoods.toLowerCase().includes(q) || w.pressures.some(p => p.toLowerCase().includes(q)))
+        .map(w => `<div class="card">
+          <h3>${w.name} <span style="color:var(--muted);font-size:0.9rem;">(Ward ${w.number})</span></h3>
+          <div class="meta">${w.neighbourhoods}</div>
+          <div><span class="tag tag-red">High pressure</span><span class="tag tag-purple">Priority</span></div>
+          <div class="ward-section"><h4>SIMD</h4><p>${w.simd}</p></div>
+          <div class="ward-section"><h4>Top 3 Pressures</h4><ol style="margin-left:1.2rem;">${w.pressures.map(p => `<li class="pressure">${p}</li>`).join("")}</ol></div>
+          <div class="ward-section"><h4>Housing & Asylum/LTR</h4><p>${w.housing}</p><p style="color:var(--muted);">${w.asylum}</p></div>
+          <div class="ward-section"><h4>Crime, Drugs & Environment</h4><p>${w.crime}</p><p>${w.drugs}</p><p>${w.environment}</p></div>
+          <div class="ward-section"><h4>Community Actions</h4><p>${w.actions}</p></div>
+          <div class="ward-section"><h4>Funding Routes</h4><p>${w.funding}</p></div>
+          <div class="ward-section"><h4>Data Gaps</h4><p style="color:var(--muted);font-size:0.84rem;">${w.gaps}</p></div>
+        </div>`).join("") || "<p style='color:var(--muted)'>No matches</p>";
     }
 
-    function renderContracts(filter="") {
-      const list = document.getElementById("contracts-list");
-      const q = filter.toLowerCase();
-      list.innerHTML = contracts.filter(c => !q || c.entity.toLowerCase().includes(q) || c.supplier.toLowerCase().includes(q) || c.name.toLowerCase().includes(q))
-        .map(c => `<div class="contract-row"><div><strong style="color:var(--green)">${c.supplier}</strong><br><span style="color:var(--muted);font-size:0.8rem">${c.entity}</span></div><div>${c.name}</div><div class="amount">${c.value}</div></div>`).join("") || "<p style='color:var(--muted);padding:1rem 0;'>No matching contracts.</p>";
+    function renderTrails(f="") {
+      const q = f.toLowerCase();
+      document.getElementById("trails-list").innerHTML = trails
+        .filter(t => !q || t.from.toLowerCase().includes(q) || t.to.toLowerCase().includes(q) || t.type.toLowerCase().includes(q))
+        .map(t => `<div class="money-row"><div class="from">${t.from}</div><div class="to">${t.to}</div><div class="type">${t.type}</div></div>`).join("") || "<p style='color:var(--muted)'>No matches</p>";
     }
 
     function showPanel(id) {
@@ -252,10 +232,10 @@
 
     function filterAll() {
       const q = document.getElementById("search").value;
-      renderWards(q); renderEntities(q); renderTrails(q); renderContracts(q);
+      renderGEntities(q); renderWards(q); renderTrails(q);
     }
 
-    renderWards(); renderEntities(); renderTrails(); renderContracts();
+    renderGEntities(); renderWards(); renderTrails();
   </script>
 </body>
 </html>
