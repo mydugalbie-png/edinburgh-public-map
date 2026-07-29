@@ -31,125 +31,65 @@
       padding: 1.5rem 1rem;
       text-align: center;
     }
-    header h1 {
-      font-size: 1.6rem;
-      color: var(--accent);
-      margin-bottom: 0.3rem;
-    }
+    header h1 { font-size: 1.6rem; color: var(--accent); margin-bottom: 0.3rem; }
     header p { color: var(--muted); font-size: 0.95rem; }
     .container { max-width: 1100px; margin: 0 auto; padding: 1.25rem; }
-    .search-box {
-      display: flex;
-      gap: 0.75rem;
-      margin-bottom: 1.5rem;
-      flex-wrap: wrap;
-    }
+    .search-box { display: flex; gap: 0.75rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
     .search-box input {
-      flex: 1;
-      min-width: 220px;
-      padding: 0.75rem 1rem;
-      border-radius: 8px;
-      border: 1px solid var(--border);
-      background: var(--card);
-      color: var(--text);
-      font-size: 1rem;
+      flex: 1; min-width: 220px; padding: 0.75rem 1rem; border-radius: 8px;
+      border: 1px solid var(--border); background: var(--card); color: var(--text); font-size: 1rem;
     }
     .search-box input:focus { outline: none; border-color: var(--accent); }
-    .tabs {
-      display: flex;
-      gap: 0.5rem;
-      margin-bottom: 1.5rem;
-      flex-wrap: wrap;
-    }
+    .tabs { display: flex; gap: 0.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
     .tab {
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      border: 1px solid var(--border);
-      background: var(--card);
-      color: var(--muted);
-      cursor: pointer;
-      font-size: 0.9rem;
-      transition: all 0.15s;
+      padding: 0.5rem 1rem; border-radius: 6px; border: 1px solid var(--border);
+      background: var(--card); color: var(--muted); cursor: pointer; font-size: 0.9rem; transition: all 0.15s;
     }
-    .tab:hover, .tab.active {
-      background: var(--blue);
-      color: white;
-      border-color: var(--blue);
-    }
+    .tab:hover, .tab.active { background: var(--blue); color: white; border-color: var(--blue); }
     .panel { display: none; }
     .panel.active { display: block; }
     .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1.1rem;
-      margin-bottom: 1rem;
+      background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+      padding: 1.1rem; margin-bottom: 1rem;
     }
-    .card h3 {
-      color: var(--accent);
-      font-size: 1.05rem;
-      margin-bottom: 0.4rem;
-    }
-    .card .meta {
-      font-size: 0.85rem;
-      color: var(--muted);
-      margin-bottom: 0.6rem;
-    }
+    .card h3 { color: var(--accent); font-size: 1.05rem; margin-bottom: 0.4rem; }
+    .card .meta { font-size: 0.85rem; color: var(--muted); margin-bottom: 0.6rem; }
     .tag {
-      display: inline-block;
-      font-size: 0.75rem;
-      padding: 0.2rem 0.5rem;
-      border-radius: 4px;
-      margin-right: 0.4rem;
-      margin-bottom: 0.3rem;
+      display: inline-block; font-size: 0.75rem; padding: 0.2rem 0.5rem;
+      border-radius: 4px; margin-right: 0.4rem; margin-bottom: 0.3rem;
     }
     .tag-blue { background: #1e3a8a; color: #93c5fd; }
     .tag-green { background: #134e4a; color: #5eead4; }
     .tag-amber { background: #78350f; color: #fcd34d; }
-    .tag-red { background: #7f1d1d; color: #fca5a5; }
     .money-row {
-      display: grid;
-      grid-template-columns: 1.2fr 1.4fr 0.9fr 1.3fr;
-      gap: 0.75rem;
-      align-items: center;
-      padding: 0.7rem 0;
-      border-bottom: 1px solid var(--border);
-      font-size: 0.9rem;
+      display: grid; grid-template-columns: 1.3fr 1.4fr 0.9fr 1.2fr;
+      gap: 0.75rem; align-items: center; padding: 0.65rem 0;
+      border-bottom: 1px solid var(--border); font-size: 0.88rem;
     }
     .money-row:last-child { border-bottom: none; }
     .money-row .amount { color: var(--amber); font-weight: 700; }
     .money-row .from { color: var(--blue); }
     .money-row .to { color: var(--green); }
+    .contract-row {
+      display: grid; grid-template-columns: 1.6fr 1.8fr 0.9fr;
+      gap: 0.6rem; padding: 0.5rem 0; border-bottom: 1px solid var(--border);
+      font-size: 0.85rem;
+    }
+    .contract-row:last-child { border-bottom: none; }
     .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1rem;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem;
     }
     .stat-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1.2rem;
-      text-align: center;
+      background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+      padding: 1.2rem; text-align: center;
     }
     .stat-card .label { color: var(--muted); font-size: 0.85rem; margin-bottom: 0.4rem; }
     .stat-card .value { color: var(--amber); font-size: 1.5rem; font-weight: 700; }
     .stat-card .sub { color: var(--muted); font-size: 0.8rem; margin-top: 0.3rem; }
-    .tree-level {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-      justify-content: center;
-      margin: 0.8rem 0;
-    }
+    .tree-level { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; margin: 0.8rem 0; }
     .tree-node {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 0.6rem 0.9rem;
-      font-size: 0.85rem;
-      text-align: center;
-      min-width: 140px;
+      background: var(--card); border: 1px solid var(--border); border-radius: 8px;
+      padding: 0.6rem 0.9rem; font-size: 0.85rem; text-align: center; min-width: 140px;
     }
     .tree-node.parent { background: #1e40af; border-color: #3b82f6; }
     .tree-node.holding { background: #1e3a8a; }
@@ -157,21 +97,18 @@
     .tree-node.assoc { background: #7c2d12; border-color: #ea580c; }
     .tree-node.excl { background: #334155; font-size: 0.8rem; }
     .arrow { text-align: center; color: var(--muted); font-size: 1.2rem; margin: 0.2rem 0; }
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      color: var(--muted);
-      font-size: 0.85rem;
-      border-top: 1px solid var(--border);
-      margin-top: 2rem;
+    .entity-contracts {
+      margin-top: 0.8rem; padding-top: 0.7rem; border-top: 1px solid var(--border);
     }
-    .hidden { display: none !important; }
+    .entity-contracts h4 {
+      font-size: 0.85rem; color: var(--amber); margin-bottom: 0.4rem;
+    }
+    footer {
+      text-align: center; padding: 2rem 1rem; color: var(--muted);
+      font-size: 0.85rem; border-top: 1px solid var(--border); margin-top: 2rem;
+    }
     @media (max-width: 700px) {
-      .money-row {
-        grid-template-columns: 1fr;
-        gap: 0.25rem;
-        padding: 0.9rem 0;
-      }
+      .money-row, .contract-row { grid-template-columns: 1fr; gap: 0.2rem; padding: 0.8rem 0; }
       header h1 { font-size: 1.3rem; }
     }
   </style>
@@ -191,12 +128,12 @@
       <button class="tab active" onclick="showPanel('overview')">Overview</button>
       <button class="tab" onclick="showPanel('entities')">Entities</button>
       <button class="tab" onclick="showPanel('trails')">Money Trails</button>
+      <button class="tab" onclick="showPanel('contracts')">Contracts</button>
       <button class="tab" onclick="showPanel('tree')">Ownership Tree</button>
     </div>
 
-    <!-- OVERVIEW -->
     <div id="overview" class="panel active">
-      <div class="grid-3" id="stats-grid">
+      <div class="grid-3">
         <div class="stat-card">
           <div class="label">Lothian Buses 2025</div>
           <div class="value">£210.7m</div>
@@ -205,7 +142,7 @@
         <div class="stat-card">
           <div class="label">Edinburgh Trams 2025</div>
           <div class="value">£32.9m</div>
-          <div class="sub">Revenue · Loss £9.3m · 12.46m passengers</div>
+          <div class="sub">Revenue · Loss £9.3m · 12.46m pax</div>
         </div>
         <div class="stat-card">
           <div class="label">Edinburgh Leisure 2026/27</div>
@@ -223,37 +160,38 @@
           <div class="sub">Homes · Facility up to £248m</div>
         </div>
         <div class="stat-card">
-          <div class="label">EIJB Contracts</div>
-          <div class="value">£27m</div>
-          <div class="sub">Block + SLAs · £1.26m savings proposed</div>
+          <div class="label">Mapped Contracts</div>
+          <div class="value">20</div>
+          <div class="sub">Material contracts from Register</div>
         </div>
       </div>
     </div>
 
-    <!-- ENTITIES -->
     <div id="entities" class="panel">
       <div id="entities-list"></div>
     </div>
 
-    <!-- MONEY TRAILS -->
     <div id="trails" class="panel">
       <div class="card">
         <div class="money-row" style="font-weight:600;color:var(--muted);border-bottom:2px solid var(--border);">
-          <div>From</div>
-          <div>To</div>
-          <div>Amount</div>
-          <div>Type / Period</div>
+          <div>From</div><div>To</div><div>Amount</div><div>Type / Period</div>
         </div>
         <div id="trails-list"></div>
       </div>
     </div>
 
-    <!-- OWNERSHIP TREE -->
+    <div id="contracts" class="panel">
+      <div class="card">
+        <div class="contract-row" style="font-weight:600;color:var(--muted);border-bottom:2px solid var(--border);">
+          <div>Contractor</div><div>Contract</div><div>Value</div>
+        </div>
+        <div id="contracts-list"></div>
+      </div>
+    </div>
+
     <div id="tree" class="panel">
       <div class="card" style="text-align:center;">
-        <div class="tree-level">
-          <div class="tree-node parent">City of Edinburgh Council</div>
-        </div>
+        <div class="tree-level"><div class="tree-node parent">City of Edinburgh Council</div></div>
         <div class="arrow">▼</div>
         <div class="tree-level">
           <div class="tree-node holding">CEC Holdings<br><small>SC135444</small></div>
@@ -294,7 +232,8 @@
         type: "Subsidiary (via Transport Holdings)",
         financials: "2025 Revenue £210.7m · Op profit £1.65m · Net loss £4.21m · Equity £144.5m",
         notes: "UK's largest municipal bus company. Fleet >700. No dividend paid in 2025.",
-        tags: ["Transport", "High materiality"]
+        tags: ["Transport", "High materiality"],
+        contracts: ["Journeo Passenger Systems – Bus Station CMS & Bustracker (£4.77m)", "Supported Bus Services – multiple routes (Lothian Buses + McGill's + Handicabs)", "DPS for Supported Bus Services (framework up to £10m)"]
       },
       {
         name: "Edinburgh Trams Limited",
@@ -302,39 +241,44 @@
         type: "Subsidiary (via Transport Holdings)",
         financials: "2025 Revenue £32.92m · Op loss £7.74m · Loss £9.29m · 12.46m passengers",
         notes: "Supported by £9.14m Operating Services Agreement + £10.5m share capital injection in 2025.",
-        tags: ["Transport", "Loss-making"]
+        tags: ["Transport", "Loss-making"],
+        contracts: ["CAF Rail UK Ltd – Maintenance Services Agreement (£69m to 2043)", "Edinburgh Trams Ltd – Operating Services Agreement (£9.14m)", "Flowbird Transport – Ticketing Maintenance (£1.59m)", "Aon UK – Insurance packages (~£3.8m)", "Jacobs UK – Technical Advisory (£0.81m)"]
       },
       {
         name: "Edinburgh Leisure",
         number: "SC179259",
         type: "Associate / ALEO (board influence)",
         financials: "2026/27 Service payment £8.035m + £165k capital · 4.56m visits 2024/25",
-        notes: "Operates 50+ facilities. School lets surplus £309k returned to Council. New ALEO Governance Framework applies.",
-        tags: ["Leisure", "Core funding"]
+        notes: "Operates 50+ facilities. School lets surplus £309k returned to Council.",
+        tags: ["Leisure", "Core funding"],
+        contracts: ["Physical Activity Programme(s) (£500k)", "AtkinsRealis – professional services Westerhailes (£217k)"]
       },
       {
         name: "Edinburgh International Conference Centre (EICC)",
         number: "SC131773",
         type: "Subsidiary (via CEC Holdings)",
-        financials: "2024 Turnover £11.134m (+20%) · Group contribution positive · No dividend",
-        notes: "Parent loans not enforced until company can afford repayment. 180k delegate days, £78m economic impact.",
-        tags: ["Conference", "Holdings"]
+        financials: "2024 Turnover £11.134m (+20%) · No dividend",
+        notes: "Parent loans not enforced until company can afford repayment.",
+        tags: ["Conference", "Holdings"],
+        contracts: ["Venue Hire – Tour de France 2027 (£265k)"]
       },
       {
         name: "Edinburgh Living MMR LLP",
         number: "SO306071",
         type: "LLP (99.999% Council)",
         financials: "594 homes · Facility Agreement up to £248m",
-        notes: "Mid-market rent vehicle. Partnership with Scottish Futures Trust. 20 homes acquired in 2024.",
-        tags: ["Housing"]
+        notes: "Mid-market rent vehicle. Partnership with Scottish Futures Trust.",
+        tags: ["Housing"],
+        contracts: []
       },
       {
         name: "CEC Holdings Limited",
         number: "SC135444",
         type: "Holding company (100% Council)",
         financials: "2024 Group profit after tax £1.147m",
-        notes: "Holds EICC and EDI Group. Main intermediate holding vehicle.",
-        tags: ["Holding"]
+        notes: "Holds EICC and EDI Group.",
+        tags: ["Holding"],
+        contracts: []
       },
       {
         name: "Edinburgh Transport Holdings Ltd",
@@ -342,23 +286,26 @@
         type: "Holding company (100% Council)",
         financials: "Share capital injections into Buses/Trams group",
         notes: "Formerly Transport for Edinburgh. Parent of Lothian Buses and Edinburgh Trams.",
-        tags: ["Holding", "Transport"]
+        tags: ["Holding", "Transport"],
+        contracts: []
       },
       {
         name: "Capital Theatres",
         number: "SC134619",
         type: "Associate / company limited by guarantee",
         financials: "Core funding + landlord relationship · King's Theatre redevelopment",
-        notes: "Max 2 Council trustees. Trading subsidiary Gift Aids surplus. Robertson main contractor on King's.",
-        tags: ["Culture"]
+        notes: "Max 2 Council trustees. Trading subsidiary Gift Aids surplus.",
+        tags: ["Culture"],
+        contracts: ["Aon UK – Property Insurance (Leased-out Theatres) (£438k)"]
       },
       {
         name: "The EDI Group Limited",
         number: "SC110956",
         type: "Subsidiary (via CEC Holdings) – winding down",
         financials: "Managed closure · remaining land sales",
-        notes: "Property development vehicle established 1988. No future pipeline; process of managed closure.",
-        tags: ["Property", "Winding down"]
+        notes: "Property development vehicle. Process of managed closure.",
+        tags: ["Property", "Winding down"],
+        contracts: []
       }
     ];
 
@@ -373,15 +320,35 @@
       { from: "EICC Operations", to: "CEC Holdings Group", amount: "£11.1m", type: "Turnover 2024" },
       { from: "Edinburgh Integration Joint Board", to: "Third sector providers", amount: "£27m", type: "Block contracts + SLAs" },
       { from: "Edinburgh Leisure", to: "City of Edinburgh Council", amount: "£309k", type: "School lets surplus return 2024/25" },
-      { from: "City of Edinburgh Council", to: "CAF / Flowbird etc.", amount: "Various", type: "Tram-related contracts" },
-      { from: "City of Edinburgh Council", to: "Edinburgh Living MMR", amount: "Up to £248m", type: "Facility Agreement" }
+      { from: "City of Edinburgh Council", to: "Edinburgh Living MMR", amount: "Up to £248m", type: "Facility Agreement" },
+      { from: "City of Edinburgh Council", to: "Flowbird Transport", amount: "£1.59m", type: "Tram Ticketing Maintenance" },
+      { from: "City of Edinburgh Council", to: "Journeo Passenger Systems", amount: "£4.77m", type: "Bus Station CMS & Bustracker" }
+    ];
+
+    const contracts = [
+      { entity: "Edinburgh Trams", supplier: "CAF Rail UK Ltd", name: "Tram Maintenance Services Agreement", value: "£69,000,000" },
+      { entity: "Edinburgh Trams", supplier: "Edinburgh Trams Ltd", name: "Operating Services Agreement", value: "£9,142,038" },
+      { entity: "Edinburgh Trams", supplier: "Aon UK Limited", name: "Insurance – Public & Products Liability", value: "£2,490,465" },
+      { entity: "Edinburgh Trams", supplier: "Flowbird Transport Limited", name: "Ticketing Maintenance Services", value: "£1,588,000" },
+      { entity: "Edinburgh Trams", supplier: "Aon UK Limited", name: "Insurance – Property Damage", value: "£1,320,000" },
+      { entity: "Edinburgh Trams", supplier: "Jacobs UK", name: "Technical Advisory – Trams to Granton", value: "£806,000" },
+      { entity: "Lothian Buses", supplier: "Journeo Passenger Systems", name: "Bus Station CMS and Bustracker RTPI", value: "£4,768,704" },
+      { entity: "Lothian Buses", supplier: "Lothian Buses PLC", name: "Supported Bus Services (Cramond–Balerno)", value: "£1,374,000" },
+      { entity: "Lothian Buses", supplier: "Lothian Buses PLC", name: "Supported Bus Services (Gyle–Hermiston)", value: "£1,248,000" },
+      { entity: "Lothian Buses", supplier: "McGill's Scotland East", name: "Supported Bus Services (Craigleith–Lochend)", value: "£1,211,600" },
+      { entity: "Lothian Buses", supplier: "Lothian Buses PLC", name: "Supported Bus Services (Queensferry–Gyle)", value: "£1,140,000" },
+      { entity: "Lothian Buses", supplier: "Framework suppliers", name: "DPS for Supported Bus Services", value: "£10,000,000" },
+      { entity: "Edinburgh Leisure", supplier: "Edinburgh Leisure", name: "Physical Activity Programme(s)", value: "£500,000" },
+      { entity: "Edinburgh Leisure", supplier: "AtkinsRealis PPS", name: "Professional services – Westerhailes", value: "£217,283" },
+      { entity: "Capital Theatres", supplier: "Aon UK Limited", name: "Property Insurance (Leased-out Theatres)", value: "£438,186" },
+      { entity: "EICC", supplier: "EICC Ltd", name: "Venue Hire – Tour de France 2027", value: "£264,970" }
     ];
 
     function renderEntities(filter = "") {
       const list = document.getElementById("entities-list");
       const q = filter.toLowerCase();
       list.innerHTML = entities
-        .filter(e => !q || e.name.toLowerCase().includes(q) || e.number.includes(q) || e.notes.toLowerCase().includes(q) || e.tags.some(t => t.toLowerCase().includes(q)))
+        .filter(e => !q || e.name.toLowerCase().includes(q) || e.number.includes(q) || e.notes.toLowerCase().includes(q) || e.tags.some(t => t.toLowerCase().includes(q)) || (e.contracts && e.contracts.some(c => c.toLowerCase().includes(q))))
         .map(e => `
           <div class="card">
             <h3>${e.name}</h3>
@@ -389,6 +356,14 @@
             <div style="margin-bottom:0.5rem;">${e.tags.map(t => `<span class="tag tag-blue">${t}</span>`).join("")}</div>
             <p style="font-size:0.9rem;margin-bottom:0.4rem;"><strong>Financials:</strong> ${e.financials}</p>
             <p style="font-size:0.85rem;color:var(--muted);">${e.notes}</p>
+            ${e.contracts && e.contracts.length ? `
+              <div class="entity-contracts">
+                <h4>Linked Contracts / Suppliers</h4>
+                <ul style="margin-left:1.1rem;font-size:0.84rem;color:var(--text);">
+                  ${e.contracts.map(c => `<li style="margin-bottom:0.25rem;">${c}</li>`).join("")}
+                </ul>
+              </div>
+            ` : ""}
           </div>
         `).join("") || "<p style='color:var(--muted)'>No matching entities.</p>";
     }
@@ -408,6 +383,20 @@
         `).join("") || "<p style='color:var(--muted);padding:1rem 0;'>No matching trails.</p>";
     }
 
+    function renderContracts(filter = "") {
+      const list = document.getElementById("contracts-list");
+      const q = filter.toLowerCase();
+      list.innerHTML = contracts
+        .filter(c => !q || c.entity.toLowerCase().includes(q) || c.supplier.toLowerCase().includes(q) || c.name.toLowerCase().includes(q) || c.value.toLowerCase().includes(q))
+        .map(c => `
+          <div class="contract-row">
+            <div><strong style="color:var(--green)">${c.supplier}</strong><br><span style="color:var(--muted);font-size:0.8rem">${c.entity}</span></div>
+            <div>${c.name}</div>
+            <div class="amount">${c.value}</div>
+          </div>
+        `).join("") || "<p style='color:var(--muted);padding:1rem 0;'>No matching contracts.</p>";
+    }
+
     function showPanel(id) {
       document.querySelectorAll(".panel").forEach(p => p.classList.remove("active"));
       document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
@@ -419,11 +408,12 @@
       const q = document.getElementById("search").value;
       renderEntities(q);
       renderTrails(q);
+      renderContracts(q);
     }
 
-    // Init
     renderEntities();
     renderTrails();
+    renderContracts();
   </script>
 </body>
 </html>
