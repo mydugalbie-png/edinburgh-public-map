@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Open Scotland – Glasgow</title><style>:root{--bg:#0f172a;--card:#1e293b;--border:#334155;--text:#e2e8f0;--muted:#94a3b8;--accent:#38bdf8;--amber:#fbbf24;--blue:#3b82f6;--green:#2dd4bf}
+<title>Open Scotland – Glasgow</title>
+<style>
+:root{--bg:#0f172a;--card:#1e293b;--border:#334155;--text:#e2e8f0;--muted:#94a3b8;--accent:#38bdf8;--amber:#fbbf24;--blue:#3b82f6;--green:#2dd4bf;--red:#f87171}
 *{box-sizing:border-box;margin:0;padding:0}body{font-family:system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
 header{background:linear-gradient(135deg,#0f172a,#1e3a5f);border-bottom:1px solid var(--border);padding:1.35rem 1rem;text-align:center}
-header h1{color:var(--accent);cursor:pointer;font-size:1.6rem}.container{max-width:960px;margin:0 auto;padding:1.1rem}
+header h1{color:var(--accent);cursor:pointer;font-size:1.6rem}.container{max-width:980px;margin:0 auto;padding:1.1rem}
 .tabs{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1.1rem}.tab{padding:.4rem .85rem;border-radius:6px;border:1px solid var(--border);background:var(--card);color:var(--muted);cursor:pointer;font-size:.86rem}
 .tab.active,.tab:hover{background:var(--blue);color:#fff}.panel{display:none}.panel.active{display:block}
 .card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1rem;margin-bottom:.85rem}
+.card.clickable{cursor:pointer}.card.clickable:hover{border-color:var(--accent)}
 .card h3{color:var(--accent)}.meta{font-size:.83rem;color:var(--muted)}
 .tag{display:inline-block;font-size:.7rem;padding:.12rem .38rem;border-radius:4px;margin:.12rem .2rem .12rem 0}
-.tag-amber{background:#78350f;color:#fcd34d}.tag-red{background:#7f1d1d;color:#fca5a5}.tag-blue{background:#1e3a8a;color:#93c5fd}
+.tag-amber{background:#78350f;color:#fcd34d}.tag-red{background:#7f1d1d;color:#fca5a5}.tag-blue{background:#1e3a8a;color:#93c5fd}.tag-green{background:#14532d;color:#86efac}
 .intro-box{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.9rem;margin-bottom:.9rem;color:var(--muted);font-size:.87rem}
 .intro-box strong{color:var(--accent)}
 .ward-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:.65rem}
 .ward-tile{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.8rem;cursor:pointer}
-.ward-tile:hover{border-color:var(--accent)}.ward-tile .wn{color:var(--accent);font-weight:600;font-size:.95rem}
-.ward-tile .wnum{color:var(--muted);font-size:.76rem}.ward-tile .wsimd{color:var(--amber);font-size:.76rem;margin-top:.25rem}
+.ward-tile:hover{border-color:var(--accent)}.ward-tile .wn{color:var(--accent);font-weight:600}.ward-tile .wnum{color:var(--muted);font-size:.76rem}.ward-tile .wsimd{color:var(--amber);font-size:.76rem;margin-top:.25rem}
 .back-btn{margin-bottom:.85rem;padding:.38rem .8rem;border-radius:6px;border:1px solid var(--border);background:var(--card);color:var(--accent);cursor:pointer}
 .sec{margin-top:1rem;padding-top:.85rem;border-top:1px solid var(--border)}.sec h4{color:var(--amber);margin-bottom:.4rem;font-size:.92rem}
 .sec h5{color:var(--accent);font-size:.82rem;margin:.5rem 0 .2rem}
@@ -23,8 +25,9 @@ header h1{color:var(--accent);cursor:pointer;font-size:1.6rem}.container{max-wid
 .fin-box{background:#0f172a;border:1px solid var(--border);border-radius:8px;padding:.5rem;text-align:center}
 .fin-box .flabel{font-size:.68rem;color:var(--muted)}.fin-box .fval{font-weight:700;color:var(--amber);margin-top:.1rem;font-size:.92rem}
 .gap{color:var(--muted);font-size:.83rem;border-left:3px solid var(--border);padding-left:.6rem;margin:.3rem 0}
-.fact{margin:.28rem 0;font-size:.88rem}.money-row{display:grid;grid-template-columns:1.2fr 1.3fr 1fr;gap:.35rem;padding:.38rem 0;border-bottom:1px solid var(--border);font-size:.83rem}
-.money-row .from{color:var(--blue)}.money-row .to{color:var(--green)}
+.fact{margin:.28rem 0;font-size:.88rem}
+.money-row{display:grid;grid-template-columns:1.15fr 1.25fr .9fr .9fr;gap:.35rem;padding:.4rem 0;border-bottom:1px solid var(--border);font-size:.82rem}
+.money-row .from{color:var(--blue)}.money-row .to{color:var(--green)}.money-row .amt{color:var(--amber);font-weight:600}
 .search-box input{width:100%;padding:.6rem;border-radius:8px;border:1px solid var(--border);background:var(--card);color:var(--text);margin-bottom:.85rem}
 #detail-view{display:none}#detail-view.active{display:block}
 footer{text-align:center;padding:1.3rem;color:var(--muted);font-size:.8rem;border-top:1px solid var(--border);margin-top:1.3rem}
@@ -32,28 +35,97 @@ footer{text-align:center;padding:1.3rem;color:var(--muted);font-size:.8rem;borde
 .stat-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.75rem;text-align:center}
 .stat-card .value{color:var(--amber);font-size:1.15rem;font-weight:700}.stat-card .label,.stat-card .sub{color:var(--muted);font-size:.76rem}
 .toc{display:flex;flex-wrap:wrap;gap:.3rem;margin:.55rem 0 0}
-.toc a{font-size:.72rem;color:var(--accent);text-decoration:none;border:1px solid var(--border);padding:.18rem .4rem;border-radius:4px}</style></head><body>
-<header><h1 onclick="goHome()">Open Scotland</h1><p>Glasgow – money trails, entities and ward intelligence</p></header>
+.toc a{font-size:.72rem;color:var(--accent);text-decoration:none;border:1px solid var(--border);padding:.18rem .4rem;border-radius:4px}
+.fund-sub{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:.85rem}
+.fund-sub button{padding:.35rem .7rem;border-radius:6px;border:1px solid var(--border);background:#0f172a;color:var(--muted);cursor:pointer;font-size:.8rem}
+.fund-sub button.active{border-color:var(--accent);color:var(--accent)}
+</style></head><body>
+<header><h1 onclick="goHome()">Open Scotland</h1><p>Glasgow – council funds, entities and ward intelligence</p></header>
 <div class="container">
-<div class="search-box" id="main-search"><input id="search" placeholder="Search wards or entities..." oninput="filterAll()"/></div>
+<div class="search-box" id="main-search"><input id="search" placeholder="Search wards, entities, funds..." oninput="filterAll()"/></div>
 <div class="tabs" id="main-tabs">
 <button class="tab active" onclick="showPanel('overview')">Overview</button>
+<button class="tab" onclick="showPanel('funds')">Council Funds</button>
 <button class="tab" onclick="showPanel('community')">Community / Wards</button>
-<button class="tab" onclick="showPanel('entities')">Council Entities</button>
-<button class="tab" onclick="showPanel('trails')">Money Trails</button>
 </div>
-<div id="overview" class="panel active"><div class="intro-box"><strong>Open Scotland – Glasgow</strong><br>
-All <strong>23 wards</strong> use the full 8-category template. Public data where available; FOI gaps marked clearly.</div>
+
+<div id="overview" class="panel active">
+<div class="intro-box"><strong>Open Scotland – Glasgow</strong><br>
+Map money from Glasgow City Council through entities and into wards. Public accounts + FOI gaps.</div>
 <div class="grid-3">
-<div class="stat-card"><div class="label">Wards complete</div><div class="value">23 / 23</div><div class="sub">Full template</div></div>
-<div class="stat-card"><div class="label">Data categories</div><div class="value">8</div><div class="sub">Per ward page</div></div>
-<div class="stat-card"><div class="label">SIMD 10% most deprived</div><div class="value">227</div><div class="sub">Glasgow data zones</div></div>
-</div></div>
-<div id="community" class="panel"><div class="intro-box"><strong>Community / Wards</strong> – Click any ward for the full 8-section profile.</div><div class="ward-grid" id="ward-grid"></div></div>
-<div id="entities" class="panel"><div class="intro-box">GCC Accounts 2024/25 Note 16.</div><div id="entities-list"></div></div>
-<div id="trails" class="panel"><div class="card"><div class="money-row" style="font-weight:600;color:var(--muted)"><div>From</div><div>To</div><div>Type</div></div><div id="trails-list"></div></div></div>
+<div class="stat-card"><div class="label">Major flows mapped</div><div class="value">3+</div><div class="sub">Life, City Building, IJB</div></div>
+<div class="stat-card"><div class="label">Entities</div><div class="value" id="ent-count">—</div><div class="sub">In Council Funds</div></div>
+<div class="stat-card"><div class="label">Wards</div><div class="value">23</div><div class="sub">Full profiles</div></div>
+</div>
+<div class="card" style="margin-top:1rem">
+<h3>How council funds work (simple)</h3>
+<p class="fact" style="margin-top:.5rem">Council tax, grants and other income → <strong>Glasgow City Council</strong> → payments and ownership stakes in <strong>companies, LLPs, charities and the IJB</strong> → services, contracts and buildings that affect every ward.</p>
+<p class="fact">Use <strong>Council Funds</strong> to follow GCC → entity → amount. Use <strong>Community / Wards</strong> for local impact and action plans.</p>
+</div>
+</div>
+
+<div id="funds" class="panel">
+<div class="intro-box"><strong>Council Funds</strong> – Glasgow City Council group and related entities. Figures from public annual accounts (mainly 2024/25 Note 16 related parties and entity accounts). Click an entity for detail.</div>
+<div class="fund-sub">
+<button type="button" class="active" onclick="fundView('all',this)">All entities</button>
+<button type="button" onclick="fundView('flows',this)">Money trails</button>
+<button type="button" onclick="fundView('ownership',this)">Ownership tree</button>
+</div>
+<div id="funds-all">
+<div class="grid-3" style="margin-bottom:1rem">
+<div class="stat-card"><div class="label">Glasgow Life</div><div class="value">£98.7m</div><div class="sub">GCC exp 2024/25</div></div>
+<div class="stat-card"><div class="label">City Building JV</div><div class="value">£52.6m</div><div class="sub">GCC exp 2024/25</div></div>
+<div class="stat-card"><div class="label">Glasgow City IJB</div><div class="value">£574m</div><div class="sub">GCC exp 2024/25</div></div>
+</div>
+<div id="entities-list"></div>
+</div>
+<div id="funds-flows" style="display:none">
+<div class="card">
+<div class="money-row" style="font-weight:600;color:var(--muted)"><div>From</div><div>To</div><div>Amount</div><div>Type</div></div>
+<div id="trails-list"></div>
+<p class="gap" style="margin-top:.8rem">Source: GCC Annual Accounts related-party / group notes. Expand with more ALEOs and contractors as accounts are added.</p>
+</div>
+</div>
+<div id="funds-ownership" style="display:none">
+<div class="card">
+<h3>Ownership / control (public)</h3>
+<p class="fact" style="margin-top:.5rem"><strong>Glasgow City Council</strong> sits at the top.</p>
+<ul style="margin:.6rem 0 0 1.2rem;font-size:.9rem">
+<li><strong>Glasgow Life</strong> (SC313851) — sole member / controlled charity-style culture &amp; sport vehicle</li>
+<li><strong>City Building (Glasgow) LLP</strong> (SO300990) — joint venture (GCC interest with Wheatley side)</li>
+<li><strong>City Building (Contracts) LLP</strong> and related City Building group companies — contracts arm</li>
+<li><strong>City Parking (Glasgow) LLP</strong> — parking LLP (GCC designated member structures)</li>
+<li><strong>Glasgow City IJB</strong> — integration joint board with NHS (not a company; statutory partnership)</li>
+<li><strong>SEC / Scottish Event Campus</strong> and other group bodies — see entity cards and Companies House</li>
+</ul>
+<p class="gap" style="margin-top:.8rem">Full tree grows as we add each Companies House / accounts extract. Influence bodies (not fully controlled) listed separately when mapped.</p>
+</div>
+</div>
+</div>
+
+<div id="community" class="panel">
+<div class="intro-box"><strong>Community / Wards</strong> – Click any ward for identity, housing, crime, environment, funding and action plan.</div>
+<div class="ward-grid" id="ward-grid"></div>
+</div>
+
 <div id="detail-view"><button class="back-btn" id="back-btn">← Back</button><div id="detail-content"></div></div>
 </div>
 <footer>Open Scotland – public sources + FOI gaps. Not an official government publication.</footer>
 <script src="wards.js"></script>
+<script>
+function fundView(v,btn){
+  document.getElementById('funds-all').style.display=v==='all'?'block':'none';
+  document.getElementById('funds-flows').style.display=v==='flows'?'block':'none';
+  document.getElementById('funds-ownership').style.display=v==='ownership'?'block':'none';
+  document.querySelectorAll('.fund-sub button').forEach(b=>b.classList.remove('active'));
+  if(btn)btn.classList.add('active');
+}
+// After wards.js loads, expand entities if present
+document.addEventListener('DOMContentLoaded',function(){
+  if(typeof entities!=='undefined'){
+    var el=document.getElementById('ent-count');
+    if(el)el.textContent=entities.length;
+  }
+});
+</script>
 </body></html>
