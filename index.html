@@ -39,6 +39,9 @@ footer{text-align:center;padding:1.3rem;color:var(--muted);font-size:.8rem;borde
 .fund-sub{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:.85rem}
 .fund-sub button{padding:.35rem .7rem;border-radius:6px;border:1px solid var(--border);background:#0f172a;color:var(--muted);cursor:pointer;font-size:.8rem}
 .fund-sub button.active{border-color:var(--accent);color:var(--accent)}
+.dept-row{display:grid;grid-template-columns:1.4fr .9fr .9fr .9fr;gap:.35rem;padding:.45rem 0;border-bottom:1px solid var(--border);font-size:.84rem;align-items:center}
+.dept-row .dname{color:var(--accent);font-weight:600;cursor:pointer}
+.dept-row .dname:hover{text-decoration:underline}
 </style></head><body>
 <header><h1 onclick="goHome()">Open Scotland</h1><p>Glasgow – council funds, entities and ward intelligence</p></header>
 <div class="container">
@@ -51,27 +54,42 @@ footer{text-align:center;padding:1.3rem;color:var(--muted);font-size:.8rem;borde
 
 <div id="overview" class="panel active">
 <div class="intro-box"><strong>Open Scotland – Glasgow</strong><br>
-Map money from Glasgow City Council through entities and into wards. Public accounts + FOI gaps.</div>
+Map money from Glasgow City Council through departments and entities into wards. Public accounts + FOI gaps.</div>
 <div class="grid-3">
-<div class="stat-card"><div class="label">Major flows mapped</div><div class="value">3+</div><div class="sub">Life, City Building, IJB</div></div>
-<div class="stat-card"><div class="label">Entities</div><div class="value" id="ent-count">—</div><div class="sub">In Council Funds</div></div>
+<div class="stat-card"><div class="label">Departments</div><div class="value">6</div><div class="sub">Official services</div></div>
+<div class="stat-card"><div class="label">Entities</div><div class="value" id="ent-count">—</div><div class="sub">Related companies</div></div>
 <div class="stat-card"><div class="label">Wards</div><div class="value">23</div><div class="sub">Full profiles</div></div>
 </div>
 <div class="card" style="margin-top:1rem">
 <h3>How council funds work (simple)</h3>
-<p class="fact" style="margin-top:.5rem">Council tax, grants and other income → <strong>Glasgow City Council</strong> → payments and ownership stakes in <strong>companies, LLPs, charities and the IJB</strong> → services, contracts and buildings that affect every ward.</p>
-<p class="fact">Use <strong>Council Funds</strong> to follow GCC → entity → amount. Use <strong>Community / Wards</strong> for local impact and action plans.</p>
+<p class="fact" style="margin-top:.5rem">Council tax, grants and other income → <strong>Glasgow City Council services</strong> → payments to <strong>companies, LLPs, charities and the IJB</strong> → services that affect every ward.</p>
+<p class="fact">Use <strong>Council Funds</strong> for departments, entities and money trails. Use <strong>Community / Wards</strong> for local impact.</p>
 </div>
 </div>
 
 <div id="funds" class="panel">
-<div class="intro-box"><strong>Council Funds</strong> – Glasgow City Council group and related entities. Figures from public annual accounts (mainly 2024/25 Note 16 related parties and entity accounts). Click an entity for detail.</div>
+<div class="intro-box"><strong>Council Funds</strong> – Official figures from GCC Revenue Estimates, Budget Motion 2023/24 and Annual Accounts (CIES + Note 16 related parties). Click for detail.</div>
 <div class="fund-sub">
-<button type="button" class="active" onclick="fundView('all',this)">All entities</button>
+<button type="button" class="active" onclick="fundView('depts',this)">Departments</button>
+<button type="button" onclick="fundView('all',this)">Entities</button>
 <button type="button" onclick="fundView('flows',this)">Money trails</button>
 <button type="button" onclick="fundView('ownership',this)">Ownership tree</button>
 </div>
-<div id="funds-all">
+
+<div id="funds-depts">
+<div class="grid-3" style="margin-bottom:1rem">
+<div class="stat-card"><div class="label">Education (actual 24/25)</div><div class="value">£869m</div><div class="sub">Net CIES</div></div>
+<div class="stat-card"><div class="label">Social Work (actual 24/25)</div><div class="value">£605m</div><div class="sub">Net CIES</div></div>
+<div class="stat-card"><div class="label">Related Cos (actual 24/25)</div><div class="value">£119m</div><div class="sub">Net CIES</div></div>
+</div>
+<div class="card">
+<div class="dept-row" style="font-weight:600;color:var(--muted)"><div>Service</div><div>Budget 23/24</div><div>Actual 23/24</div><div>Actual 24/25</div></div>
+<div id="depts-list"></div>
+<p class="gap" style="margin-top:.8rem">Budget = City Government Budget Motion 2023/24 net. Actual = Comprehensive Income & Expenditure Statement net expenditure (accounting basis). Source: GCC public documents.</p>
+</div>
+</div>
+
+<div id="funds-all" style="display:none">
 <div class="grid-3" style="margin-bottom:1rem">
 <div class="stat-card"><div class="label">Glasgow Life</div><div class="value">£98.7m</div><div class="sub">GCC exp 2024/25</div></div>
 <div class="stat-card"><div class="label">City Building JV</div><div class="value">£52.6m</div><div class="sub">GCC exp 2024/25</div></div>
@@ -79,26 +97,28 @@ Map money from Glasgow City Council through entities and into wards. Public acco
 </div>
 <div id="entities-list"></div>
 </div>
+
 <div id="funds-flows" style="display:none">
 <div class="card">
 <div class="money-row" style="font-weight:600;color:var(--muted)"><div>From</div><div>To</div><div>Amount</div><div>Type</div></div>
 <div id="trails-list"></div>
-<p class="gap" style="margin-top:.8rem">Source: GCC Annual Accounts related-party / group notes. Expand with more ALEOs and contractors as accounts are added.</p>
+<p class="gap" style="margin-top:.8rem">Source: GCC Annual Accounts 2024/25 Note 16 Related party transactions.</p>
 </div>
 </div>
+
 <div id="funds-ownership" style="display:none">
 <div class="card">
 <h3>Ownership / control (public)</h3>
 <p class="fact" style="margin-top:.5rem"><strong>Glasgow City Council</strong> sits at the top.</p>
 <ul style="margin:.6rem 0 0 1.2rem;font-size:.9rem">
-<li><strong>Glasgow Life</strong> (SC313851) — sole member / controlled charity-style culture &amp; sport vehicle</li>
-<li><strong>City Building (Glasgow) LLP</strong> (SO300990) — joint venture (GCC interest with Wheatley side)</li>
-<li><strong>City Building (Contracts) LLP</strong> and related City Building group companies — contracts arm</li>
-<li><strong>City Parking (Glasgow) LLP</strong> — parking LLP (GCC designated member structures)</li>
-<li><strong>Glasgow City IJB</strong> — integration joint board with NHS (not a company; statutory partnership)</li>
-<li><strong>SEC / Scottish Event Campus</strong> and other group bodies — see entity cards and Companies House</li>
+<li><strong>Glasgow Life</strong> (SC313851) — sole member / controlled culture & sport vehicle</li>
+<li><strong>City Building (Glasgow) LLP</strong> (SO300990) — joint venture</li>
+<li><strong>City Building (Contracts) LLP</strong> — contracts arm</li>
+<li><strong>City Parking (Glasgow) LLP</strong> — parking</li>
+<li><strong>Glasgow City IJB</strong> — statutory partnership with NHS</li>
+<li><strong>SEC / City Property / Jobs & Business Glasgow</strong> — group bodies</li>
 </ul>
-<p class="gap" style="margin-top:.8rem">Full tree grows as we add each Companies House / accounts extract. Influence bodies (not fully controlled) listed separately when mapped.</p>
+<p class="gap" style="margin-top:.8rem">See Entities tab and Note 16 for transaction amounts.</p>
 </div>
 </div>
 </div>
@@ -114,18 +134,19 @@ Map money from Glasgow City Council through entities and into wards. Public acco
 <script src="wards.js"></script>
 <script>
 function fundView(v,btn){
+  document.getElementById('funds-depts').style.display=v==='depts'?'block':'none';
   document.getElementById('funds-all').style.display=v==='all'?'block':'none';
   document.getElementById('funds-flows').style.display=v==='flows'?'block':'none';
   document.getElementById('funds-ownership').style.display=v==='ownership'?'block':'none';
   document.querySelectorAll('.fund-sub button').forEach(b=>b.classList.remove('active'));
   if(btn)btn.classList.add('active');
 }
-// After wards.js loads, expand entities if present
 document.addEventListener('DOMContentLoaded',function(){
   if(typeof entities!=='undefined'){
     var el=document.getElementById('ent-count');
     if(el)el.textContent=entities.length;
   }
+  if(typeof renderDepts==='function')renderDepts();
 });
 </script>
 </body></html>
