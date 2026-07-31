@@ -278,5 +278,5 @@ function openDept(id){
 }
 
 function filterAll(){const q=document.getElementById('search').value;renderWards(q);renderEntities(q)}
-renderWards();renderEntities();renderTrails();
+renderWards();renderEntities();renderTrails();renderProcurement();
 if(typeof renderDepts==='function')renderDepts();
