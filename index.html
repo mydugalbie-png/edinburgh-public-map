@@ -61,7 +61,22 @@ Map money from Glasgow City Council through departments and entities into wards.
 <div class="stat-card"><div class="label">Entities</div><div class="value" id="ent-count">—</div><div class="sub">Related companies</div></div>
 <div class="stat-card"><div class="label">Wards</div><div class="value">23</div><div class="sub">Full profiles</div></div>
 </div>
+
 <div class="card" style="margin-top:1rem">
+<h3>Budget snapshot</h3>
+<p class="meta" style="margin-bottom:.6rem">Official figures from Council budget reports and approved estimates.</p>
+<div class="fin-grid">
+<div class="fin-box"><div class="flabel">2024-27 multi-year gap</div><div class="fval">£107.7m</div></div>
+<div class="fin-box"><div class="flabel">2025/26 remaining gap</div><div class="fval">£7.9m</div></div>
+<div class="fin-box"><div class="flabel">2025/26 Net expenditure</div><div class="fval">£2,127m</div></div>
+<div class="fin-box"><div class="flabel">Central grant 2025/26</div><div class="fval">£1,750m</div></div>
+</div>
+<p class="fact" style="margin-top:.6rem"><strong>2025/26 approved:</strong> Service spend £3,163m · Income £1,045m · Net £2,118m · Funded by grant £1,750m + local taxes £377m.</p>
+<p class="fact"><strong>Capital 2025–28:</strong> £148.6m approved (Property £63m · Infrastructure £75.6m).</p>
+<p class="gap">Sources: Council budget reports 15 Feb 2024 and 20 Feb 2025; Council minutes approving 2025/26 estimates.</p>
+</div>
+
+<div class="card">
 <h3>How council funds work (simple)</h3>
 <p class="fact" style="margin-top:.5rem">Council tax, grants and other income → <strong>Glasgow City Council services</strong> → payments to <strong>companies, LLPs, charities and the IJB</strong> → services that affect every ward.</p>
 <p class="fact">Use <strong>Council Funds</strong> for departments, entities and money trails. Use <strong>Community / Wards</strong> for local impact.</p>
@@ -69,7 +84,7 @@ Map money from Glasgow City Council through departments and entities into wards.
 </div>
 
 <div id="funds" class="panel">
-<div class="intro-box"><strong>Council Funds</strong> – Official figures from GCC Revenue Estimates, Budget Motion 2023/24 and Annual Accounts (CIES + Note 16 related parties). Click for detail.</div>
+<div class="intro-box"><strong>Council Funds</strong> – Official figures from GCC Revenue Estimates, Budget Motion and Annual Accounts (CIES + Note 16 related parties). Click for detail.</div>
 <div class="fund-sub">
 <button type="button" class="active" onclick="fundView('depts',this)">Departments</button>
 <button type="button" onclick="fundView('all',this)">Entities</button>
@@ -79,14 +94,14 @@ Map money from Glasgow City Council through departments and entities into wards.
 
 <div id="funds-depts">
 <div class="grid-3" style="margin-bottom:1rem">
-<div class="stat-card"><div class="label">Education (actual 24/25)</div><div class="value">£869m</div><div class="sub">Net CIES</div></div>
-<div class="stat-card"><div class="label">Social Work (actual 24/25)</div><div class="value">£605m</div><div class="sub">Net CIES</div></div>
-<div class="stat-card"><div class="label">Related Cos (actual 24/25)</div><div class="value">£119m</div><div class="sub">Net CIES</div></div>
+<div class="stat-card"><div class="label">Education (budget 25/26)</div><div class="value">£823m</div><div class="sub">Net approved</div></div>
+<div class="stat-card"><div class="label">Social Work (budget 25/26)</div><div class="value">£592m</div><div class="sub">Net approved</div></div>
+<div class="stat-card"><div class="label">Related Cos (budget 25/26)</div><div class="value">£110m</div><div class="sub">Net approved</div></div>
 </div>
 <div class="card">
-<div class="dept-row" style="font-weight:600;color:var(--muted)"><div>Service</div><div>Budget 23/24</div><div>Actual 23/24</div><div>Actual 24/25</div></div>
+<div class="dept-row" style="font-weight:600;color:var(--muted)"><div>Service</div><div>Actual 23/24</div><div>Actual 24/25</div><div>Budget 25/26</div></div>
 <div id="depts-list"></div>
-<p class="gap" style="margin-top:.8rem">Budget = City Government Budget Motion 2023/24 net. Actual = Comprehensive Income & Expenditure Statement net expenditure (accounting basis). Source: GCC public documents.</p>
+<p class="gap" style="margin-top:.8rem">Actual = CIES net cost of services. Budget 25/26 = approved net direct service expenditure (Council minutes). Sources: GCC Annual Accounts and 2025/26 Budget decision.</p>
 </div>
 </div>
 
