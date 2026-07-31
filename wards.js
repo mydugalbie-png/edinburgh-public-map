@@ -154,7 +154,15 @@ function openWard(id){
       <div class="fin-box"><div class="flabel">Change 22→24</div><div class="fval" style="font-size:0.9rem;color:var(--green)">${w.popChange||'—'}</div></div>
     </div>
     <p class="gap" style="margin-bottom:0.8rem">Source: National Records of Scotland, mid-year estimates (2011 Data Zones best-fit to Electoral Wards).</p>
-    <div class="sec"><h4>SIMD / Need</h4><p class="fact">${w.simd||''}</p><p class="fact">${w.notes||''}</p></div>
+       <div class="sec">
+      <h4>Deprivation (SIMD)</h4>
+      <div class="fin-grid" style="margin:0.5rem 0 0.8rem">
+        <div class="fin-box"><div class="flabel">Ward profile</div><div class="fval" style="font-size:0.9rem">${w.simd||'—'}</div></div>
+        <div class="fin-box"><div class="flabel">City context</div><div class="fval" style="font-size:0.85rem;color:var(--amber)">44% of Glasgow data zones in Scotland's 20% most deprived</div></div>
+      </div>
+      <p class="fact">${w.notes||''}</p>
+      <p class="gap">Source: Scottish Index of Multiple Deprivation 2020. Ward-level % most deprived requires Data Zone aggregation (Phase 2).</p>
+    </div>
     <div class="sec"><h4>Housing</h4><p class="fact">${w.housing||''}</p><p class="gap">${FOI.h.homelessness}</p></div>
     <div class="sec"><h4>Crime & Safety</h4><p class="fact">${w.crime||''}</p><p class="gap">${FOI.c.violent}</p></div>
     <div class="sec"><h4>Environment</h4><p class="fact">${w.environment||''}</p><p class="gap">${FOI.e.litter}</p></div>
