@@ -58,55 +58,61 @@ const departments=[
 {
   id:"ceo",
   name:"Chief Executive's Office",
-  note:"Corporate & democratic core, strategy, governance. Official CIES figures (Pre-Audit Accounts).",
+  note:"Corporate & democratic core, strategy, governance. Official CIES figures (Pre-Audit Accounts) + approved Budget 2025/26.",
+  budget2526:"£124.5m",
   years:[
-    {y:"2023/24",gross:"£179.5m",income:"£50.6m",net:"£128.9m",budget:"-"},
-    {y:"2024/25",gross:"£158.6m",income:"£40.8m",net:"£117.8m",budget:"Not published"}
+    {y:"2023/24",gross:"£179.5m",income:"£50.6m",net:"£128.9m"},
+    {y:"2024/25",gross:"£158.6m",income:"£40.8m",net:"£117.8m"}
   ]
 },
 {
   id:"education",
   name:"Education Services",
-  note:"Largest service. Schools, early years, additional support. Official CIES figures.",
+  note:"Largest service. Schools, early years, additional support. Official CIES + approved Budget 2025/26.",
+  budget2526:"£823.4m",
   years:[
-    {y:"2023/24",gross:"£846.3m",income:"£115.8m",net:"£730.5m",budget:"-"},
-    {y:"2024/25",gross:"£923.6m",income:"£54.6m",net:"£869.0m",budget:"Not published"}
+    {y:"2023/24",gross:"£846.3m",income:"£115.8m",net:"£730.5m"},
+    {y:"2024/25",gross:"£923.6m",income:"£54.6m",net:"£869.0m"}
   ]
 },
 {
   id:"financial",
   name:"Financial Services",
   note:"Revenues, benefits, corporate finance, audit. High income (housing benefit subsidy etc).",
+  budget2526:"£157.6m",
   years:[
-    {y:"2023/24",gross:"£376.9m",income:"£270.0m",net:"£106.9m",budget:"-"},
-    {y:"2024/25",gross:"£345.0m",income:"£259.6m",net:"£85.4m",budget:"Not published"}
+    {y:"2023/24",gross:"£376.9m",income:"£270.0m",net:"£106.9m"},
+    {y:"2024/25",gross:"£345.0m",income:"£259.6m",net:"£85.4m"}
   ]
 },
 {
   id:"nrs",
   name:"Neighbourhoods, Regeneration & Sustainability",
-  note:"NRS - development, regeneration, sustainability, neighbourhood services. Official CIES.",
+  note:"NRS - development, regeneration, sustainability, neighbourhood services.",
+  budget2526:"£219.3m",
   years:[
-    {y:"2023/24",gross:"£502.1m",income:"£237.4m",net:"£264.7m",budget:"-"},
-    {y:"2024/25",gross:"£514.8m",income:"£243.1m",net:"£271.7m",budget:"Not published"}
+    {y:"2023/24",gross:"£502.1m",income:"£237.4m",net:"£264.7m"},
+    {y:"2024/25",gross:"£514.8m",income:"£243.1m",net:"£271.7m"}
   ]
 },
 {
   id:"social",
   name:"Social Work Services",
-  note:"Adult and children social care. Significant overlap with Glasgow City IJB. Official CIES.",
+  note:"Adult and children social care. Significant overlap with Glasgow City IJB.",
+  budget2526:"£591.9m",
   years:[
-    {y:"2023/24",gross:"£1,395.9m",income:"£870.0m",net:"£525.9m",budget:"-"},
-    {y:"2024/25",gross:"£1,526.0m",income:"£921.0m",net:"£605.0m",budget:"Not published"}
+    {y:"2023/24",gross:"£1,395.9m",income:"£870.0m",net:"£525.9m"},
+    {y:"2024/25",gross:"£1,526.0m",income:"£921.0m",net:"£605.0m"}
   ]
 },
 {
   id:"related",
   name:"Related Companies",
   note:"Net cost of ALEOs and group entities (Glasgow Life, City Building, etc.). See Entities and Money trails.",
+  budget2526:"£110.0m",
   years:[
-    {y:"2023/24",gross:"£136.0m",income:"£0.1m",net:"£135.9m",budget:"-"},
-    {y:"2024/25",gross:"£118.7m",income:"-",net:"£118.7m",budget:"Not published"}
+    {y:"2023/24",gross:"£136.0m",income:"£0.1m",net:"£135.9m"},
+    {y:"2024/25",gross:"£118.7m",income:"-",net:"£118.7m"}
   ]
 }
 ];
@@ -214,9 +220,9 @@ function renderDepts(){
   const list=document.getElementById('depts-list');
   if(!list)return;
   list.innerHTML=departments.map(d=>{
-    const latest = d.years[d.years.length-1];
-    const prev = d.years[d.years.length-2];
-    return `<div class="dept-row"><div class="dname" onclick="openDept('${d.id}')">${d.name}</div><div>${prev && prev.budget !== '-' && prev.budget !== 'Not published' ? prev.budget : '-'}</div><div>${prev ? prev.net : '-'}</div><div>${latest ? latest.net : '-'}</div></div>`;
+    const y2324 = d.years.find(y=>y.y==='2023/24');
+    const y2425 = d.years.find(y=>y.y==='2024/25');
+    return `<div class="dept-row"><div class="dname" onclick="openDept('${d.id}')">${d.name}</div><div>${y2324 ? y2324.net : '-'}</div><div>${y2425 ? y2425.net : '-'}</div><div>${d.budget2526 || '-'}</div></div>`;
   }).join('');
 }
 function renderProcurement(){
@@ -272,6 +278,9 @@ function openDept(id){
     <div class="card">
       <h3>${d.name}</h3>
       <p class="meta" style="margin-bottom:.8rem">${d.note || ''}</p>
+      <div class="fin-grid" style="margin:0.5rem 0 1rem">
+        <div class="fin-box"><div class="flabel">Budget 2025/26 (approved)</div><div class="fval">${d.budget2526 || '-'}</div></div>
+      </div>
       <div class="dept-row" style="font-weight:600;color:var(--muted);font-size:.78rem;border-bottom:1px solid var(--border);padding-bottom:.4rem;margin-bottom:.3rem">
         <div>Year</div><div>Gross</div><div>Income</div><div>Net</div>
       </div>
@@ -279,7 +288,7 @@ function openDept(id){
       <div class="sec" style="margin-top:1.2rem">
         <h4>Notes</h4>
         <p class="fact">${d.note || ''}</p>
-        <p class="gap" style="margin-top:.5rem">Figures from GCC Comprehensive Income & Expenditure Statement (Pre-Audit Accounts). Gross = total expenditure, Income = income attributed to the service, Net = net cost of services.</p>
+        <p class="gap" style="margin-top:.5rem">Actual figures from GCC Comprehensive Income & Expenditure Statement (Pre-Audit Accounts). Budget 2025/26 = approved net direct service expenditure from Council minutes.</p>
       </div>
       <div class="sec">
         <h4>Sources & Reports</h4>
