@@ -58,21 +58,23 @@ const departments=[
 {
   id:"ceo",
   name:"Chief Executive's Office",
-  note:"Corporate & democratic core, strategy, governance. Official CIES figures (Pre-Audit Accounts) + approved Budget 2025/26.",
+  note:"Corporate & democratic core, strategy, governance. CIES actuals + approved Budget 2025/26.",
   budget2526:"£124.5m",
   years:[
     {y:"2023/24",gross:"£179.5m",income:"£50.6m",net:"£128.9m"},
-    {y:"2024/25",gross:"£158.6m",income:"£40.8m",net:"£117.8m"}
+    {y:"2024/25",gross:"£158.6m",income:"£40.8m",net:"£117.8m"},
+    {y:"2025/26",gross:"£170.3m",income:"£40.3m",net:"£130.0m"}
   ]
 },
 {
   id:"education",
   name:"Education Services",
-  note:"Largest service. Schools, early years, additional support. Official CIES + approved Budget 2025/26.",
+  note:"Largest service. Schools, early years, additional support.",
   budget2526:"£823.4m",
   years:[
     {y:"2023/24",gross:"£846.3m",income:"£115.8m",net:"£730.5m"},
-    {y:"2024/25",gross:"£923.6m",income:"£54.6m",net:"£869.0m"}
+    {y:"2024/25",gross:"£923.6m",income:"£54.6m",net:"£869.0m"},
+    {y:"2025/26",gross:"£963.6m",income:"£52.3m",net:"£911.3m"}
   ]
 },
 {
@@ -82,7 +84,8 @@ const departments=[
   budget2526:"£157.6m",
   years:[
     {y:"2023/24",gross:"£376.9m",income:"£270.0m",net:"£106.9m"},
-    {y:"2024/25",gross:"£345.0m",income:"£259.6m",net:"£85.4m"}
+    {y:"2024/25",gross:"£345.0m",income:"£259.6m",net:"£85.4m"},
+    {y:"2025/26",gross:"£306.9m",income:"£212.4m",net:"£94.5m"}
   ]
 },
 {
@@ -92,7 +95,8 @@ const departments=[
   budget2526:"£219.3m",
   years:[
     {y:"2023/24",gross:"£502.1m",income:"£237.4m",net:"£264.7m"},
-    {y:"2024/25",gross:"£514.8m",income:"£243.1m",net:"£271.7m"}
+    {y:"2024/25",gross:"£514.8m",income:"£243.1m",net:"£271.7m"},
+    {y:"2025/26",gross:"£511.5m",income:"£283.3m",net:"£228.2m"}
   ]
 },
 {
@@ -102,7 +106,8 @@ const departments=[
   budget2526:"£591.9m",
   years:[
     {y:"2023/24",gross:"£1,395.9m",income:"£870.0m",net:"£525.9m"},
-    {y:"2024/25",gross:"£1,526.0m",income:"£921.0m",net:"£605.0m"}
+    {y:"2024/25",gross:"£1,526.0m",income:"£921.0m",net:"£605.0m"},
+    {y:"2025/26",gross:"£1,661.0m",income:"£1,011.3m",net:"£649.8m"}
   ]
 },
 {
@@ -112,7 +117,8 @@ const departments=[
   budget2526:"£110.0m",
   years:[
     {y:"2023/24",gross:"£136.0m",income:"£0.1m",net:"£135.9m"},
-    {y:"2024/25",gross:"£118.7m",income:"-",net:"£118.7m"}
+    {y:"2024/25",gross:"£118.7m",income:"-",net:"£118.7m"},
+    {y:"2025/26",gross:"£112.5m",income:"-",net:"£112.5m"}
   ]
 }
 ];
@@ -220,9 +226,9 @@ function renderDepts(){
   const list=document.getElementById('depts-list');
   if(!list)return;
   list.innerHTML=departments.map(d=>{
-    const y2324 = d.years.find(y=>y.y==='2023/24');
     const y2425 = d.years.find(y=>y.y==='2024/25');
-    return `<div class="dept-row"><div class="dname" onclick="openDept('${d.id}')">${d.name}</div><div>${y2324 ? y2324.net : '-'}</div><div>${y2425 ? y2425.net : '-'}</div><div>${d.budget2526 || '-'}</div></div>`;
+    const y2526 = d.years.find(y=>y.y==='2025/26');
+    return `<div class="dept-row"><div class="dname" onclick="openDept('${d.id}')">${d.name}</div><div>${y2425 ? y2425.net : '-'}</div><div>${y2526 ? y2526.net : '-'}</div><div>${d.budget2526 || '-'}</div></div>`;
   }).join('');
 }
 function renderProcurement(){
