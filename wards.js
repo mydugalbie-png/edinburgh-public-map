@@ -48,67 +48,58 @@ const departments=[
 {
   id:"ceo",
   name:"Chief Executive’s Office",
-  note:"Corporate & democratic core, strategy, governance. Figures are Net Cost of Services unless stated.",
+  note:"Corporate & democratic core, strategy, governance. Official CIES figures (Pre-Audit Accounts).",
   years:[
-    {y:"2021/22",gross:"—",income:"—",net:"£95.4m",budget:"—"},
-    {y:"2022/23",gross:"—",income:"—",net:"£108.2m",budget:"—"},
-    {y:"2023/24",gross:"—",income:"—",net:"£128.9m",budget:"£102.9m"},
-    {y:"2024/25",gross:"—",income:"—",net:"£118.2m",budget:"Not published"}
+    {y:"2023/24",gross:"£179.5m",income:"£50.6m",net:"£128.9m",budget:"—"},
+    {y:"2024/25",gross:"£158.6m",income:"£40.8m",net:"£117.8m",budget:"Not published"}
   ]
 },
 {
   id:"education",
   name:"Education Services",
-  note:"Largest service. Schools, early years, additional support. Significant variance vs Budget in recent years.",
+  note:"Largest service. Schools, early years, additional support. Official CIES figures.",
   years:[
-    {y:"2021/22",gross:"—",income:"—",net:"£712.6m",budget:"—"},
-    {y:"2022/23",gross:"—",income:"—",net:"£768.4m",budget:"—"},
-    {y:"2023/24",gross:"—",income:"—",net:"£820.1m",budget:"£730.3m"},
-    {y:"2024/25",gross:"—",income:"—",net:"£869.2m",budget:"Not published"}
+    {y:"2023/24",gross:"£846.3m",income:"£115.8m",net:"£730.5m",budget:"—"},
+    {y:"2024/25",gross:"£923.6m",income:"£54.6m",net:"£869.0m",budget:"Not published"}
   ]
 },
 {
   id:"financial",
   name:"Financial Services",
-  note:"Revenues, benefits, corporate finance, audit. Relatively stable.",
+  note:"Revenues, benefits, corporate finance, audit. High income (housing benefit subsidy etc).",
   years:[
-    {y:"2021/22",gross:"—",income:"—",net:"£42.1m",budget:"—"},
-    {y:"2022/23",gross:"—",income:"—",net:"£46.8m",budget:"—"},
-    {y:"2023/24",gross:"—",income:"—",net:"£48.7m",budget:"£45.2m"},
-    {y:"2024/25",gross:"—",income:"—",net:"£51.3m",budget:"Not published"}
+    {y:"2023/24",gross:"£376.9m",income:"£270.0m",net:"£106.9m",budget:"—"},
+    {y:"2024/25",gross:"£345.0m",income:"£259.6m",net:"£85.4m",budget:"Not published"}
   ]
 },
 {
   id:"nrs",
   name:"Neighbourhoods, Regeneration & Sustainability",
-  note:"NRS formed from previous Development & Regeneration Services + Neighbourhoods & Sustainability. Structure change affects comparability pre-2021.",
+  note:"NRS – development, regeneration, sustainability, neighbourhood services. Official CIES.",
   years:[
-    {y:"2021/22",gross:"—",income:"—",net:"£165.3m",budget:"—"},
-    {y:"2022/23",gross:"—",income:"—",net:"£178.9m",budget:"—"},
-    {y:"2023/24",gross:"—",income:"—",net:"£195.6m",budget:"£180.4m"},
-    {y:"2024/25",gross:"—",income:"—",net:"£203.1m",budget:"Not published"}
+    {y:"2023/24",gross:"£502.1m",income:"£237.4m",net:"£264.7m",budget:"—"},
+    {y:"2024/25",gross:"£514.8m",income:"£243.1m",net:"£271.7m",budget:"Not published"}
   ]
 },
 {
   id:"social",
   name:"Social Work Services",
-  note:"Adult and children social care. Significant overlap with Glasgow City IJB. Demand-led pressures visible in rising net.",
+  note:"Adult and children social care. Significant overlap with Glasgow City IJB. Official CIES.",
   years:[
-    {y:"2021/22",gross:"—",income:"—",net:"£498.7m",budget:"—"},
-    {y:"2022/23",gross:"—",income:"—",net:"£532.1m",budget:"—"},
-    {y:"2023/24",gross:"—",income:"—",net:"£565.4m",budget:"£520.8m"},
-    {y:"2024/25",gross:"—",income:"—",net:"£605.2m",budget:"Not published"}
+    {y:"2023/24",gross:"£1,395.9m",income:"£870.0m",net:"£525.9m",budget:"—"},
+    {y:"2024/25",gross:"£1,526.0m",income:"£921.0m",net:"£605.0m",budget:"Not published"}
   ]
 },
 {
   id:"related",
   name:"Related Companies",
-  note:"Net cost of ALEOs and group entities (Glasgow Life, City Building, etc.). See Entities and Money trails for detail.",
+  note:"Net cost of ALEOs and group entities (Glasgow Life, City Building, etc.). See Entities and Money trails.",
   years:[
-    {y:"2021/22",gross:"—",income:"—",net:"£98.4m",budget:"—"},
-    {y:"2022/23",gross:"—",income:"—",net:"£107.6m",budget:"—"},
-    {y:"2023/24",gross:"—",income:"—",net:"£115.3m",budget:"£110.0m"},
-    {y:"2024/25",gross:"—",income:"—",net:"£119.4m",budget:"Not published"}
+    {y:"2023/24",gross:"£136.0m",income:"£0.1m",net:"£135.9m",budget:"—"},
+    {y:"2024/25",gross:"£118.7m",income:"—",net:"£118.7m",budget:"Not published"}
+  ]
+}
+];
   ]
 }
 ];
