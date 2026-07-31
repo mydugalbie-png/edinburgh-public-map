@@ -156,37 +156,213 @@ function openWard(id){
   dv.style.display='block';
   dv.classList.add('active');
   document.getElementById('back-btn').onclick=()=>showPanel('community');
+
+  // Build "What this ward needs" summary from existing data
+  const needsSummary = `${w.simd || 'Mixed profile'}. ${w.notes || ''} Key pressures: housing demand, environment and local services. Priority action: ${w.action || 'See data sections below.'}`;
+
   document.getElementById('detail-content').innerHTML=`
-    <div class="card"><h3>${w.name} <span class="meta">Ward ${w.n}</span></h3>
-    <p class="meta">${w.areas||''}</p>
-    <div class="fin-grid" style="margin:0.8rem 0">
-      <div class="fin-box"><div class="flabel">Population 2024</div><div class="fval">${w.pop}</div></div>
-      <div class="fin-box"><div class="flabel">2022</div><div class="fval" style="font-size:0.95rem">${w.pop2022||'-'}</div></div>
-      <div class="fin-box"><div class="flabel">Change 22-24</div><div class="fval" style="font-size:0.9rem;color:var(--green)">${w.popChange||'-'}</div></div>
-    </div>
-    <p class="gap" style="margin-bottom:0.8rem">Source: National Records of Scotland, mid-year estimates (2011 Data Zones best-fit to Electoral Wards).</p>
-    <div class="sec">
-      <h4>Deprivation (SIMD)</h4>
-      <div class="fin-grid" style="margin:0.5rem 0 0.8rem">
-        <div class="fin-box"><div class="flabel">Ward profile</div><div class="fval" style="font-size:0.9rem">${w.simd||'-'}</div></div>
-        <div class="fin-box"><div class="flabel">City context</div><div class="fval" style="font-size:0.85rem;color:var(--amber)">44% of Glasgow data zones in Scotland's 20% most deprived</div></div>
+    <div class="card">
+      <h3>${w.name} <span class="meta">Ward ${w.n}</span></h3>
+      <p class="meta">${w.areas||''}</p>
+
+      <!-- EXISTING DATA: Population -->
+      <div class="fin-grid" style="margin:0.8rem 0">
+        <div class="fin-box"><div class="flabel">Population 2024</div><div class="fval">${w.pop}</div></div>
+        <div class="fin-box"><div class="flabel">2022</div><div class="fval" style="font-size:0.95rem">${w.pop2022||'-'}</div></div>
+        <div class="fin-box"><div class="flabel">Change 22-24</div><div class="fval" style="font-size:0.9rem;color:var(--green)">${w.popChange||'-'}</div></div>
       </div>
-      <p class="fact">${w.notes||''}</p>
-      <p class="gap">Source: Scottish Index of Multiple Deprivation 2020. Ward-level % most deprived requires Data Zone aggregation (Phase 2).</p>
-    </div>
-    <div class="sec"><h4>Housing</h4>
-      <p class="fact">${w.housing||''}</p>
-      <div class="fin-grid" style="margin:0.5rem 0">
-        <div class="fin-box"><div class="flabel">Affordable pipeline</div><div class="fval">${w.affEst||'-'}</div></div>
-        <div class="fin-box"><div class="flabel">Expected to be built</div><div class="fval">${w.affEff||'-'}</div></div>
+      <p class="gap" style="margin-bottom:0.8rem">Source: National Records of Scotland, mid-year estimates (2011 Data Zones best-fit to Electoral Wards).</p>
+
+      <!-- EXISTING DATA: Deprivation -->
+      <div class="sec">
+        <h4>Deprivation (SIMD)</h4>
+        <div class="fin-grid" style="margin:0.5rem 0 0.8rem">
+          <div class="fin-box"><div class="flabel">Ward profile</div><div class="fval" style="font-size:0.9rem">${w.simd||'-'}</div></div>
+          <div class="fin-box"><div class="flabel">City context</div><div class="fval" style="font-size:0.85rem;color:var(--amber)">44% of Glasgow data zones in Scotland's 20% most deprived</div></div>
+        </div>
+        <p class="fact">${w.notes||''}</p>
+        <p class="gap">Source: Scottish Index of Multiple Deprivation 2020. Ward-level % most deprived requires Data Zone aggregation (Phase 2).</p>
       </div>
-      <p class="gap">Pipeline = total affordable homes identified in the land supply. Expected = the portion programmed to be delivered (to ~2031). Source: GCC Housing Land Audit March 2024.</p>
-      <p class="gap">${FOI.h.homelessness}</p>
+
+      <!-- EXISTING DATA: Housing -->
+      <div class="sec"><h4>Housing</h4>
+        <p class="fact">${w.housing||''}</p>
+        <div class="fin-grid" style="margin:0.5rem 0">
+          <div class="fin-box"><div class="flabel">Affordable pipeline</div><div class="fval">${w.affEst||'-'}</div></div>
+          <div class="fin-box"><div class="flabel">Expected to be built</div><div class="fval">${w.affEff||'-'}</div></div>
+        </div>
+        <p class="gap">Pipeline = total affordable homes identified in the land supply. Expected = the portion programmed to be delivered (to ~2031). Source: GCC Housing Land Audit March 2024.</p>
+        <p class="gap">${FOI.h.homelessness}</p>
+      </div>
+
+      <!-- EXISTING DATA: Crime -->
+      <div class="sec"><h4>Crime & Safety</h4><p class="fact">${w.crime||''}</p><p class="gap">${FOI.c.violent}</p></div>
+
+      <!-- EXISTING DATA: Environment -->
+      <div class="sec"><h4>Environment</h4><p class="fact">${w.environment||''}</p><p class="gap">${FOI.e.litter}</p></div>
+
+      <!-- EXISTING DATA: Action / FOI -->
+      <div class="sec"><h4>Action / FOI priority</h4><p class="fact">${w.action||''}</p></div>
     </div>
-    <div class="sec"><h4>Crime & Safety</h4><p class="fact">${w.crime||''}</p><p class="gap">${FOI.c.violent}</p></div>
-    <div class="sec"><h4>Environment</h4><p class="fact">${w.environment||''}</p><p class="gap">${FOI.e.litter}</p></div>
-    <div class="sec"><h4>Action / FOI priority</h4><p class="fact">${w.action||''}</p></div>
-    </div>`;
+
+    <!-- ===================== NEW: COMMUNITY ACTION TOOLKIT ===================== -->
+    <div class="card" style="margin-top:1.2rem;border-color:var(--accent)">
+      <h3 style="color:var(--accent)">Community Action Toolkit</h3>
+      <p class="meta" style="margin-bottom:1rem">Practical help if you want to do something positive in this ward.</p>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0.75rem">
+
+        <!-- What is needed -->
+        <div style="background:#0f172a;border:1px solid var(--border);border-radius:10px;padding:0.9rem">
+          <div style="font-size:0.75rem;color:var(--amber);font-weight:600;margin-bottom:0.35rem">WHAT THIS WARD NEEDS</div>
+          <p style="font-size:0.88rem;line-height:1.45">${needsSummary}</p>
+        </div>
+
+        <!-- Existing groups -->
+        <div style="background:#0f172a;border:1px solid var(--border);border-radius:10px;padding:0.9rem">
+          <div style="font-size:0.75rem;color:var(--amber);font-weight:600;margin-bottom:0.35rem">EXISTING GROUPS</div>
+          <p style="font-size:0.88rem;line-height:1.45;color:var(--muted)">Community councils, resident groups, litter-picking crews, mutual aid and local charities. Local knowledge needed — help us map who is already active here.</p>
+          <p style="font-size:0.8rem;margin-top:0.5rem;color:var(--accent)">→ Contribute a group</p>
+        </div>
+
+        <!-- Local facilities -->
+        <div style="background:#0f172a;border:1px solid var(--border);border-radius:10px;padding:0.9rem">
+          <div style="font-size:0.75rem;color:var(--amber);font-weight:600;margin-bottom:0.35rem">LOCAL FACILITIES</div>
+          <p style="font-size:0.88rem;line-height:1.45;color:var(--muted)">Community centres, libraries, halls, parks, school space after hours, empty shops that could be used. We will build this list with local input.</p>
+          <p style="font-size:0.8rem;margin-top:0.5rem;color:var(--accent)">→ Add a facility</p>
+        </div>
+
+        <!-- Funding -->
+        <div style="background:#0f172a;border:1px solid var(--border);border-radius:10px;padding:0.9rem">
+          <div style="font-size:0.75rem;color:var(--amber);font-weight:600;margin-bottom:0.35rem">FUNDING & SUPPORT</div>
+          <p style="font-size:0.88rem;line-height:1.45">
+            • Glasgow City Council community grants<br>
+            • Area Partnership funding<br>
+            • National Lottery Awards for All<br>
+            • Crowdfunding + in-kind support
+          </p>
+          <p style="font-size:0.8rem;margin-top:0.5rem;color:var(--muted)">Start small. Many projects begin with under £500.</p>
+        </div>
+
+        <!-- Start something -->
+        <div style="background:#0f172a;border:1px solid var(--border);border-radius:10px;padding:0.9rem">
+          <div style="font-size:0.75rem;color:var(--amber);font-weight:600;margin-bottom:0.35rem">START SOMETHING</div>
+          <p style="font-size:0.88rem;line-height:1.45">
+            1. Pick one clear issue (litter, isolation, safety, green space)<br>
+            2. Talk to 5 neighbours<br>
+            3. Check existing groups first<br>
+            4. Use a local facility or outdoor space<br>
+            5. Apply for a small grant if needed
+          </p>
+        </div>
+
+        <!-- Generate report -->
+        <div style="background:linear-gradient(135deg,#0f172a,#1e3a5f);border:1px solid var(--accent);border-radius:10px;padding:0.9rem;display:flex;flex-direction:column;justify-content:space-between">
+          <div>
+            <div style="font-size:0.75rem;color:var(--accent);font-weight:600;margin-bottom:0.35rem">YOUR WARD REPORT</div>
+            <p style="font-size:0.88rem;line-height:1.45">Get a clean one-page summary of this ward’s data + suggested next steps. Print or save it.</p>
+          </div>
+          <button onclick="generateWardReport('${w.id}')" style="margin-top:0.8rem;padding:0.55rem 0.9rem;border-radius:8px;border:none;background:var(--accent);color:#0f172a;font-weight:700;cursor:pointer;font-size:0.9rem">
+            Generate Report
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===================== NEW: COMMUNITY NOTICEBOARD ===================== -->
+    <div class="card" style="margin-top:1.2rem">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.9rem;flex-wrap:wrap;gap:0.5rem">
+        <h3 style="margin:0">Community Noticeboard</h3>
+        <span class="meta">Local calls for help, events & offers</span>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:0.7rem">
+
+        <!-- Placeholder notice 1 -->
+        <div style="background:#0f172a;border-left:4px solid var(--green);border-radius:0 8px 8px 0;padding:0.75rem 1rem">
+          <div style="display:flex;justify-content:space-between;gap:0.5rem;flex-wrap:wrap">
+            <strong style="color:var(--green);font-size:0.9rem">Looking for volunteers</strong>
+            <span class="meta">Example notice</span>
+          </div>
+          <p style="font-size:0.88rem;margin-top:0.35rem;color:var(--text)">Regular litter-pick in the main residential streets. Tools provided. All welcome — no experience needed.</p>
+        </div>
+
+        <!-- Placeholder notice 2 -->
+        <div style="background:#0f172a;border-left:4px solid var(--amber);border-radius:0 8px 8px 0;padding:0.75rem 1rem">
+          <div style="display:flex;justify-content:space-between;gap:0.5rem;flex-wrap:wrap">
+            <strong style="color:var(--amber);font-size:0.9rem">Facility available</strong>
+            <span class="meta">Example notice</span>
+          </div>
+          <p style="font-size:0.88rem;margin-top:0.35rem;color:var(--text)">Local hall free on weekday evenings for community groups. Contact via the noticeboard to be put in touch.</p>
+        </div>
+
+        <!-- Empty state / call to action -->
+        <div style="background:#0f172a;border:1px dashed var(--border);border-radius:10px;padding:1.1rem;text-align:center">
+          <p style="font-size:0.9rem;color:var(--muted);margin-bottom:0.6rem">This board is just starting. Real notices from local people will appear here.</p>
+          <p style="font-size:0.85rem;color:var(--accent)">Want to post a notice for ${w.name}? Message the project with the ward name + your notice text.</p>
+        </div>
+
+      </div>
+    </div>
+  `;
+}
+
+function generateWardReport(id){
+  const w=wards.find(x=>x.id===id);
+  if(!w)return;
+  const reportWindow=window.open('','_blank');
+  reportWindow.document.write(`
+    <!DOCTYPE html><html><head><title>${w.name} – Ward Action Report</title>
+    <style>
+      body{font-family:system-ui,sans-serif;max-width:700px;margin:2rem auto;padding:0 1.2rem;color:#1e293b;line-height:1.5}
+      h1{font-size:1.6rem;margin-bottom:0.2rem}h2{font-size:1.1rem;margin-top:1.4rem;border-bottom:2px solid #e2e8f0;padding-bottom:0.3rem}
+      .meta{color:#64748b;font-size:0.9rem}.box{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:0.9rem;margin:0.6rem 0}
+      .label{font-size:0.75rem;color:#64748b;text-transform:uppercase;letter-spacing:0.03em}.value{font-weight:700;font-size:1.05rem}
+      ul{padding-left:1.2rem}li{margin:0.25rem 0}.footer{margin-top:2rem;font-size:0.8rem;color:#94a3b8;border-top:1px solid #e2e8f0;padding-top:0.8rem}
+      @media print{body{margin:0}}
+    </style></head><body>
+    <h1>${w.name}</h1>
+    <p class="meta">Ward ${w.n} · ${w.areas||''} · Generated ${new Date().toLocaleDateString('en-GB')}</p>
+
+    <h2>Snapshot</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.6rem">
+      <div class="box"><div class="label">Population 2024</div><div class="value">${w.pop}</div></div>
+      <div class="box"><div class="label">Deprivation</div><div class="value" style="font-size:0.95rem">${w.simd||'-'}</div></div>
+      <div class="box"><div class="label">Change 2022–24</div><div class="value">${w.popChange||'-'}</div></div>
+    </div>
+
+    <h2>What this ward needs</h2>
+    <div class="box">
+      <p>${w.notes||''}</p>
+      <p style="margin-top:0.5rem"><strong>Housing:</strong> ${w.housing||'-'}</p>
+      <p><strong>Environment:</strong> ${w.environment||'-'}</p>
+      <p><strong>Priority action:</strong> ${w.action||'-'}</p>
+    </div>
+
+    <h2>Suggested next steps</h2>
+    <ul>
+      <li>Talk to five neighbours about the biggest local issue</li>
+      <li>Check whether a community council or residents’ group already exists</li>
+      <li>Identify one small, visible action (litter-pick, clean-up, noticeboard, garden)</li>
+      <li>Find a local facility or outdoor meeting point</li>
+      <li>Look at Glasgow City Council community grants or Awards for All for small funding</li>
+    </ul>
+
+    <h2>Key data points</h2>
+    <div class="box">
+      <p>Affordable housing pipeline: <strong>${w.affEst||'-'}</strong> identified · <strong>${w.affEff||'-'}</strong> expected to be built</p>
+      <p style="margin-top:0.4rem">Crime & safety and detailed environment data require further local FOI / Police Scotland requests.</p>
+    </div>
+
+    <div class="footer">
+      Generated by Open Scotland (Glasgow) · Public data + community action toolkit<br>
+      This is not an official council document. Use it as a starting point for local action.
+    </div>
+    <script>window.onload=function(){setTimeout(function(){window.print()},400)}<\/script>
+    </body></html>
+  `);
+  reportWindow.document.close();
 }
 
 function renderEntities(q){
