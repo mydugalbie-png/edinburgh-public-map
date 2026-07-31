@@ -29,7 +29,7 @@ const wards=[
 const entities=[
 {id:"glasgow-life",name:"Glasgow Life",type:"Charity / ALEO",reg:"SC313851",exp:"£98.7m",note:"Culture, sport, libraries, museums. Sole member controlled by GCC."},
 {id:"city-building",name:"City Building (Glasgow) LLP",type:"Joint Venture",reg:"SO300990",exp:"£52.6m",note:"Repairs, construction, manufacturing. JV with GCC."},
-{id:"city-building-contracts",name:"City Building (Contracts) LLP",type:"LLP",reg:"-",exp:"Included in group",note:"Contracts arm of City Building group."},
+{id:"city-building-contracts",name:"City Building (Contracts) LLP",type:"LLP",reg:"SO301080",exp:"Turnover series",note:"Contracts arm of City Building group. Construction, repairs and maintenance including RSL work. Registered office: 350 Darnick Street, Glasgow G21 4BA.",turnover:[{y:"2016/17",t:"£74.9m"},{y:"2017/18",t:"£86.2m"},{y:"2018/19",t:"£87.9m"},{y:"2019/20",t:"£65.2m"},{y:"2020/21",t:"£45.8m"}]},
 {id:"city-parking",name:"City Parking (Glasgow) LLP",type:"LLP",reg:"-",exp:"-",note:"Parking services."},
 {id:"ijb",name:"Glasgow City IJB",type:"Integration Joint Board",reg:"Statutory",exp:"£574m",note:"Health & social care partnership with NHS Greater Glasgow & Clyde."},
 {id:"city-property",name:"City Property Glasgow",type:"ALEO",reg:"-",exp:"-",note:"Property and commercial estate."},
@@ -207,12 +207,26 @@ function openEntity(id){
   dv.style.display='block';
   dv.classList.add('active');
   document.getElementById('back-btn').onclick=()=>{showPanel('funds');fundView('all');};
+
+  let turnoverBlock = '';
+  if(e.turnover && e.turnover.length){
+    turnoverBlock = `
+      <div class="sec"><h4>Turnover history</h4>
+      <div class="dept-row" style="font-weight:600;color:var(--muted);font-size:.78rem;border-bottom:1px solid var(--border);padding-bottom:.4rem;margin-bottom:.3rem">
+        <div>Year</div><div></div><div></div><div>Turnover</div>
+      </div>
+      ${e.turnover.map(t=>`<div class="dept-row" style="font-size:.82rem"><div>${t.y}</div><div></div><div></div><div style="font-weight:600;color:var(--amber)">${t.t}</div></div>`).join('')}
+      <p class="gap" style="margin-top:.5rem">Source: City Building (Contracts) LLP Members' Reports and Financial Statements (published accounts).</p>
+      </div>`;
+  }
+
   document.getElementById('detail-content').innerHTML=`
     <div class="card"><h3>${e.name}</h3>
     <p class="meta">${e.type} · ${e.reg||'-'}</p>
     <div class="sec"><h4>GCC related expenditure</h4><p class="fact" style="font-size:1.2rem;color:var(--amber)">${e.exp||'-'}</p></div>
     <div class="sec"><h4>Notes</h4><p class="fact">${e.note||''}</p></div>
-    <div class="sec"><h4>Source</h4><p class="gap">GCC Annual Accounts Note 16 Related Party Transactions + Companies House.</p></div>
+    ${turnoverBlock}
+    <div class="sec"><h4>Source</h4><p class="gap">GCC Annual Accounts Note 16 Related Party Transactions + Companies House + published LLP accounts.</p></div>
     </div>`;
 }
 
