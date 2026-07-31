@@ -50,26 +50,42 @@ header .tagline{color:var(--muted);font-size:.92rem;margin-top:.15rem}
 header .motto{color:var(--purple);font-size:.78rem;margin-top:.35rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
 .container{max-width:1040px;margin:0 auto;padding:1.3rem}
 #home-view{display:block}#council-view{display:none}
-.hero{text-align:center;padding:1.8rem 0 1.5rem}
-.hero h2{font-size:1.45rem;color:var(--text);font-weight:650;margin-bottom:.55rem}
-.hero p{color:var(--muted);font-size:1rem;max-width:520px;margin:0 auto;line-height:1.55}
-.paths{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.9rem;margin:1.6rem 0 2.2rem}
-.path-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.25rem 1.1rem;text-align:center;cursor:pointer;transition:border-color .15s,box-shadow .15s,transform .15s;box-shadow:0 1px 4px rgba(124,58,237,.06)}
-.path-card:hover{border-color:var(--purple);box-shadow:0 6px 22px rgba(124,58,237,.12);transform:translateY(-2px)}
-.path-card .icon{font-size:1.75rem;margin-bottom:.45rem;filter:grayscale(1) brightness(1.4);opacity:0.85}
-.path-card h3{color:var(--text);font-size:1rem;margin-bottom:.3rem}
-.path-card p{color:var(--muted);font-size:.84rem}
-.section-title{color:var(--text);font-size:1.08rem;font-weight:600;margin:1.6rem 0 .9rem;display:flex;align-items:center;gap:.7rem}
-.section-title span{flex:1;height:1px;background:var(--border)}
-.council-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:.75rem}
-.council-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem;cursor:pointer;transition:border-color .15s,box-shadow .15s;box-shadow:0 1px 3px rgba(124,58,237,.04)}
-.council-card:hover{border-color:var(--purple);box-shadow:0 4px 14px rgba(124,58,237,.1)}
-.council-card.live{border-color:var(--purple);background:var(--purple-soft)}
-.council-card .cname{color:var(--text);font-weight:600;font-size:.94rem}
-.council-card .cstatus{font-size:.74rem;margin-top:.35rem;font-weight:500}
-.council-card .cstatus.live{color:var(--green)}
-.council-card .cstatus.ready{color:var(--muted)}
-.council-card .cmeta{font-size:.76rem;color:var(--muted);margin-top:.12rem}
+.hero{text-align:center;padding:1.5rem 0 1.2rem}
+.hero h2{font-size:1.4rem;color:var(--text);font-weight:650;margin-bottom:.5rem}
+.hero p{color:var(--muted);font-size:.98rem;max-width:480px;margin:0 auto;line-height:1.55}
+
+/* Two big path cards */
+.paths{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:1.2rem;
+  margin:2rem auto 2.5rem;
+  max-width:720px;
+}
+.path-card{
+  background:var(--card);
+  border:2px solid var(--border);
+  border-radius:18px;
+  padding:2rem 1.4rem;
+  text-align:center;
+  cursor:pointer;
+  transition:border-color .15s,box-shadow .15s,transform .15s;
+  box-shadow:0 2px 8px rgba(124,58,237,.06);
+}
+.path-card:hover{
+  border-color:var(--purple);
+  box-shadow:0 8px 28px rgba(124,58,237,.14);
+  transform:translateY(-3px);
+}
+.path-card .icon{
+  font-size:2.8rem;
+  margin-bottom:.7rem;
+  filter:grayscale(1) brightness(1.35);
+  opacity:0.9;
+}
+.path-card h3{color:var(--text);font-size:1.2rem;margin-bottom:.4rem;font-weight:700}
+.path-card p{color:var(--muted);font-size:.9rem;line-height:1.45}
+
 .tabs{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1.15rem}
 .tab{padding:.45rem .95rem;border-radius:8px;border:1px solid var(--border);background:var(--card);color:var(--muted);cursor:pointer;font-size:.87rem;transition:all .15s}
 .tab.active,.tab:hover{background:var(--purple);border-color:var(--purple);color:#fff}
@@ -113,8 +129,6 @@ footer .motto{color:var(--purple);letter-spacing:.08em;margin-bottom:.35rem;font
 .dept-row{display:grid;grid-template-columns:1.4fr .9fr .9fr .9fr;gap:.35rem;padding:.48rem 0;border-bottom:1px solid var(--border);font-size:.85rem;align-items:center}
 .dept-row .dname{color:var(--text);font-weight:600;cursor:pointer}
 .dept-row .dname:hover{color:var(--purple)}
-.placeholder-box{background:var(--bg-soft);border:1px dashed var(--border);border-radius:12px;padding:1.6rem;text-align:center;color:var(--muted)}
-.placeholder-box h4{color:var(--text);margin-bottom:.4rem}
 .badge-live{display:inline-block;background:#ecfdf5;color:var(--green);font-size:.7rem;padding:.18rem .5rem;border-radius:5px;font-weight:600}
 .badge-ready{display:inline-block;background:#f4f4f6;color:var(--muted);font-size:.7rem;padding:.18rem .5rem;border-radius:5px}
 .council-header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.6rem;margin-bottom:1.1rem}
@@ -136,24 +150,24 @@ footer .motto{color:var(--purple);letter-spacing:.08em;margin-bottom:.35rem;font
   <div id="home-view">
     <div class="hero">
       <h2>Scotland’s councils, opened up</h2>
-      <p>See where the money goes. Understand what your area needs. Take practical action in your community.</p>
+      <p>Choose your path. Investigate the money, or act in your community.</p>
     </div>
     <div class="paths">
-      <div class="path-card" onclick="document.getElementById('council-grid').scrollIntoView({behavior:'smooth'})">
-        <div class="icon">🗺️</div><h3>Explore a Council</h3><p>Funds, entities, wards and local action tools</p>
+      <div class="path-card" onclick="openPath('community')">
+        <div class="icon">🏘️</div>
+        <h3>Community & Wards</h3>
+        <p>Ward profiles, local needs, grassroots groups, facilities, funding and action toolkits</p>
       </div>
-      <div class="path-card" onclick="openCouncil('glasgow')">
-        <div class="icon">📊</div><h3>Follow the Money</h3><p>Glasgow is fully live — start here</p>
-      </div>
-      <div class="path-card" onclick="openCouncil('glasgow');setTimeout(()=>showPanel('community'),200)">
-        <div class="icon">🤝</div><h3>Act Locally</h3><p>Ward toolkits, noticeboards and funding</p>
+      <div class="path-card" onclick="openPath('funds')">
+        <div class="icon">💷</div>
+        <h3>Follow the Money</h3>
+        <p>Council budgets, departments, entities, money trails and financial investigations</p>
       </div>
     </div>
-    <div class="section-title">All 32 Scottish Councils <span></span></div>
-    <div class="council-grid" id="council-grid"></div>
   </div>
+
   <div id="council-view">
-    <button class="back-btn" onclick="showHome()">← All Councils</button>
+    <button class="back-btn" onclick="showHome()">← Home</button>
     <div class="council-header">
       <h2 id="council-title">Council</h2>
       <div id="council-badge"></div>
@@ -199,40 +213,10 @@ footer .motto{color:var(--purple);letter-spacing:.08em;margin-bottom:.35rem;font
 <script src="wards.js"></script>
 <script>
 const councils = [
-  {id:"aberdeen-city",name:"Aberdeen City",status:"ready",wards:13},
-  {id:"aberdeenshire",name:"Aberdeenshire",status:"ready",wards:19},
-  {id:"angus",name:"Angus",status:"ready",wards:8},
-  {id:"argyll-bute",name:"Argyll and Bute",status:"ready",wards:11},
-  {id:"edinburgh",name:"City of Edinburgh",status:"ready",wards:17},
-  {id:"clackmannanshire",name:"Clackmannanshire",status:"ready",wards:5},
-  {id:"dumfries-galloway",name:"Dumfries and Galloway",status:"ready",wards:12},
-  {id:"dundee",name:"Dundee City",status:"ready",wards:8},
-  {id:"east-ayrshire",name:"East Ayrshire",status:"ready",wards:9},
-  {id:"east-dunbartonshire",name:"East Dunbartonshire",status:"ready",wards:7},
-  {id:"east-lothian",name:"East Lothian",status:"ready",wards:6},
-  {id:"east-renfrewshire",name:"East Renfrewshire",status:"ready",wards:5},
-  {id:"falkirk",name:"Falkirk",status:"ready",wards:9},
-  {id:"fife",name:"Fife",status:"ready",wards:22},
-  {id:"glasgow",name:"Glasgow City",status:"live",wards:23},
-  {id:"highland",name:"Highland",status:"ready",wards:21},
-  {id:"inverclyde",name:"Inverclyde",status:"ready",wards:7},
-  {id:"midlothian",name:"Midlothian",status:"ready",wards:6},
-  {id:"moray",name:"Moray",status:"ready",wards:8},
-  {id:"western-isles",name:"Na h-Eileanan Siar",status:"ready",wards:9},
-  {id:"north-ayrshire",name:"North Ayrshire",status:"ready",wards:10},
-  {id:"north-lanarkshire",name:"North Lanarkshire",status:"ready",wards:21},
-  {id:"orkney",name:"Orkney Islands",status:"ready",wards:6},
-  {id:"perth-kinross",name:"Perth and Kinross",status:"ready",wards:12},
-  {id:"renfrewshire",name:"Renfrewshire",status:"ready",wards:12},
-  {id:"scottish-borders",name:"Scottish Borders",status:"ready",wards:11},
-  {id:"shetland",name:"Shetland Islands",status:"ready",wards:7},
-  {id:"south-ayrshire",name:"South Ayrshire",status:"ready",wards:8},
-  {id:"south-lanarkshire",name:"South Lanarkshire",status:"ready",wards:20},
-  {id:"stirling",name:"Stirling",status:"ready",wards:7},
-  {id:"west-dunbartonshire",name:"West Dunbartonshire",status:"ready",wards:6},
-  {id:"west-lothian",name:"West Lothian",status:"ready",wards:9}
+  {id:"glasgow",name:"Glasgow City",status:"live",wards:23}
 ];
 let currentCouncil = null;
+
 function showHome(){
   document.getElementById('home-view').style.display='block';
   document.getElementById('council-view').style.display='none';
@@ -240,9 +224,18 @@ function showHome(){
   document.getElementById('detail-view').style.display='none';
   currentCouncil = null;
 }
+
+function openPath(path){
+  openCouncil('glasgow');
+  setTimeout(function(){
+    if(path === 'community') showPanel('community');
+    else if(path === 'funds') showPanel('funds');
+    else showPanel('overview');
+  }, 80);
+}
+
 function openCouncil(id){
-  const c = councils.find(x=>x.id===id);
-  if(!c) return;
+  const c = councils.find(x=>x.id===id) || {id:'glasgow',name:'Glasgow City',status:'live',wards:23};
   currentCouncil = c;
   document.getElementById('home-view').style.display='none';
   document.getElementById('council-view').style.display='block';
@@ -251,6 +244,7 @@ function openCouncil(id){
   showPanel('overview');
   renderCouncilContent(c);
 }
+
 function showPanel(id){
   document.querySelectorAll('#council-view .panel').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('#council-view .tab').forEach(t=>t.classList.remove('active'));
@@ -262,10 +256,11 @@ function showPanel(id){
   document.getElementById('main-tabs').style.display='flex';
   document.getElementById('main-search').style.display='block';
 }
+
 function renderCouncilContent(c){
-  if(c.id === 'glasgow' && c.status === 'live') renderGlasgowLive();
-  else renderTemplate(c);
+  renderGlasgowLive();
 }
+
 function renderGlasgowLive(){
   document.getElementById('overview-content').innerHTML = `
     <div class="intro-box"><strong>Glasgow City Council</strong><br>
@@ -310,181 +305,7 @@ function renderGlasgowLive(){
       </ul>
     </div>`;
 }
-function renderTemplate(c){
-  document.getElementById('overview-content').innerHTML = `
-    <div class="intro-box"><strong>${c.name}</strong><br>
-    Full Community Shield template is ready. Financial and ward data will be added using the same standard as Glasgow.</div>
-    <div class="grid-3">
-      <div class="stat-card"><div class="label">Wards</div><div class="value">${c.wards||'—'}</div><div class="sub">Multi-member wards</div></div>
-      <div class="stat-card"><div class="label">Status</div><div class="value" style="font-size:.95rem;color:var(--muted)">Template</div><div class="sub">Data incoming</div></div>
-      <div class="stat-card"><div class="label">Action tools</div><div class="value" style="font-size:.95rem;color:var(--green)">Ready</div><div class="sub">Same as Glasgow</div></div>
-    </div>
-    <div class="card" style="margin-top:1rem">
-      <h3>Budget snapshot</h3>
-      <p class="meta" style="margin-bottom:.6rem">Official figures from Council budget reports and annual accounts (once loaded).</p>
-      <div class="fin-grid">
-        <div class="fin-box"><div class="flabel">Multi-year gap</div><div class="fval" style="color:var(--muted);font-size:.9rem">—</div></div>
-        <div class="fin-box"><div class="flabel">Net expenditure</div><div class="fval" style="color:var(--muted);font-size:.9rem">—</div></div>
-        <div class="fin-box"><div class="flabel">Central grant</div><div class="fval" style="color:var(--muted);font-size:.9rem">—</div></div>
-        <div class="fin-box"><div class="flabel">Local tax income</div><div class="fval" style="color:var(--muted);font-size:.9rem">—</div></div>
-      </div>
-      <p class="gap" style="margin-top:.6rem">Source: Council budget reports + annual accounts. Structure matches Glasgow.</p>
-    </div>
-    <div class="card">
-      <h3>How council funds work</h3>
-      <p class="fact" style="margin-top:.5rem">Council tax, grants and other income → <strong>Council services</strong> → payments to <strong>companies, LLPs, charities and partnerships</strong> → services that affect every ward.</p>
-    </div>
-    <div class="card">
-      <h3>Want to help build ${c.name}?</h3>
-      <p class="fact">We welcome local knowledge, FOI responses, and published accounts. Glasgow shows the full standard applied everywhere.</p>
-    </div>`;
 
-  document.getElementById('depts-list').innerHTML = `
-    <div class="card">
-      <div class="dept-row" style="font-weight:600;color:var(--muted);font-size:.78rem;border-bottom:1px solid var(--border);padding-bottom:.4rem;margin-bottom:.3rem">
-        <div>Service</div><div>Actual prev</div><div>Actual</div><div>Budget</div>
-      </div>
-      <div class="dept-row" style="color:var(--muted)"><div style="font-weight:600">Education / Schools</div><div>—</div><div>—</div><div>—</div></div>
-      <div class="dept-row" style="color:var(--muted)"><div style="font-weight:600">Social Work / HSCP</div><div>—</div><div>—</div><div>—</div></div>
-      <div class="dept-row" style="color:var(--muted)"><div style="font-weight:600">Neighbourhood / Environment</div><div>—</div><div>—</div><div>—</div></div>
-      <div class="dept-row" style="color:var(--muted)"><div style="font-weight:600">Financial Services</div><div>—</div><div>—</div><div>—</div></div>
-      <div class="dept-row" style="color:var(--muted)"><div style="font-weight:600">Chief Executive / Corporate</div><div>—</div><div>—</div><div>—</div></div>
-      <div class="dept-row" style="color:var(--muted)"><div style="font-weight:600">Related companies</div><div>—</div><div>—</div><div>—</div></div>
-      <p class="gap" style="margin-top:.8rem">Department names and figures will be filled from ${c.name} annual accounts and budget reports. Layout matches Glasgow.</p>
-    </div>`;
-
-  document.getElementById('entities-list').innerHTML = `
-    <div class="card">
-      <h3>Related entities / ALEOs</h3>
-      <p class="meta" style="margin-bottom:.8rem">Companies, LLPs, charities and partnerships controlled by or contracted to the council.</p>
-      <div style="display:grid;gap:.6rem">
-        <div style="background:var(--bg-soft);border:1px solid var(--border);border-radius:10px;padding:.85rem">
-          <div style="font-weight:600;color:var(--text)">Culture / Leisure body</div>
-          <div class="meta">Type · Registration · Spend / turnover —</div>
-        </div>
-        <div style="background:var(--bg-soft);border:1px solid var(--border);border-radius:10px;padding:.85rem">
-          <div style="font-weight:600;color:var(--text)">Property / Building arm</div>
-          <div class="meta">Type · Registration · Spend / turnover —</div>
-        </div>
-        <div style="background:var(--bg-soft);border:1px solid var(--border);border-radius:10px;padding:.85rem">
-          <div style="font-weight:600;color:var(--text)">Integration Joint Board / HSCP</div>
-          <div class="meta">Statutory partnership · Spend —</div>
-        </div>
-        <div style="background:var(--bg-soft);border:1px solid var(--border);border-radius:10px;padding:.85rem">
-          <div style="font-weight:600;color:var(--text)">Other group companies</div>
-          <div class="meta">To be mapped from accounts Note on related parties</div>
-        </div>
-      </div>
-      <p class="gap" style="margin-top:.8rem">Each entity will link to Companies House and published accounts once identified for ${c.name}.</p>
-    </div>`;
-
-  document.getElementById('trails-list').innerHTML = `
-    <div class="card">
-      <div class="money-row" style="font-weight:600;color:var(--muted);font-size:.78rem;border-bottom:1px solid var(--border);padding-bottom:.4rem;margin-bottom:.3rem">
-        <div>From</div><div>To</div><div>Amount</div><div>Type</div>
-      </div>
-      <div class="money-row" style="color:var(--muted)">
-        <div class="from">${c.name}</div><div class="to">Culture / Leisure body</div><div class="amt">—</div><div>Service payment</div>
-      </div>
-      <div class="money-row" style="color:var(--muted)">
-        <div class="from">${c.name}</div><div class="to">Property / Building arm</div><div class="amt">—</div><div>Service payment</div>
-      </div>
-      <div class="money-row" style="color:var(--muted)">
-        <div class="from">${c.name}</div><div class="to">IJB / HSCP</div><div class="amt">—</div><div>Integration funding</div>
-      </div>
-      <div class="money-row" style="color:var(--muted)">
-        <div class="from">${c.name}</div><div class="to">Other ALEOs</div><div class="amt">—</div><div>Related party</div>
-      </div>
-      <p class="gap" style="margin-top:.8rem">Figures from annual accounts Note on related party transactions. Structure matches Glasgow money trails.</p>
-    </div>`;
-
-  document.getElementById('ownership-content').innerHTML = `
-    <div class="card">
-      <h3>Ownership / control (public)</h3>
-      <p class="fact" style="margin-top:.5rem"><strong>${c.name}</strong> sits at the top.</p>
-      <ul style="margin:.7rem 0 0 1.2rem;font-size:.9rem;color:var(--muted)">
-        <li>Culture / leisure ALEO — sole member or controlled vehicle</li>
-        <li>Property / building companies or LLPs</li>
-        <li>Integration Joint Board (health & social care)</li>
-        <li>Other group bodies (to be listed from accounts)</li>
-      </ul>
-      <p class="gap" style="margin-top:.8rem">Control and membership details will be filled from Companies House and published accounts for ${c.name}.</p>
-    </div>`;
-
-  const wardCount = c.wards || 8;
-  let wardHtml = '';
-  for(let i=1;i<=wardCount;i++){
-    wardHtml += `<div class="ward-tile" onclick="openTemplateWard('${c.name}',${i})"><div class="wn">Ward ${i}</div><div class="wnum">${c.name}</div><div class="wsimd">Profile coming soon</div></div>`;
-  }
-  document.getElementById('ward-grid').innerHTML = wardHtml;
-
-  document.getElementById('procurement-list').innerHTML = `
-    <div class="card">
-      <h3>Procurement & contracts</h3>
-      <p class="meta" style="margin-bottom:.8rem">Published contracts, frameworks and pipeline for ${c.name}.</p>
-      <div class="dept-row" style="font-weight:600;color:var(--muted);font-size:.78rem;border-bottom:1px solid var(--border);padding-bottom:.4rem;margin-bottom:.3rem">
-        <div style="flex:2">Project / Contract</div><div>Type</div><div>Value</div><div>Status</div>
-      </div>
-      <div class="dept-row" style="color:var(--muted);font-size:.84rem">
-        <div style="flex:2">—</div><div>—</div><div>—</div><div>—</div>
-      </div>
-      <p class="gap" style="margin-top:.8rem">Contracts will be added from published registers and pipeline tools where available.</p>
-    </div>`;
-}
-function openTemplateWard(councilName, n){
-  document.getElementById('main-tabs').style.display='none';
-  document.getElementById('main-search').style.display='none';
-  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
-  const dv=document.getElementById('detail-view');
-  dv.style.display='block';
-  dv.classList.add('active');
-  document.getElementById('back-btn').onclick=()=>showPanel('community');
-  document.getElementById('detail-content').innerHTML = `
-    <div class="card">
-      <h3>${councilName} — Ward ${n}</h3>
-      <p class="meta">Template ward profile</p>
-      <div class="sec"><h4>Data sections (same as Glasgow)</h4>
-        <p class="fact">Population · Deprivation (SIMD) · Housing · Crime & Safety · Environment · FOI priorities</p>
-      </div>
-    </div>
-    <div class="card" style="margin-top:1rem;border-color:var(--purple)">
-      <h3 style="color:var(--purple)">Community Action Toolkit</h3>
-      <p class="meta" style="margin-bottom:1rem">Practical help if you want to do something positive in this ward.</p>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0.7rem">
-        <div style="background:var(--bg-soft);border:1px solid var(--border);border-radius:10px;padding:0.85rem">
-          <div style="font-size:0.72rem;color:var(--purple);font-weight:600;margin-bottom:0.3rem">WHAT THIS WARD NEEDS</div>
-          <p style="font-size:0.86rem;color:var(--muted)">Local priorities will be summarised here from published data and community input.</p>
-        </div>
-        <div style="background:var(--bg-soft);border:1px solid var(--border);border-radius:10px;padding:0.85rem">
-          <div style="font-size:0.72rem;color:var(--purple);font-weight:600;margin-bottom:0.3rem">EXISTING GROUPS</div>
-          <p style="font-size:0.86rem;color:var(--muted)">Community councils, resident groups and local projects.</p>
-        </div>
-        <div style="background:var(--bg-soft);border:1px solid var(--border);border-radius:10px;padding:0.85rem">
-          <div style="font-size:0.72rem;color:var(--purple);font-weight:600;margin-bottom:0.3rem">LOCAL FACILITIES</div>
-          <p style="font-size:0.86rem;color:var(--muted)">Centres, halls, libraries, parks and usable spaces.</p>
-        </div>
-        <div style="background:var(--bg-soft);border:1px solid var(--border);border-radius:10px;padding:0.85rem">
-          <div style="font-size:0.72rem;color:var(--purple);font-weight:600;margin-bottom:0.3rem">FUNDING & SUPPORT</div>
-          <p style="font-size:0.86rem;color:var(--muted)">Council grants, Awards for All, crowdfunding routes.</p>
-        </div>
-        <div style="background:var(--bg-soft);border:1px solid var(--border);border-radius:10px;padding:0.85rem">
-          <div style="font-size:0.72rem;color:var(--purple);font-weight:600;margin-bottom:0.3rem">START SOMETHING</div>
-          <p style="font-size:0.86rem;color:var(--muted)">Simple 5-step guide to beginning local action.</p>
-        </div>
-        <div style="background:var(--purple-soft);border:1px solid var(--purple);border-radius:10px;padding:0.85rem">
-          <div style="font-size:0.72rem;color:var(--purple);font-weight:600;margin-bottom:0.3rem">WARD REPORT</div>
-          <p style="font-size:0.86rem;color:var(--muted)">One-page summary will be available once data is loaded.</p>
-        </div>
-      </div>
-    </div>
-    <div class="card" style="margin-top:1rem">
-      <h3>Community Noticeboard</h3>
-      <p class="meta" style="margin-bottom:.8rem">Local calls for help, events and offers</p>
-      <div style="background:var(--bg-soft);border:1px dashed var(--border);border-radius:10px;padding:1.1rem;text-align:center">
-        <p style="color:var(--muted);font-size:.9rem">Noticeboard ready. Real local notices will appear here.</p>
-      </div>
-    </div>`;
-}
 function fundView(v,btn){
   document.getElementById('funds-depts').style.display=v==='depts'?'block':'none';
   document.getElementById('funds-all').style.display=v==='all'?'block':'none';
@@ -498,17 +319,6 @@ function filterAll(){
   if(typeof renderWards==='function') renderWards(q);
   if(typeof renderEntities==='function') renderEntities(q);
 }
-function renderCouncilGrid(){
-  const grid = document.getElementById('council-grid');
-  const sorted = [...councils].sort((a,b)=> (a.status==='live'?-1:1) - (b.status==='live'?-1:1) || a.name.localeCompare(b.name));
-  grid.innerHTML = sorted.map(c=>`
-    <div class="council-card ${c.status}" onclick="openCouncil('${c.id}')">
-      <div class="cname">${c.name}</div>
-      <div class="cstatus ${c.status}">${c.status==='live'?'● Live':'○ Template ready'}</div>
-      <div class="cmeta">${c.wards} wards</div>
-    </div>`).join('');
-}
-document.addEventListener('DOMContentLoaded', function(){ renderCouncilGrid(); });
 </script>
 </body>
 </html>
