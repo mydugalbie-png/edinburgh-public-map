@@ -43,7 +43,17 @@ const trails=[
 {from:"Glasgow City Council",to:"Glasgow City IJB",amount:"£574m",type:"Expenditure 2024/25"},
 {from:"Glasgow City Council",to:"City Parking / other ALEOs",amount:"Various",type:"Note 16 related parties"}
 ];
-
+const procurement=[
+{name:"Civils and Infrastructure Core Works Framework",type:"Enabling Works",value:"£400m",status:"In procurement",route:"Authority Framework"},
+{name:"Custom House / Carlton Place Quay Wall Development",type:"New Build",value:"£20m",status:"In procurement",route:"Authority Framework"},
+{name:"ABS 2025/26 Work Package 1 – South Carntyne",type:"New Build",value:"£8.1m",status:"In procurement",route:"Scotland Excel Framework"},
+{name:"Roads Maintenance Contract 2026/27",type:"Maintenance",value:"£5.0m",status:"In procurement",route:"Scotland Excel Framework"},
+{name:"ABS 2025/26 Work Package 2 – North Pollok",type:"New Build",value:"£3.1m",status:"In procurement",route:"Scotland Excel Framework"},
+{name:"Ground Investigation Framework",type:"Enabling Works",value:"£2.8m",status:"In procurement",route:"Authority Framework"},
+{name:"Solar Panels Supply, Installation & Commissioning",type:"Retrofit",value:"£2.5m",status:"In procurement",route:"Authority Framework"},
+{name:"Camlachie Burn Improvement Works – Phase 3",type:"Enabling Works",value:"£2.0m",status:"In procurement",route:"Authority Framework"},
+{name:"Green Connectors Tree Planting & Habitat Creation",type:"Enabling Works",value:"£0.34m",status:"—",route:"—"}
+];
 const departments=[
 {
   id:"ceo",
