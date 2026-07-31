@@ -6,15 +6,16 @@
 <title>Community Shield Scotland</title>
 <style>
 :root{
-  --bg:#f7f6fb;
+  --bg:#f0ebf8;
+  --bg-soft:#f7f3fc;
   --card:#ffffff;
-  --border:#e4e2ec;
+  --border:#ddd6eb;
   --text:#1c1a2e;
   --muted:#6b6880;
-  --silver:#8a8a9c;
-  --silver-light:#c5c5d0;
+  --silver:#9a9aab;
+  --silver-light:#d4d4de;
   --purple:#7c3aed;
-  --purple-soft:#f3eefc;
+  --purple-soft:#ede6f8;
   --purple-dim:#6d28d9;
   --amber:#b45309;
   --green:#059669;
@@ -22,9 +23,15 @@
   --blue:#2563eb;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:system-ui,-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg);color:var(--text);line-height:1.55;min-height:100vh}
+body{
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
+  background:linear-gradient(165deg,#f7f3fc 0%,#ebe4f5 45%,#f0ebf8 100%);
+  color:var(--text);
+  line-height:1.55;
+  min-height:100vh;
+}
 
-/* Header – bright + welcoming */
+/* Header */
 header{
   background:linear-gradient(180deg,#ffffff 0%,#f3eefc 100%);
   border-bottom:1px solid var(--border);
@@ -33,13 +40,14 @@ header{
 }
 header .brand{display:flex;flex-direction:column;align-items:center;gap:.7rem;cursor:pointer}
 header .logo-mark{
-  width:88px;height:88px;
+  width:92px;height:92px;
   border-radius:50%;
-  background:linear-gradient(145deg,#e8e8f0,#ffffff);
+  background:linear-gradient(145deg,#e8e8f0,#f8f8fa);
   border:3px solid var(--silver-light);
-  box-shadow:0 4px 20px rgba(124,58,237,.12);
+  box-shadow:0 4px 22px rgba(124,58,237,.14);
   display:flex;align-items:center;justify-content:center;
-  font-size:2.2rem;
+  font-size:2.3rem;
+  filter:grayscale(0.15) brightness(1.05);
 }
 header h1{color:var(--text);font-size:1.65rem;font-weight:700;letter-spacing:.01em}
 header .tagline{color:var(--muted);font-size:.92rem;margin-top:.15rem}
@@ -70,14 +78,19 @@ header .motto{
   text-align:center;
   cursor:pointer;
   transition:border-color .15s,box-shadow .15s,transform .15s;
-  box-shadow:0 1px 3px rgba(0,0,0,.04);
+  box-shadow:0 1px 4px rgba(124,58,237,.06);
 }
 .path-card:hover{
   border-color:var(--purple);
-  box-shadow:0 6px 20px rgba(124,58,237,.1);
+  box-shadow:0 6px 22px rgba(124,58,237,.12);
   transform:translateY(-2px);
 }
-.path-card .icon{font-size:1.7rem;margin-bottom:.45rem}
+.path-card .icon{
+  font-size:1.75rem;
+  margin-bottom:.45rem;
+  filter:grayscale(1) brightness(1.4);
+  opacity:0.85;
+}
 .path-card h3{color:var(--text);font-size:1rem;margin-bottom:.3rem}
 .path-card p{color:var(--muted);font-size:.84rem}
 
@@ -98,7 +111,7 @@ header .motto{
   padding:1rem;
   cursor:pointer;
   transition:border-color .15s,box-shadow .15s;
-  box-shadow:0 1px 3px rgba(0,0,0,.03);
+  box-shadow:0 1px 3px rgba(124,58,237,.04);
 }
 .council-card:hover{
   border-color:var(--purple);
@@ -136,7 +149,7 @@ header .motto{
   border-radius:12px;
   padding:1.1rem;
   margin-bottom:.9rem;
-  box-shadow:0 1px 3px rgba(0,0,0,.03);
+  box-shadow:0 1px 3px rgba(124,58,237,.04);
 }
 .card.clickable{cursor:pointer}.card.clickable:hover{border-color:var(--purple)}
 .card h3{color:var(--text)}
@@ -144,7 +157,7 @@ header .motto{
 
 .intro-box{
   background:var(--purple-soft);
-  border:1px solid #e0d4f7;
+  border:1px solid #ddd0f0;
   border-radius:12px;
   padding:1rem;
   margin-bottom:1rem;
@@ -185,7 +198,7 @@ header .motto{
 
 .fin-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:.5rem;margin:.5rem 0}
 .fin-box{
-  background:var(--bg);
+  background:var(--bg-soft);
   border:1px solid var(--border);
   border-radius:10px;
   padding:.55rem;
@@ -221,7 +234,7 @@ footer{
   font-size:.82rem;
   border-top:1px solid var(--border);
   margin-top:2.5rem;
-  background:#fff;
+  background:linear-gradient(180deg,#f7f3fc,#ffffff);
 }
 footer .motto{color:var(--purple);letter-spacing:.08em;margin-bottom:.35rem;font-weight:600;font-size:.78rem}
 
@@ -253,7 +266,7 @@ footer .motto{color:var(--purple);letter-spacing:.08em;margin-bottom:.35rem;font
 .dept-row .dname:hover{color:var(--purple)}
 
 .placeholder-box{
-  background:var(--bg);
+  background:var(--bg-soft);
   border:1px dashed var(--border);
   border-radius:12px;
   padding:1.6rem;
@@ -299,7 +312,6 @@ footer .motto{color:var(--purple);letter-spacing:.08em;margin-bottom:.35rem;font
 
 <div class="container">
 
-  <!-- HOME VIEW -->
   <div id="home-view">
     <div class="hero">
       <h2>Scotland’s councils, opened up</h2>
@@ -325,36 +337,27 @@ footer .motto{color:var(--purple);letter-spacing:.08em;margin-bottom:.35rem;font
     </div>
 
     <div class="section-title">All 32 Scottish Councils <span></span></div>
-
     <div class="council-grid" id="council-grid"></div>
   </div>
 
-  <!-- COUNCIL VIEW -->
   <div id="council-view">
     <button class="back-btn" onclick="showHome()">← All Councils</button>
-
     <div class="council-header">
       <h2 id="council-title">Council</h2>
       <div id="council-badge"></div>
     </div>
-
     <div class="search-box" id="main-search">
       <input id="search" placeholder="Search wards, entities, funds..." oninput="filterAll()"/>
     </div>
-
     <div class="tabs" id="main-tabs">
       <button class="tab active" onclick="showPanel('overview')">Overview</button>
       <button class="tab" onclick="showPanel('funds')">Council Funds</button>
       <button class="tab" onclick="showPanel('community')">Community / Wards</button>
       <button class="tab" onclick="showPanel('procurement')">Procurement</button>
     </div>
-
-    <div id="overview" class="panel active">
-      <div id="overview-content"></div>
-    </div>
-
+    <div id="overview" class="panel active"><div id="overview-content"></div></div>
     <div id="funds" class="panel">
-      <div class="intro-box" id="funds-intro"><strong>Council Funds</strong> – Departments, related entities and money trails.</div>
+      <div class="intro-box"><strong>Council Funds</strong> – Departments, related entities and money trails.</div>
       <div class="fund-sub">
         <button type="button" class="active" onclick="fundView('depts',this)">Departments</button>
         <button type="button" onclick="fundView('all',this)">Entities</button>
@@ -366,16 +369,11 @@ footer .motto{color:var(--purple);letter-spacing:.08em;margin-bottom:.35rem;font
       <div id="funds-flows" style="display:none"><div id="trails-list"></div></div>
       <div id="funds-ownership" style="display:none"><div id="ownership-content"></div></div>
     </div>
-
     <div id="community" class="panel">
       <div class="intro-box"><strong>Community / Wards</strong> – Local data, action toolkits and noticeboards.</div>
       <div class="ward-grid" id="ward-grid"></div>
     </div>
-
-    <div id="procurement" class="panel">
-      <div id="procurement-list"></div>
-    </div>
-
+    <div id="procurement" class="panel"><div id="procurement-list"></div></div>
     <div id="detail-view">
       <button class="back-btn" id="back-btn">← Back</button>
       <div id="detail-content"></div>
@@ -465,11 +463,8 @@ function showPanel(id){
 }
 
 function renderCouncilContent(c){
-  if(c.id === 'glasgow' && c.status === 'live'){
-    renderGlasgowLive();
-  } else {
-    renderTemplate(c);
-  }
+  if(c.id === 'glasgow' && c.status === 'live') renderGlasgowLive();
+  else renderTemplate(c);
 }
 
 function renderGlasgowLive(){
@@ -497,13 +492,11 @@ function renderGlasgowLive(){
       <h3>How council funds work</h3>
       <p class="fact" style="margin-top:.5rem">Council tax, grants and other income → <strong>Council services</strong> → payments to <strong>companies, LLPs, charities and the IJB</strong> → services that affect every ward.</p>
     </div>`;
-
   if(typeof renderDepts==='function') renderDepts();
   if(typeof renderEntities==='function') renderEntities();
   if(typeof renderTrails==='function') renderTrails();
   if(typeof renderWards==='function') renderWards();
   if(typeof renderProcurement==='function') renderProcurement();
-
   document.getElementById('ownership-content').innerHTML = `
     <div class="card">
       <h3>Ownership / control (public)</h3>
@@ -540,12 +533,10 @@ function renderTemplate(c){
       <h3>Want to help build ${c.name}?</h3>
       <p class="fact">We welcome local knowledge, FOI responses, and published accounts. The Glasgow page shows the full standard we are applying everywhere.</p>
     </div>`;
-
   document.getElementById('depts-list').innerHTML = `<div class="placeholder-box"><h4>Departments</h4><p>Budget and actuals for ${c.name} services will appear here.</p></div>`;
   document.getElementById('entities-list').innerHTML = `<div class="placeholder-box"><h4>Related entities</h4><p>ALEOs and partnerships linked to ${c.name} will be listed here.</p></div>`;
   document.getElementById('trails-list').innerHTML = `<div class="placeholder-box"><h4>Money trails</h4><p>Payments from the council to related bodies will be mapped here.</p></div>`;
   document.getElementById('ownership-content').innerHTML = `<div class="placeholder-box"><h4>Ownership tree</h4><p>Control structure for ${c.name} group bodies.</p></div>`;
-
   const wardCount = c.wards || 8;
   let wardHtml = '';
   for(let i=1;i<=wardCount;i++){
@@ -563,7 +554,6 @@ function openTemplateWard(councilName, n){
   dv.style.display='block';
   dv.classList.add('active');
   document.getElementById('back-btn').onclick=()=>showPanel('community');
-
   document.getElementById('detail-content').innerHTML = `
     <div class="card">
       <h3>${councilName} — Ward ${n}</h3>
@@ -576,23 +566,23 @@ function openTemplateWard(councilName, n){
       <h3 style="color:var(--purple)">Community Action Toolkit</h3>
       <p class="meta" style="margin-bottom:1rem">Practical help if you want to do something positive in this ward.</p>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0.7rem">
-        <div style="background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:0.85rem">
+        <div style="background:var(--bg-soft);border:1px solid var(--border);border-radius:10px;padding:0.85rem">
           <div style="font-size:0.72rem;color:var(--purple);font-weight:600;margin-bottom:0.3rem">WHAT THIS WARD NEEDS</div>
           <p style="font-size:0.86rem;color:var(--muted)">Local priorities will be summarised here from published data and community input.</p>
         </div>
-        <div style="background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:0.85rem">
+        <div style="background:var(--bg-soft);border:1px solid var(--border);border-radius:10px;padding:0.85rem">
           <div style="font-size:0.72rem;color:var(--purple);font-weight:600;margin-bottom:0.3rem">EXISTING GROUPS</div>
           <p style="font-size:0.86rem;color:var(--muted)">Community councils, resident groups and local projects.</p>
         </div>
-        <div style="background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:0.85rem">
+        <div style="background:var(--bg-soft);border:1px solid var(--border);border-radius:10px;padding:0.85rem">
           <div style="font-size:0.72rem;color:var(--purple);font-weight:600;margin-bottom:0.3rem">LOCAL FACILITIES</div>
           <p style="font-size:0.86rem;color:var(--muted)">Centres, halls, libraries, parks and usable spaces.</p>
         </div>
-        <div style="background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:0.85rem">
+        <div style="background:var(--bg-soft);border:1px solid var(--border);border-radius:10px;padding:0.85rem">
           <div style="font-size:0.72rem;color:var(--purple);font-weight:600;margin-bottom:0.3rem">FUNDING & SUPPORT</div>
           <p style="font-size:0.86rem;color:var(--muted)">Council grants, Awards for All, crowdfunding routes.</p>
         </div>
-        <div style="background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:0.85rem">
+        <div style="background:var(--bg-soft);border:1px solid var(--border);border-radius:10px;padding:0.85rem">
           <div style="font-size:0.72rem;color:var(--purple);font-weight:600;margin-bottom:0.3rem">START SOMETHING</div>
           <p style="font-size:0.86rem;color:var(--muted)">Simple 5-step guide to beginning local action.</p>
         </div>
@@ -605,7 +595,7 @@ function openTemplateWard(councilName, n){
     <div class="card" style="margin-top:1rem">
       <h3>Community Noticeboard</h3>
       <p class="meta" style="margin-bottom:.8rem">Local calls for help, events and offers</p>
-      <div style="background:var(--bg);border:1px dashed var(--border);border-radius:10px;padding:1.1rem;text-align:center">
+      <div style="background:var(--bg-soft);border:1px dashed var(--border);border-radius:10px;padding:1.1rem;text-align:center">
         <p style="color:var(--muted);font-size:.9rem">Noticeboard ready. Real local notices will appear here.</p>
       </div>
     </div>`;
