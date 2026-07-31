@@ -110,9 +110,7 @@ const departments=[
   ]
 }
 ];
-  ]
-}
-];
+
 
 function showPanel(id){
   document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
@@ -275,7 +273,7 @@ function openDept(id){
       </div>
     </div>`;
 }
-}
+
 
 function filterAll(){const q=document.getElementById('search').value;renderWards(q);renderEntities(q)}
 renderWards();renderEntities();renderTrails();renderProcurement();
