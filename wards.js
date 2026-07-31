@@ -211,9 +211,9 @@ function openDept(id){
   let rows = d.years.map(yr => `
     <div class="dept-row" style="font-size:.82rem">
       <div style="color:var(--muted)">${yr.y}</div>
-      <div>${yr.budget || '—'}</div>
-      <div>${yr.net || '—'}</div>
-      <div style="color:var(--muted);font-size:.75rem">${yr.gross !== '—' ? 'G: '+yr.gross : ''}</div>
+      <div>${yr.gross || '—'}</div>
+      <div>${yr.income || '—'}</div>
+      <div style="font-weight:600">${yr.net || '—'}</div>
     </div>`).join('');
 
   document.getElementById('detail-content').innerHTML=`
@@ -221,13 +221,13 @@ function openDept(id){
       <h3>${d.name}</h3>
       <p class="meta" style="margin-bottom:.8rem">${d.note || ''}</p>
       <div class="dept-row" style="font-weight:600;color:var(--muted);font-size:.78rem;border-bottom:1px solid var(--border);padding-bottom:.4rem;margin-bottom:.3rem">
-        <div>Year</div><div>Budget</div><div>Net Actual</div><div></div>
+        <div>Year</div><div>Gross</div><div>Income</div><div>Net</div>
       </div>
       ${rows}
       <div class="sec" style="margin-top:1.2rem">
         <h4>Notes</h4>
         <p class="fact">${d.note || ''}</p>
-        <p class="gap" style="margin-top:.5rem">Budget = City Government Budget Motion (where published). Net Actual = CIES net expenditure. No published Revenue Estimates for 2024/25 or 2025/26.</p>
+        <p class="gap" style="margin-top:.5rem">Figures from GCC Comprehensive Income & Expenditure Statement (Pre-Audit Accounts). Gross = total expenditure, Income = income attributed to the service, Net = net cost of services.</p>
       </div>
       <div class="sec">
         <h4>Sources & Reports</h4>
@@ -240,6 +240,7 @@ function openDept(id){
         <p class="fact">• <a href="https://audit.scot/publications/glasgow-city-council-annual-audit-202425" target="_blank" rel="noopener" style="color:var(--accent)">Audit Scotland – Glasgow</a></p>
       </div>
     </div>`;
+}
 }
 
 function filterAll(){const q=document.getElementById('search').value;renderWards(q);renderEntities(q)}
