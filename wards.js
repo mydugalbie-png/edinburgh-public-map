@@ -239,8 +239,14 @@ function openDept(id){
         <p class="gap" style="margin-top:.5rem">Budget = City Government Budget Motion (where published). Net Actual = CIES net expenditure. No published Revenue Estimates for 2024/25 or 2025/26.</p>
       </div>
       <div class="sec">
-        <h4>Source</h4>
-        <p class="gap">GCC Annual Accounts (CIES) and Budget Motions. OpenScotland research extract.</p>
+        <h4>Sources & Reports</h4>
+        <p class="fact" style="margin-bottom:.5rem">Official documents (open in new tab):</p>
+        <p class="fact">• <a href="https://www.glasgow.gov.uk/media/24090/2024-25/pdf/01_GCC_Annual_Accounts_2024-25.pdf" target="_blank" rel="noopener" style="color:var(--accent)">2024/25 Annual Accounts</a></p>
+        <p class="fact">• <a href="https://www.glasgow.gov.uk/media/24092/2024-25-Audit-Report/pdf/25_GCC_Annual_Audit_Report_2024-25_-_final.pdf" target="_blank" rel="noopener" style="color:var(--accent)">2024/25 Annual Audit Report</a></p>
+        <p class="fact">• <a href="https://www.glasgow.gov.uk/media/19326/2023-24/pdf/01_GCC_Annual_Accounts_2023-24.pdf" target="_blank" rel="noopener" style="color:var(--accent)">2023/24 Annual Accounts</a></p>
+        <p class="fact">• <a href="https://www.glasgow.gov.uk/media/19327/2023-24-Audit-Report/pdf/24_GCC_Annual_Audit_Report_-_FINAL.pdf" target="_blank" rel="noopener" style="color:var(--accent)">2023/24 Annual Audit Report</a></p>
+        <p class="fact" style="margin-top:.6rem">• <a href="https://www.glasgow.gov.uk/article/1265/Annual-Accounts" target="_blank" rel="noopener" style="color:var(--accent)">All Annual Accounts & Audit Reports</a></p>
+        <p class="fact">• <a href="https://audit.scot/publications/glasgow-city-council-annual-audit-202425" target="_blank" rel="noopener" style="color:var(--accent)">Audit Scotland – Glasgow</a></p>
       </div>
     </div>`;
 }
