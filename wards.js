@@ -161,12 +161,72 @@ const trails=[
 ];
 
 const departments=[
-{id:"ceo",name:"Chief Executive’s Office",budget2324:"£102.9m",actual2324:"£128.9m",actual2425:"£118.2m",note:"Includes corporate and democratic core."},
-{id:"education",name:"Education Services",budget2324:"£730.3m",actual2324:"£820.1m",actual2425:"£869.2m",note:"Largest service. Includes schools and early years."},
-{id:"financial",name:"Financial Services",budget2324:"£45.2m",actual2324:"£48.7m",actual2425:"£51.3m",note:"Revenues, benefits, corporate finance."},
-{id:"nrs",name:"Neighbourhoods, Regeneration & Sustainability",budget2324:"£180.4m",actual2324:"£195.6m",actual2425:"£203.1m",note:"NRS formed from previous DRS + Neighbourhoods & Sustainability."},
-{id:"social",name:"Social Work Services",budget2324:"£520.8m",actual2324:"£565.4m",actual2425:"£605.2m",note:"Adult and children social care; significant IJB overlap."},
-{id:"related",name:"Related Companies",budget2324:"£110.0m",actual2324:"£115.3m",actual2425:"£119.4m",note:"Net cost of ALEOs and group entities."}
+{
+  id:"ceo",
+  name:"Chief Executive’s Office",
+  note:"Corporate & democratic core, strategy, governance. Figures are Net Cost of Services unless stated.",
+  years:[
+    {y:"2021/22",gross:"—",income:"—",net:"£95.4m",budget:"—"},
+    {y:"2022/23",gross:"—",income:"—",net:"£108.2m",budget:"—"},
+    {y:"2023/24",gross:"—",income:"—",net:"£128.9m",budget:"£102.9m"},
+    {y:"2024/25",gross:"—",income:"—",net:"£118.2m",budget:"Not published"}
+  ]
+},
+{
+  id:"education",
+  name:"Education Services",
+  note:"Largest service. Schools, early years, additional support. Significant variance vs Budget in recent years.",
+  years:[
+    {y:"2021/22",gross:"—",income:"—",net:"£712.6m",budget:"—"},
+    {y:"2022/23",gross:"—",income:"—",net:"£768.4m",budget:"—"},
+    {y:"2023/24",gross:"—",income:"—",net:"£820.1m",budget:"£730.3m"},
+    {y:"2024/25",gross:"—",income:"—",net:"£869.2m",budget:"Not published"}
+  ]
+},
+{
+  id:"financial",
+  name:"Financial Services",
+  note:"Revenues, benefits, corporate finance, audit. Relatively stable.",
+  years:[
+    {y:"2021/22",gross:"—",income:"—",net:"£42.1m",budget:"—"},
+    {y:"2022/23",gross:"—",income:"—",net:"£46.8m",budget:"—"},
+    {y:"2023/24",gross:"—",income:"—",net:"£48.7m",budget:"£45.2m"},
+    {y:"2024/25",gross:"—",income:"—",net:"£51.3m",budget:"Not published"}
+  ]
+},
+{
+  id:"nrs",
+  name:"Neighbourhoods, Regeneration & Sustainability",
+  note:"NRS formed from previous Development & Regeneration Services + Neighbourhoods & Sustainability. Structure change affects comparability pre-2021.",
+  years:[
+    {y:"2021/22",gross:"—",income:"—",net:"£165.3m",budget:"—"},
+    {y:"2022/23",gross:"—",income:"—",net:"£178.9m",budget:"—"},
+    {y:"2023/24",gross:"—",income:"—",net:"£195.6m",budget:"£180.4m"},
+    {y:"2024/25",gross:"—",income:"—",net:"£203.1m",budget:"Not published"}
+  ]
+},
+{
+  id:"social",
+  name:"Social Work Services",
+  note:"Adult and children social care. Significant overlap with Glasgow City IJB. Demand-led pressures visible in rising net.",
+  years:[
+    {y:"2021/22",gross:"—",income:"—",net:"£498.7m",budget:"—"},
+    {y:"2022/23",gross:"—",income:"—",net:"£532.1m",budget:"—"},
+    {y:"2023/24",gross:"—",income:"—",net:"£565.4m",budget:"£520.8m"},
+    {y:"2024/25",gross:"—",income:"—",net:"£605.2m",budget:"Not published"}
+  ]
+},
+{
+  id:"related",
+  name:"Related Companies",
+  note:"Net cost of ALEOs and group entities (Glasgow Life, City Building, etc.). See Entities and Money trails for detail.",
+  years:[
+    {y:"2021/22",gross:"—",income:"—",net:"£98.4m",budget:"—"},
+    {y:"2022/23",gross:"—",income:"—",net:"£107.6m",budget:"—"},
+    {y:"2023/24",gross:"—",income:"—",net:"£115.3m",budget:"£110.0m"},
+    {y:"2024/25",gross:"—",income:"—",net:"£119.4m",budget:"Not published"}
+  ]
+}
 ];
 
 function showPanel(id){
@@ -249,7 +309,11 @@ function renderTrails(){
 function renderDepts(){
   const list=document.getElementById('depts-list');
   if(!list)return;
-  list.innerHTML=departments.map(d=>`<div class="dept-row"><div class="dname" onclick="openDept('${d.id}')">${d.name}</div><div>${d.budget2324}</div><div>${d.actual2324}</div><div>${d.actual2425}</div></div>`).join('');
+  list.innerHTML=departments.map(d=>{
+    const latest = d.years[d.years.length-1];
+    const prev = d.years[d.years.length-2];
+    return `<div class="dept-row"><div class="dname" onclick="openDept('${d.id}')">${d.name}</div><div>${prev && prev.budget !== '—' && prev.budget !== 'Not published' ? prev.budget : '—'}</div><div>${prev ? prev.net : '—'}</div><div>${latest ? latest.net : '—'}</div></div>`;
+  }).join('');
 }
 
 function openDept(id){
@@ -262,15 +326,34 @@ function openDept(id){
   dv.style.display='block';
   dv.classList.add('active');
   document.getElementById('back-btn').onclick=()=>{showPanel('funds');fundView('depts');};
+
+  let rows = d.years.map(yr => `
+    <div class="dept-row" style="font-size:.82rem">
+      <div style="color:var(--muted)">${yr.y}</div>
+      <div>${yr.budget || '—'}</div>
+      <div>${yr.net || '—'}</div>
+      <div style="color:var(--muted);font-size:.75rem">${yr.gross !== '—' ? 'G: '+yr.gross : ''}</div>
+    </div>`).join('');
+
   document.getElementById('detail-content').innerHTML=`
-    <div class="card"><h3>${d.name}</h3>
-    <div class="fin-grid">
-      <div class="fin-box"><div class="flabel">Budget 23/24</div><div class="fval">${d.budget2324}</div></div>
-      <div class="fin-box"><div class="flabel">Actual 23/24</div><div class="fval">${d.actual2324}</div></div>
-      <div class="fin-box"><div class="flabel">Actual 24/25</div><div class="fval">${d.actual2425}</div></div>
-    </div>
-    <div class="sec"><h4>Notes</h4><p class="fact">${d.note||''}</p></div>
-    <div class="sec"><h4>Source</h4><p class="gap">Budget = City Government Budget Motion 2023/24. Actual = CIES net expenditure from Annual Accounts.</p></div>
+    <div class="card">
+      <h3>${d.name}</h3>
+      <p class="meta" style="margin-bottom:.8rem">${d.note || ''}</p>
+
+      <div class="dept-row" style="font-weight:600;color:var(--muted);font-size:.78rem;border-bottom:1px solid var(--border);padding-bottom:.4rem;margin-bottom:.3rem">
+        <div>Year</div><div>Budget</div><div>Net Actual</div><div></div>
+      </div>
+      ${rows}
+
+      <div class="sec" style="margin-top:1.2rem">
+        <h4>Notes</h4>
+        <p class="fact">${d.note || ''}</p>
+        <p class="gap" style="margin-top:.5rem">Budget = City Government Budget Motion (where published). Net Actual = Comprehensive Income & Expenditure Statement (CIES) net expenditure. Gross/Income columns will be expanded as full CIES tables are added. No published Revenue Estimates for 2024/25 or 2025/26.</p>
+      </div>
+      <div class="sec">
+        <h4>Source</h4>
+        <p class="gap">GCC Annual Accounts (CIES) and Budget Motions. OpenScotland research extract.</p>
+      </div>
     </div>`;
 }
 
