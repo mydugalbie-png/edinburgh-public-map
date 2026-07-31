@@ -165,10 +165,11 @@ function openWard(id){
     <div class="sec"><h4>Housing</h4>
       <p class="fact">${w.housing||''}</p>
       <div class="fin-grid" style="margin:0.5rem 0">
-        <div class="fin-box"><div class="flabel">Affordable Established</div><div class="fval">${w.affEst||'-'}</div></div>
-        <div class="fin-box"><div class="flabel">Affordable Effective</div><div class="fval">${w.affEff||'-'}</div></div>
+        <div class="fin-box"><div class="flabel">Affordable pipeline</div><div class="fval">${w.affEst||'-'}</div></div>
+        <div class="fin-box"><div class="flabel">Expected to be built</div><div class="fval">${w.affEff||'-'}</div></div>
       </div>
-      <p class="gap">Source: GCC Housing Land Audit 31 March 2024 (sites of 4+ units). ${FOI.h.homelessness}</p>
+      <p class="gap">Pipeline = total affordable homes identified in the land supply. Expected = the portion programmed to be delivered (to ~2031). Source: GCC Housing Land Audit March 2024.</p>
+      <p class="gap">${FOI.h.homelessness}</p>
     </div>
     <div class="sec"><h4>Crime & Safety</h4><p class="fact">${w.crime||''}</p><p class="gap">${FOI.c.violent}</p></div>
     <div class="sec"><h4>Environment</h4><p class="fact">${w.environment||''}</p><p class="gap">${FOI.e.litter}</p></div>
