@@ -105,8 +105,8 @@ const departments=[
   name:"Related Companies",
   note:"Net cost of ALEOs and group entities (Glasgow Life, City Building, etc.). See Entities and Money trails.",
   years:[
-    {y:"2023/24",gross:"£136.0m",income:"£0.1m",net:"£135.9m",budget:"—"},
-    {y:"2024/25",gross:"£118.7m",income:"—",net:"£118.7m",budget:"Not published"}
+    {y:"2023/24",gross:"£136.0m",income:"£0.1m",net:"£135.9m",budget:"-"},
+    {y:"2024/25",gross:"£118.7m",income:"-",net:"£118.7m",budget:"Not published"}
   ]
 }
 ];
