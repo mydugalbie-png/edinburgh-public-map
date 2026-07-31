@@ -6,143 +6,300 @@
 <title>Community Shield Scotland</title>
 <style>
 :root{
-  --bg:#0a0a0f;
-  --card:#14141c;
-  --border:#2a2a38;
-  --text:#e8e8f0;
-  --muted:#9494a8;
-  --silver:#c8c8d4;
-  --purple:#a855f7;
-  --purple-dim:#7c3aed;
-  --amber:#e8c547;
-  --green:#2dd4bf;
-  --red:#f87171;
-  --blue:#60a5fa;
+  --bg:#f7f6fb;
+  --card:#ffffff;
+  --border:#e4e2ec;
+  --text:#1c1a2e;
+  --muted:#6b6880;
+  --silver:#8a8a9c;
+  --silver-light:#c5c5d0;
+  --purple:#7c3aed;
+  --purple-soft:#f3eefc;
+  --purple-dim:#6d28d9;
+  --amber:#b45309;
+  --green:#059669;
+  --red:#dc2626;
+  --blue:#2563eb;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.55;min-height:100vh}
+body{font-family:system-ui,-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg);color:var(--text);line-height:1.55;min-height:100vh}
 
-/* Header */
-header{background:linear-gradient(160deg,#0a0a0f 0%,#16122a 50%,#0a0a0f 100%);border-bottom:1px solid var(--border);padding:1.5rem 1rem 1.2rem;text-align:center}
-header .brand{display:flex;align-items:center;justify-content:center;gap:.75rem;cursor:pointer}
-header h1{color:var(--silver);font-size:1.55rem;font-weight:700;letter-spacing:.02em}
-header .tagline{color:var(--muted);font-size:.88rem;margin-top:.35rem}
-header .motto{color:var(--purple);font-size:.78rem;margin-top:.25rem;letter-spacing:.08em;text-transform:uppercase}
+/* Header – bright + welcoming */
+header{
+  background:linear-gradient(180deg,#ffffff 0%,#f3eefc 100%);
+  border-bottom:1px solid var(--border);
+  padding:1.8rem 1rem 1.4rem;
+  text-align:center;
+}
+header .brand{display:flex;flex-direction:column;align-items:center;gap:.7rem;cursor:pointer}
+header .logo-mark{
+  width:88px;height:88px;
+  border-radius:50%;
+  background:linear-gradient(145deg,#e8e8f0,#ffffff);
+  border:3px solid var(--silver-light);
+  box-shadow:0 4px 20px rgba(124,58,237,.12);
+  display:flex;align-items:center;justify-content:center;
+  font-size:2.2rem;
+}
+header h1{color:var(--text);font-size:1.65rem;font-weight:700;letter-spacing:.01em}
+header .tagline{color:var(--muted);font-size:.92rem;margin-top:.15rem}
+header .motto{
+  color:var(--purple);
+  font-size:.78rem;
+  margin-top:.35rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  font-weight:600;
+}
 
-.container{max-width:1040px;margin:0 auto;padding:1.2rem}
+.container{max-width:1040px;margin:0 auto;padding:1.3rem}
 
-/* Home view */
 #home-view{display:block}
 #council-view{display:none}
 
-.hero{text-align:center;padding:1.5rem 0 1.8rem}
-.hero h2{font-size:1.35rem;color:var(--silver);font-weight:600;margin-bottom:.5rem}
-.hero p{color:var(--muted);font-size:.95rem;max-width:540px;margin:0 auto;line-height:1.5}
+.hero{text-align:center;padding:1.8rem 0 1.5rem}
+.hero h2{font-size:1.45rem;color:var(--text);font-weight:650;margin-bottom:.55rem}
+.hero p{color:var(--muted);font-size:1rem;max-width:520px;margin:0 auto;line-height:1.55}
 
-.paths{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.8rem;margin:1.4rem 0 2rem}
-.path-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.1rem;text-align:center;cursor:pointer;transition:border-color .15s,transform .15s}
-.path-card:hover{border-color:var(--purple);transform:translateY(-2px)}
-.path-card .icon{font-size:1.6rem;margin-bottom:.4rem}
-.path-card h3{color:var(--silver);font-size:.98rem;margin-bottom:.3rem}
-.path-card p{color:var(--muted);font-size:.82rem}
+.paths{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.9rem;margin:1.6rem 0 2.2rem}
+.path-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:1.25rem 1.1rem;
+  text-align:center;
+  cursor:pointer;
+  transition:border-color .15s,box-shadow .15s,transform .15s;
+  box-shadow:0 1px 3px rgba(0,0,0,.04);
+}
+.path-card:hover{
+  border-color:var(--purple);
+  box-shadow:0 6px 20px rgba(124,58,237,.1);
+  transform:translateY(-2px);
+}
+.path-card .icon{font-size:1.7rem;margin-bottom:.45rem}
+.path-card h3{color:var(--text);font-size:1rem;margin-bottom:.3rem}
+.path-card p{color:var(--muted);font-size:.84rem}
 
-.section-title{color:var(--silver);font-size:1.05rem;margin:1.5rem 0 .8rem;display:flex;align-items:center;gap:.6rem}
+.section-title{
+  color:var(--text);
+  font-size:1.08rem;
+  font-weight:600;
+  margin:1.6rem 0 .9rem;
+  display:flex;align-items:center;gap:.7rem;
+}
 .section-title span{flex:1;height:1px;background:var(--border)}
 
-.council-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:.7rem}
-.council-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.9rem;cursor:pointer;transition:border-color .15s,background .15s}
-.council-card:hover{border-color:var(--purple);background:#1a1a26}
-.council-card.live{border-color:var(--purple)}
-.council-card .cname{color:var(--silver);font-weight:600;font-size:.92rem}
-.council-card .cstatus{font-size:.72rem;margin-top:.3rem}
+.council-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:.75rem}
+.council-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:1rem;
+  cursor:pointer;
+  transition:border-color .15s,box-shadow .15s;
+  box-shadow:0 1px 3px rgba(0,0,0,.03);
+}
+.council-card:hover{
+  border-color:var(--purple);
+  box-shadow:0 4px 14px rgba(124,58,237,.1);
+}
+.council-card.live{border-color:var(--purple);background:var(--purple-soft)}
+.council-card .cname{color:var(--text);font-weight:600;font-size:.94rem}
+.council-card .cstatus{font-size:.74rem;margin-top:.35rem;font-weight:500}
 .council-card .cstatus.live{color:var(--green)}
 .council-card .cstatus.ready{color:var(--muted)}
-.council-card .cmeta{font-size:.75rem;color:var(--muted);margin-top:.15rem}
+.council-card .cmeta{font-size:.76rem;color:var(--muted);margin-top:.12rem}
 
 /* Council view */
-.tabs{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1.1rem}
-.tab{padding:.42rem .9rem;border-radius:7px;border:1px solid var(--border);background:var(--card);color:var(--muted);cursor:pointer;font-size:.86rem;transition:all .15s}
-.tab.active,.tab:hover{background:var(--purple-dim);border-color:var(--purple);color:#fff}
+.tabs{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1.15rem}
+.tab{
+  padding:.45rem .95rem;
+  border-radius:8px;
+  border:1px solid var(--border);
+  background:var(--card);
+  color:var(--muted);
+  cursor:pointer;
+  font-size:.87rem;
+  transition:all .15s;
+}
+.tab.active,.tab:hover{
+  background:var(--purple);
+  border-color:var(--purple);
+  color:#fff;
+}
 .panel{display:none}.panel.active{display:block}
 
-.card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1rem;margin-bottom:.85rem}
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:1.1rem;
+  margin-bottom:.9rem;
+  box-shadow:0 1px 3px rgba(0,0,0,.03);
+}
 .card.clickable{cursor:pointer}.card.clickable:hover{border-color:var(--purple)}
-.card h3{color:var(--silver)}
-.meta{font-size:.83rem;color:var(--muted)}
+.card h3{color:var(--text)}
+.meta{font-size:.84rem;color:var(--muted)}
 
-.intro-box{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.9rem;margin-bottom:.9rem;color:var(--muted);font-size:.87rem}
+.intro-box{
+  background:var(--purple-soft);
+  border:1px solid #e0d4f7;
+  border-radius:12px;
+  padding:1rem;
+  margin-bottom:1rem;
+  color:var(--muted);
+  font-size:.9rem;
+}
 .intro-box strong{color:var(--purple)}
 
-.ward-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:.65rem}
-.ward-tile{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.8rem;cursor:pointer;transition:border-color .15s}
-.ward-tile:hover{border-color:var(--purple)}
-.ward-tile .wn{color:var(--silver);font-weight:600}
-.ward-tile .wnum{color:var(--muted);font-size:.76rem}
-.ward-tile .wsimd{color:var(--amber);font-size:.76rem;margin-top:.25rem}
+.ward-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:.7rem}
+.ward-tile{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:.9rem;
+  cursor:pointer;
+  transition:border-color .15s,box-shadow .15s;
+}
+.ward-tile:hover{border-color:var(--purple);box-shadow:0 4px 12px rgba(124,58,237,.08)}
+.ward-tile .wn{color:var(--text);font-weight:600}
+.ward-tile .wnum{color:var(--muted);font-size:.77rem}
+.ward-tile .wsimd{color:var(--amber);font-size:.77rem;margin-top:.25rem}
 
-.back-btn{margin-bottom:.85rem;padding:.4rem .85rem;border-radius:7px;border:1px solid var(--border);background:var(--card);color:var(--purple);cursor:pointer;font-size:.88rem}
-.back-btn:hover{border-color:var(--purple)}
+.back-btn{
+  margin-bottom:.9rem;
+  padding:.42rem .9rem;
+  border-radius:8px;
+  border:1px solid var(--border);
+  background:var(--card);
+  color:var(--purple);
+  cursor:pointer;
+  font-size:.9rem;
+  font-weight:500;
+}
+.back-btn:hover{border-color:var(--purple);background:var(--purple-soft)}
 
-.sec{margin-top:1rem;padding-top:.85rem;border-top:1px solid var(--border)}
-.sec h4{color:var(--amber);margin-bottom:.4rem;font-size:.92rem}
+.sec{margin-top:1.05rem;padding-top:.9rem;border-top:1px solid var(--border)}
+.sec h4{color:var(--purple);margin-bottom:.4rem;font-size:.93rem}
 
-.fin-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:.45rem;margin:.45rem 0}
-.fin-box{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:.5rem;text-align:center}
-.fin-box .flabel{font-size:.68rem;color:var(--muted)}
-.fin-box .fval{font-weight:700;color:var(--amber);margin-top:.1rem;font-size:.92rem}
+.fin-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:.5rem;margin:.5rem 0}
+.fin-box{
+  background:var(--bg);
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:.55rem;
+  text-align:center;
+}
+.fin-box .flabel{font-size:.7rem;color:var(--muted)}
+.fin-box .fval{font-weight:700;color:var(--purple);margin-top:.12rem;font-size:.95rem}
 
-.gap{color:var(--muted);font-size:.83rem;border-left:3px solid var(--border);padding-left:.6rem;margin:.3rem 0}
-.fact{margin:.28rem 0;font-size:.88rem}
+.gap{color:var(--muted);font-size:.84rem;border-left:3px solid var(--silver-light);padding-left:.65rem;margin:.35rem 0}
+.fact{margin:.3rem 0;font-size:.9rem}
 
-.money-row{display:grid;grid-template-columns:1.15fr 1.25fr .9fr .9fr;gap:.35rem;padding:.4rem 0;border-bottom:1px solid var(--border);font-size:.82rem}
+.money-row{display:grid;grid-template-columns:1.15fr 1.25fr .9fr .9fr;gap:.35rem;padding:.45rem 0;border-bottom:1px solid var(--border);font-size:.84rem}
 .money-row .from{color:var(--blue)}.money-row .to{color:var(--green)}.money-row .amt{color:var(--amber);font-weight:600}
 
-.search-box input{width:100%;padding:.65rem .9rem;border-radius:8px;border:1px solid var(--border);background:var(--card);color:var(--text);margin-bottom:.85rem;font-size:.92rem}
-.search-box input:focus{outline:none;border-color:var(--purple)}
+.search-box input{
+  width:100%;
+  padding:.7rem 1rem;
+  border-radius:10px;
+  border:1px solid var(--border);
+  background:var(--card);
+  color:var(--text);
+  margin-bottom:.9rem;
+  font-size:.93rem;
+}
+.search-box input:focus{outline:none;border-color:var(--purple);box-shadow:0 0 0 3px rgba(124,58,237,.12)}
 
 #detail-view{display:none}#detail-view.active{display:block}
 
-footer{text-align:center;padding:1.5rem 1rem;color:var(--muted);font-size:.8rem;border-top:1px solid var(--border);margin-top:2rem}
-footer .motto{color:var(--purple);letter-spacing:.06em;margin-bottom:.3rem}
+footer{
+  text-align:center;
+  padding:1.8rem 1rem;
+  color:var(--muted);
+  font-size:.82rem;
+  border-top:1px solid var(--border);
+  margin-top:2.5rem;
+  background:#fff;
+}
+footer .motto{color:var(--purple);letter-spacing:.08em;margin-bottom:.35rem;font-weight:600;font-size:.78rem}
 
-.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:.65rem}
-.stat-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.75rem;text-align:center}
-.stat-card .value{color:var(--amber);font-size:1.15rem;font-weight:700}
-.stat-card .label,.stat-card .sub{color:var(--muted);font-size:.76rem}
+.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:.7rem}
+.stat-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:.85rem;
+  text-align:center;
+}
+.stat-card .value{color:var(--purple);font-size:1.2rem;font-weight:700}
+.stat-card .label,.stat-card .sub{color:var(--muted);font-size:.77rem}
 
-.fund-sub{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:.85rem}
-.fund-sub button{padding:.35rem .7rem;border-radius:6px;border:1px solid var(--border);background:var(--bg);color:var(--muted);cursor:pointer;font-size:.8rem}
-.fund-sub button.active{border-color:var(--purple);color:var(--purple)}
+.fund-sub{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:.9rem}
+.fund-sub button{
+  padding:.38rem .75rem;
+  border-radius:7px;
+  border:1px solid var(--border);
+  background:var(--card);
+  color:var(--muted);
+  cursor:pointer;
+  font-size:.82rem;
+}
+.fund-sub button.active{border-color:var(--purple);color:var(--purple);background:var(--purple-soft)}
 
-.dept-row{display:grid;grid-template-columns:1.4fr .9fr .9fr .9fr;gap:.35rem;padding:.45rem 0;border-bottom:1px solid var(--border);font-size:.84rem;align-items:center}
-.dept-row .dname{color:var(--silver);font-weight:600;cursor:pointer}
+.dept-row{display:grid;grid-template-columns:1.4fr .9fr .9fr .9fr;gap:.35rem;padding:.48rem 0;border-bottom:1px solid var(--border);font-size:.85rem;align-items:center}
+.dept-row .dname{color:var(--text);font-weight:600;cursor:pointer}
 .dept-row .dname:hover{color:var(--purple)}
 
-.placeholder-box{background:var(--bg);border:1px dashed var(--border);border-radius:10px;padding:1.5rem;text-align:center;color:var(--muted)}
-.placeholder-box h4{color:var(--silver);margin-bottom:.4rem}
-.badge-live{display:inline-block;background:rgba(45,212,191,.15);color:var(--green);font-size:.68rem;padding:.15rem .45rem;border-radius:4px;font-weight:600}
-.badge-ready{display:inline-block;background:rgba(148,148,168,.12);color:var(--muted);font-size:.68rem;padding:.15rem .45rem;border-radius:4px}
+.placeholder-box{
+  background:var(--bg);
+  border:1px dashed var(--border);
+  border-radius:12px;
+  padding:1.6rem;
+  text-align:center;
+  color:var(--muted);
+}
+.placeholder-box h4{color:var(--text);margin-bottom:.4rem}
 
-.council-header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.6rem;margin-bottom:1rem}
-.council-header h2{color:var(--silver);font-size:1.3rem}
+.badge-live{
+  display:inline-block;
+  background:#ecfdf5;
+  color:var(--green);
+  font-size:.7rem;
+  padding:.18rem .5rem;
+  border-radius:5px;
+  font-weight:600;
+}
+.badge-ready{
+  display:inline-block;
+  background:#f4f4f6;
+  color:var(--muted);
+  font-size:.7rem;
+  padding:.18rem .5rem;
+  border-radius:5px;
+}
+
+.council-header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.6rem;margin-bottom:1.1rem}
+.council-header h2{color:var(--text);font-size:1.35rem}
 </style>
 </head>
 <body>
 
 <header>
   <div class="brand" onclick="showHome()">
-    <div style="width:42px;height:42px;border-radius:50%;border:2px solid var(--silver);display:flex;align-items:center;justify-content:center;font-size:1.1rem">🛡️</div>
+    <div class="logo-mark">🛡️</div>
     <div>
       <h1>Community Shield Scotland</h1>
+      <p class="tagline">Mapping council money · Empowering local communities</p>
+      <p class="motto">Truth · Community · Power</p>
     </div>
   </div>
-  <p class="tagline">Mapping council money · Empowering local communities</p>
-  <p class="motto">Truth · Community · Power</p>
 </header>
 
 <div class="container">
 
-  <!-- ===================== HOME VIEW ===================== -->
+  <!-- HOME VIEW -->
   <div id="home-view">
     <div class="hero">
       <h2>Scotland’s councils, opened up</h2>
@@ -169,12 +326,10 @@ footer .motto{color:var(--purple);letter-spacing:.06em;margin-bottom:.3rem}
 
     <div class="section-title">All 32 Scottish Councils <span></span></div>
 
-    <div class="council-grid" id="council-grid">
-      <!-- Filled by JS -->
-    </div>
+    <div class="council-grid" id="council-grid"></div>
   </div>
 
-  <!-- ===================== COUNCIL VIEW ===================== -->
+  <!-- COUNCIL VIEW -->
   <div id="council-view">
     <button class="back-btn" onclick="showHome()">← All Councils</button>
 
@@ -194,12 +349,10 @@ footer .motto{color:var(--purple);letter-spacing:.06em;margin-bottom:.3rem}
       <button class="tab" onclick="showPanel('procurement')">Procurement</button>
     </div>
 
-    <!-- Overview -->
     <div id="overview" class="panel active">
       <div id="overview-content"></div>
     </div>
 
-    <!-- Funds -->
     <div id="funds" class="panel">
       <div class="intro-box" id="funds-intro"><strong>Council Funds</strong> – Departments, related entities and money trails.</div>
       <div class="fund-sub">
@@ -214,18 +367,15 @@ footer .motto{color:var(--purple);letter-spacing:.06em;margin-bottom:.3rem}
       <div id="funds-ownership" style="display:none"><div id="ownership-content"></div></div>
     </div>
 
-    <!-- Community / Wards -->
     <div id="community" class="panel">
       <div class="intro-box"><strong>Community / Wards</strong> – Local data, action toolkits and noticeboards.</div>
       <div class="ward-grid" id="ward-grid"></div>
     </div>
 
-    <!-- Procurement -->
     <div id="procurement" class="panel">
       <div id="procurement-list"></div>
     </div>
 
-    <!-- Detail view (wards, entities, depts) -->
     <div id="detail-view">
       <button class="back-btn" id="back-btn">← Back</button>
       <div id="detail-content"></div>
@@ -241,7 +391,6 @@ footer .motto{color:var(--purple);letter-spacing:.06em;margin-bottom:.3rem}
 
 <script src="wards.js"></script>
 <script>
-/* ===== 32 Scottish Councils ===== */
 const councils = [
   {id:"aberdeen-city",name:"Aberdeen City",status:"ready",wards:13},
   {id:"aberdeenshire",name:"Aberdeenshire",status:"ready",wards:19},
@@ -297,8 +446,6 @@ function openCouncil(id){
   document.getElementById('council-badge').innerHTML = c.status==='live'
     ? '<span class="badge-live">LIVE</span>'
     : '<span class="badge-ready">TEMPLATE READY</span>';
-
-  // Reset tabs
   showPanel('overview');
   renderCouncilContent(c);
 }
@@ -326,7 +473,6 @@ function renderCouncilContent(c){
 }
 
 function renderGlasgowLive(){
-  // Overview
   document.getElementById('overview-content').innerHTML = `
     <div class="intro-box"><strong>Glasgow City Council</strong><br>
     Map money from the council through departments and entities into wards. Public accounts + FOI gaps + community action tools.</div>
@@ -352,7 +498,6 @@ function renderGlasgowLive(){
       <p class="fact" style="margin-top:.5rem">Council tax, grants and other income → <strong>Council services</strong> → payments to <strong>companies, LLPs, charities and the IJB</strong> → services that affect every ward.</p>
     </div>`;
 
-  // Use existing Glasgow renderers
   if(typeof renderDepts==='function') renderDepts();
   if(typeof renderEntities==='function') renderEntities();
   if(typeof renderTrails==='function') renderTrails();
@@ -396,47 +541,18 @@ function renderTemplate(c){
       <p class="fact">We welcome local knowledge, FOI responses, and published accounts. The Glasgow page shows the full standard we are applying everywhere.</p>
     </div>`;
 
-  document.getElementById('depts-list').innerHTML = `
-    <div class="placeholder-box">
-      <h4>Departments</h4>
-      <p>Budget and actuals for ${c.name} services will appear here (same layout as Glasgow).</p>
-    </div>`;
+  document.getElementById('depts-list').innerHTML = `<div class="placeholder-box"><h4>Departments</h4><p>Budget and actuals for ${c.name} services will appear here.</p></div>`;
+  document.getElementById('entities-list').innerHTML = `<div class="placeholder-box"><h4>Related entities</h4><p>ALEOs and partnerships linked to ${c.name} will be listed here.</p></div>`;
+  document.getElementById('trails-list').innerHTML = `<div class="placeholder-box"><h4>Money trails</h4><p>Payments from the council to related bodies will be mapped here.</p></div>`;
+  document.getElementById('ownership-content').innerHTML = `<div class="placeholder-box"><h4>Ownership tree</h4><p>Control structure for ${c.name} group bodies.</p></div>`;
 
-  document.getElementById('entities-list').innerHTML = `
-    <div class="placeholder-box">
-      <h4>Related entities</h4>
-      <p>ALEOs, companies and partnerships linked to ${c.name} will be listed here with turnover and accounts links.</p>
-    </div>`;
-
-  document.getElementById('trails-list').innerHTML = `
-    <div class="placeholder-box">
-      <h4>Money trails</h4>
-      <p>Payments from the council to related bodies will be mapped here.</p>
-    </div>`;
-
-  document.getElementById('ownership-content').innerHTML = `
-    <div class="placeholder-box">
-      <h4>Ownership tree</h4>
-      <p>Control and membership structure for ${c.name} group bodies.</p>
-    </div>`;
-
-  // Simple ward placeholders
   const wardCount = c.wards || 8;
   let wardHtml = '';
   for(let i=1;i<=wardCount;i++){
-    wardHtml += `<div class="ward-tile" onclick="openTemplateWard('${c.name}',${i})">
-      <div class="wn">Ward ${i}</div>
-      <div class="wnum">${c.name}</div>
-      <div class="wsimd">Profile coming soon</div>
-    </div>`;
+    wardHtml += `<div class="ward-tile" onclick="openTemplateWard('${c.name}',${i})"><div class="wn">Ward ${i}</div><div class="wnum">${c.name}</div><div class="wsimd">Profile coming soon</div></div>`;
   }
   document.getElementById('ward-grid').innerHTML = wardHtml;
-
-  document.getElementById('procurement-list').innerHTML = `
-    <div class="placeholder-box">
-      <h4>Procurement</h4>
-      <p>Published contracts and pipeline for ${c.name} will appear here.</p>
-    </div>`;
+  document.getElementById('procurement-list').innerHTML = `<div class="placeholder-box"><h4>Procurement</h4><p>Published contracts and pipeline for ${c.name} will appear here.</p></div>`;
 }
 
 function openTemplateWard(councilName, n){
@@ -452,8 +568,7 @@ function openTemplateWard(councilName, n){
     <div class="card">
       <h3>${councilName} — Ward ${n}</h3>
       <p class="meta">Template ward profile</p>
-      <div class="sec">
-        <h4>Data sections (same as Glasgow)</h4>
+      <div class="sec"><h4>Data sections (same as Glasgow)</h4>
         <p class="fact">Population · Deprivation (SIMD) · Housing · Crime & Safety · Environment · FOI priorities</p>
       </div>
     </div>
@@ -462,26 +577,26 @@ function openTemplateWard(councilName, n){
       <p class="meta" style="margin-bottom:1rem">Practical help if you want to do something positive in this ward.</p>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0.7rem">
         <div style="background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:0.85rem">
-          <div style="font-size:0.72rem;color:var(--amber);font-weight:600;margin-bottom:0.3rem">WHAT THIS WARD NEEDS</div>
+          <div style="font-size:0.72rem;color:var(--purple);font-weight:600;margin-bottom:0.3rem">WHAT THIS WARD NEEDS</div>
           <p style="font-size:0.86rem;color:var(--muted)">Local priorities will be summarised here from published data and community input.</p>
         </div>
         <div style="background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:0.85rem">
-          <div style="font-size:0.72rem;color:var(--amber);font-weight:600;margin-bottom:0.3rem">EXISTING GROUPS</div>
+          <div style="font-size:0.72rem;color:var(--purple);font-weight:600;margin-bottom:0.3rem">EXISTING GROUPS</div>
           <p style="font-size:0.86rem;color:var(--muted)">Community councils, resident groups and local projects.</p>
         </div>
         <div style="background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:0.85rem">
-          <div style="font-size:0.72rem;color:var(--amber);font-weight:600;margin-bottom:0.3rem">LOCAL FACILITIES</div>
+          <div style="font-size:0.72rem;color:var(--purple);font-weight:600;margin-bottom:0.3rem">LOCAL FACILITIES</div>
           <p style="font-size:0.86rem;color:var(--muted)">Centres, halls, libraries, parks and usable spaces.</p>
         </div>
         <div style="background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:0.85rem">
-          <div style="font-size:0.72rem;color:var(--amber);font-weight:600;margin-bottom:0.3rem">FUNDING & SUPPORT</div>
+          <div style="font-size:0.72rem;color:var(--purple);font-weight:600;margin-bottom:0.3rem">FUNDING & SUPPORT</div>
           <p style="font-size:0.86rem;color:var(--muted)">Council grants, Awards for All, crowdfunding routes.</p>
         </div>
         <div style="background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:0.85rem">
-          <div style="font-size:0.72rem;color:var(--amber);font-weight:600;margin-bottom:0.3rem">START SOMETHING</div>
+          <div style="font-size:0.72rem;color:var(--purple);font-weight:600;margin-bottom:0.3rem">START SOMETHING</div>
           <p style="font-size:0.86rem;color:var(--muted)">Simple 5-step guide to beginning local action.</p>
         </div>
-        <div style="background:linear-gradient(135deg,var(--bg),#1a1430);border:1px solid var(--purple);border-radius:10px;padding:0.85rem">
+        <div style="background:var(--purple-soft);border:1px solid var(--purple);border-radius:10px;padding:0.85rem">
           <div style="font-size:0.72rem;color:var(--purple);font-weight:600;margin-bottom:0.3rem">WARD REPORT</div>
           <p style="font-size:0.86rem;color:var(--muted)">One-page summary will be available once data is loaded.</p>
         </div>
@@ -511,10 +626,8 @@ function filterAll(){
   if(typeof renderEntities==='function') renderEntities(q);
 }
 
-/* Render council grid on load */
 function renderCouncilGrid(){
   const grid = document.getElementById('council-grid');
-  // Put live first
   const sorted = [...councils].sort((a,b)=> (a.status==='live'?-1:1) - (b.status==='live'?-1:1) || a.name.localeCompare(b.name));
   grid.innerHTML = sorted.map(c=>`
     <div class="council-card ${c.status}" onclick="openCouncil('${c.id}')">
