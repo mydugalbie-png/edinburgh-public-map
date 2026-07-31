@@ -206,7 +206,31 @@ function renderDepts(){
     return `<div class="dept-row"><div class="dname" onclick="openDept('${d.id}')">${d.name}</div><div>${prev && prev.budget !== '—' && prev.budget !== 'Not published' ? prev.budget : '—'}</div><div>${prev ? prev.net : '—'}</div><div>${latest ? latest.net : '—'}</div></div>`;
   }).join('');
 }
-
+function renderProcurement(){
+  const list=document.getElementById('procurement-list');
+  if(!list)return;
+  list.innerHTML=`
+    <div class="card" style="margin-bottom:1rem">
+      <h3>Construction Pipeline</h3>
+      <p class="meta">Glasgow City Council projects from the Scottish Futures Trust Construction Pipeline Forecast Tool (Q1 2026 submission).</p>
+    </div>
+    <div class="dept-row" style="font-weight:600;color:var(--muted);font-size:.78rem;border-bottom:1px solid var(--border);padding-bottom:.4rem;margin-bottom:.3rem">
+      <div style="flex:2">Project</div><div>Type</div><div>Value</div><div>Status</div>
+    </div>
+    ${procurement.map(p=>`
+      <div class="dept-row" style="font-size:.82rem;align-items:flex-start">
+        <div style="flex:2">
+          <strong>${p.name}</strong><br>
+          <span class="meta">${p.route||''}</span>
+        </div>
+        <div>${p.type}</div>
+        <div style="font-weight:600;color:var(--amber)">${p.value}</div>
+        <div>${p.status}</div>
+      </div>`).join('')}
+    <div class="sec" style="margin-top:1.2rem">
+      <p class="gap">Source: Glasgow City Council CPFT submission to Scottish Futures Trust (May 2026). Values are estimated construction values.</p>
+    </div>`;
+}
 function openDept(id){
   const d=departments.find(x=>x.id===id);
   if(!d)return;
