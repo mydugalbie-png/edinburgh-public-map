@@ -27,14 +27,14 @@ const wards=[
 ];
 
 const entities=[
-{id:"glasgow-life",name:"Glasgow Life",type:"Charity / ALEO",reg:"SC313851 / SC037844",exp:"£98.7m",note:"Culture, sport, libraries, museums (trading as Glasgow Life). Sole member controlled by GCC. Service contract with GCC ~£77m in 2021/22.",turnover:[{y:"2020/21",t:"£107.1m income"},{y:"2021/22",t:"£102.7m income"}]},
-{id:"city-building",name:"City Building (Glasgow) LLP",type:"Joint Venture",reg:"SO300990",exp:"£52.6m",note:"Repairs, construction, manufacturing. JV with GCC. Post-2021 accounts delayed due to whistleblowing investigations; group audits qualified 2022/23 and 2023/24.",turnover:[{y:"2019/20",t:"£142.6m"},{y:"2020/21",t:"£105.7m"}]},
-{id:"city-building-contracts",name:"City Building (Contracts) LLP",type:"LLP",reg:"SO301080",exp:"Turnover series",note:"Contracts arm of City Building group. Construction, repairs and maintenance including RSL work. Registered office: 350 Darnick Street, Glasgow G21 4BA.",accountsUrl:"https://citizen.glascc1-prd.gosshosted.com/1252",turnover:[{y:"2016/17",t:"£74.9m"},{y:"2017/18",t:"£86.2m"},{y:"2018/19",t:"£87.9m"},{y:"2019/20",t:"£65.2m"},{y:"2020/21",t:"£45.8m"}]},
-{id:"city-parking",name:"City Parking (Glasgow) LLP",type:"LLP",reg:"SO301266",exp:"-",note:"Parking services. COVID impact clear in 2020/21 turnover drop.",turnover:[{y:"2019/20",t:"£16.1m"},{y:"2020/21",t:"£6.4m"}]},
+{id:"glasgow-life",name:"Glasgow Life",type:"Charity / ALEO",reg:"SC313851 / SC037844",exp:"£98.7m",note:"Culture, sport, libraries, museums (trading as Glasgow Life). Sole member controlled by GCC. Service contract with GCC ~£77m in 2021/22. Group accounts filed at Companies House for years ended 31 March 2020–2025.",companiesHouseUrl:"https://find-and-update.company-information.service.gov.uk/company/SC313851",turnover:[{y:"2020/21",t:"£107.1m income"},{y:"2021/22",t:"£102.7m income"}]},
+{id:"city-building",name:"City Building (Glasgow) LLP",type:"Joint Venture",reg:"SO300990",exp:"£52.6m",note:"Repairs, construction, manufacturing. JV with GCC. Post-2021 accounts delayed due to whistleblowing investigations; group audits qualified 2022/23 and 2023/24.",companiesHouseUrl:"https://find-and-update.company-information.service.gov.uk/company/SO300990",turnover:[{y:"2019/20",t:"£142.6m"},{y:"2020/21",t:"£105.7m"}]},
+{id:"city-building-contracts",name:"City Building (Contracts) LLP",type:"LLP",reg:"SO301080",exp:"Turnover series",note:"Contracts arm of City Building group. Construction, repairs and maintenance including RSL work. Registered office: 350 Darnick Street, Glasgow G21 4BA.",accountsUrl:"https://citizen.glascc1-prd.gosshosted.com/1252",companiesHouseUrl:"https://find-and-update.company-information.service.gov.uk/company/SO301080",turnover:[{y:"2016/17",t:"£74.9m"},{y:"2017/18",t:"£86.2m"},{y:"2018/19",t:"£87.9m"},{y:"2019/20",t:"£65.2m"},{y:"2020/21",t:"£45.8m"}]},
+{id:"city-parking",name:"City Parking (Glasgow) LLP",type:"LLP",reg:"SO301266",exp:"-",note:"Parking services. COVID impact clear in 2020/21 turnover drop.",companiesHouseUrl:"https://find-and-update.company-information.service.gov.uk/company/SO301266",turnover:[{y:"2019/20",t:"£16.1m"},{y:"2020/21",t:"£6.4m"}]},
 {id:"ijb",name:"Glasgow City IJB",type:"Integration Joint Board",reg:"Statutory",exp:"£574m",note:"Health & social care partnership with NHS Greater Glasgow & Clyde."},
-{id:"city-property",name:"City Property (Glasgow) LLP",type:"ALEO",reg:"SO302223",exp:"-",note:"Property and commercial estate management. Related: Investments LLP (SO302466), Operations SL Ltd (SC635243), SL1/SL2 LLPs.",turnover:[{y:"2019/20",t:"£2.6m"},{y:"2020/21",t:"£2.4m"}]},
-{id:"jobs-business",name:"Jobs & Business Glasgow",type:"Charity / ALEO",reg:"SC108565 / SC023930",exp:"-",note:"Economic development and employability. Company limited by guarantee + registered charity.",turnover:[{y:"2020/21",t:"£9.4m income"},{y:"2021/22",t:"£9.4m income"}]},
-{id:"sec",name:"Scottish Event Campus Limited",type:"Company",reg:"SC082081",exp:"-",note:"Scottish Event Campus (SEC). Accounts 2021/22 uploaded; turnover extraction pending (large/image-heavy PDF)."}
+{id:"city-property",name:"City Property (Glasgow) LLP",type:"ALEO",reg:"SO302223",exp:"-",note:"Property and commercial estate management. Related: Investments LLP (SO302466), Operations SL Ltd (SC635243), SL1/SL2 LLPs.",companiesHouseUrl:"https://find-and-update.company-information.service.gov.uk/company/SO302223",turnover:[{y:"2019/20",t:"£2.6m"},{y:"2020/21",t:"£2.4m"}]},
+{id:"jobs-business",name:"Jobs & Business Glasgow",type:"Charity / ALEO",reg:"SC108565 / SC023930",exp:"-",note:"Economic development and employability. Company limited by guarantee + registered charity.",companiesHouseUrl:"https://find-and-update.company-information.service.gov.uk/company/SC108565",turnover:[{y:"2020/21",t:"£9.4m income"},{y:"2021/22",t:"£9.4m income"}]},
+{id:"sec",name:"Scottish Event Campus Limited",type:"Company",reg:"SC082081",exp:"-",note:"Scottish Event Campus (SEC). Accounts 2021/22 uploaded; turnover extraction pending (large/image-heavy PDF).",companiesHouseUrl:"https://find-and-update.company-information.service.gov.uk/company/SC082081"}
 ];
 
 const trails=[
@@ -220,9 +220,12 @@ function openEntity(id){
       </div>`;
   }
 
-  let accountsLink = '';
+  let links = '';
+  if(e.companiesHouseUrl){
+    links += `<p class="fact" style="margin-top:.4rem"><a href="${e.companiesHouseUrl}" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600">→ Companies House</a></p>`;
+  }
   if(e.accountsUrl){
-    accountsLink = `<p class="fact" style="margin-top:.5rem"><a href="${e.accountsUrl}" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600">→ Official accounts page (Glasgow City Council)</a></p>`;
+    links += `<p class="fact" style="margin-top:.3rem"><a href="${e.accountsUrl}" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600">→ Official accounts page (GCC)</a></p>`;
   }
 
   document.getElementById('detail-content').innerHTML=`
@@ -232,8 +235,8 @@ function openEntity(id){
     <div class="sec"><h4>Notes</h4><p class="fact">${e.note||''}</p></div>
     ${turnoverBlock}
     <div class="sec"><h4>Sources & accounts</h4>
-    <p class="gap">GCC Annual Accounts Note 16 Related Party Transactions + Companies House + published entity accounts. Post-2021 City Building accounts delayed (whistleblowing investigations; group audits qualified 2022/23–2023/24).</p>
-    ${accountsLink}
+    <p class="gap">GCC Annual Accounts Note 16 + Companies House + published entity accounts.</p>
+    ${links}
     </div>
     </div>`;
 }
