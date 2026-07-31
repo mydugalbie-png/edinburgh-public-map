@@ -50,6 +50,7 @@ footer{text-align:center;padding:1.3rem;color:var(--muted);font-size:.8rem;borde
 <button class="tab active" onclick="showPanel('overview')">Overview</button>
 <button class="tab" onclick="showPanel('funds')">Council Funds</button>
 <button class="tab" onclick="showPanel('community')">Community / Wards</button>
+  <button class="tab" onclick="showPanel('procurement')">Procurement</button>
 </div>
 
 <div id="overview" class="panel active">
@@ -122,7 +123,9 @@ Map money from Glasgow City Council through departments and entities into wards.
 </div>
 </div>
 </div>
-
+<div id="procurement" class="panel">
+  <div id="procurement-list"></div>
+</div>
 <div id="community" class="panel">
 <div class="intro-box"><strong>Community / Wards</strong> – Click any ward for identity, housing, crime, environment, funding and action plan.</div>
 <div class="ward-grid" id="ward-grid"></div>
