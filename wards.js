@@ -211,6 +211,11 @@ function renderProcurement(){
     <div class="card" style="margin-bottom:1rem">
       <h3>Construction Pipeline</h3>
       <p class="meta">Glasgow City Council projects from the Scottish Futures Trust Construction Pipeline Forecast Tool (Q1 2026 submission).</p>
+      <p class="fact" style="margin-top:.6rem">
+        <a href="https://app.powerbi.com/view?r=eyJrIjoiNjQyNDExZjMtYTZlMy00NjM3LWE0OWQtYWEyYjkzMTNmNmFiIiwidCI6ImI5ODZlNzBmLWEwMWUtNGU0MS04YTg5LTdhMjY1MmI0NWE1MiJ9" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600">
+          → View Live Contracts (Power BI)
+        </a>
+      </p>
     </div>
     <div class="dept-row" style="font-weight:600;color:var(--muted);font-size:.78rem;border-bottom:1px solid var(--border);padding-bottom:.4rem;margin-bottom:.3rem">
       <div style="flex:2">Project</div><div>Type</div><div>Value</div><div>Status</div>
