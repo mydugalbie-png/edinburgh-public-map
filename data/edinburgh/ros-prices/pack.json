@@ -1,0 +1,118 @@
+{
+  "pack": "edinburgh-ros-house-prices",
+  "priority": 1,
+  "status": "download_blocked_cloudflare_structure_ready",
+  "source": {
+    "name": "Registers of Scotland Small Area Statistics 2025",
+    "url": "https://www.ros.gov.uk/data-and-statistics/property-market-statistics/small-area-statistics",
+    "xlsx": "https://www.ros.gov.uk/__data/assets/excel_doc/0005/297887/ros_small_area_statistics_2025.xlsx",
+    "also": "https://statistics.gov.scot/data/residential-properties-sales-and-price"
+  },
+  "fields": [
+    "electoral_ward",
+    "period",
+    "sales_count",
+    "mean",
+    "median",
+    "lower_quartile",
+    "upper_quartile"
+  ],
+  "wards": [
+    {
+      "id": "almond",
+      "name": "Almond",
+      "n": 1
+    },
+    {
+      "id": "pentland-hills",
+      "name": "Pentland Hills",
+      "n": 2
+    },
+    {
+      "id": "drum-brae-gyle",
+      "name": "Drum Brae/Gyle",
+      "n": 3
+    },
+    {
+      "id": "forth",
+      "name": "Forth",
+      "n": 4
+    },
+    {
+      "id": "inverleith",
+      "name": "Inverleith",
+      "n": 5
+    },
+    {
+      "id": "corstorphine-murrayfield",
+      "name": "Corstorphine/Murrayfield",
+      "n": 6
+    },
+    {
+      "id": "sighthill-gorgie",
+      "name": "Sighthill/Gorgie",
+      "n": 7
+    },
+    {
+      "id": "colinton-fairmilehead",
+      "name": "Colinton/Fairmilehead",
+      "n": 8
+    },
+    {
+      "id": "fountainbridge-craiglockhart",
+      "name": "Fountainbridge/Craiglockhart",
+      "n": 9
+    },
+    {
+      "id": "morningside",
+      "name": "Morningside",
+      "n": 10
+    },
+    {
+      "id": "city-centre",
+      "name": "City Centre",
+      "n": 11
+    },
+    {
+      "id": "leith-walk",
+      "name": "Leith Walk",
+      "n": 12
+    },
+    {
+      "id": "leith",
+      "name": "Leith",
+      "n": 13
+    },
+    {
+      "id": "craigentinny-duddingston",
+      "name": "Craigentinny/Duddingston",
+      "n": 14
+    },
+    {
+      "id": "southside-newington",
+      "name": "Southside/Newington",
+      "n": 15
+    },
+    {
+      "id": "liberton-gilmerton",
+      "name": "Liberton/Gilmerton",
+      "n": 16
+    },
+    {
+      "id": "portobello-craigmillar",
+      "name": "Portobello/Craigmillar",
+      "n": 17
+    }
+  ],
+  "city_benchmark_from_ebyN": {
+    "avg_price_sep_2025_gbp": 294488,
+    "yoy_pct": 4.2,
+    "sales_2024": 11341
+  },
+  "next_install_steps": [
+    "Download XLSX manually (Cloudflare blocks automated fetch)",
+    "Filter Local Authority = City of Edinburgh, Geography = Electoral Ward",
+    "Join to CSS ward slugs",
+    "Add house-price tiles to each ward dashboard"
+  ]
+}
