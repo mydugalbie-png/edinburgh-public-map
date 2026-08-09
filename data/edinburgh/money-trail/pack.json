@@ -1,0 +1,180 @@
+{
+  "pack": "edinburgh-money-trail",
+  "priority": 3,
+  "status": "public_sources_downloaded_headlines_extracted",
+  "geography": "council / group / ALEO (not multi-member ward)",
+  "sources": [
+    {
+      "name": "CEC Audited Annual Accounts 2024/25",
+      "file": "money-trail/CEC_audited_accounts_2024-25.pdf",
+      "url": "https://www.edinburgh.gov.uk/downloads/file/38217/audited-annual-accounts-2024-25"
+    },
+    {
+      "name": "Audit Scotland Annual Audit Report 2024/25",
+      "file": "money-trail/CEC_AAR_2024-25.pdf",
+      "url": "https://www.edinburgh.gov.uk/downloads/file/38218/annual-audit-report-2024-25"
+    },
+    {
+      "name": "CEC Holdings 2024",
+      "file": "money-trail/cec-holdings-audited-annual-accounts-2024.pdf"
+    },
+    {
+      "name": "Transport for Edinburgh 2024",
+      "file": "money-trail/transport-for-edinburgh-audited-annual-accounts-2024.pdf"
+    },
+    {
+      "name": "Edinburgh Living MMR LLP 2024",
+      "file": "money-trail/edinburgh-living-mmr-llp-audited-annual-accounts-2024.pdf"
+    },
+    {
+      "name": "Edinburgh Leisure 2024/25",
+      "file": "money-trail/Edinburgh_Leisure_2024-25.pdf",
+      "url": "https://www.edinburghleisure.co.uk/wp-content/uploads/2025/09/Year-End-2024-25-Edinburgh-Leisure-Final.pdf"
+    },
+    {
+      "name": "EIJB Audited Accounts 2024/25",
+      "file": "money-trail/EIJB_audited_accounts_2024-25.pdf"
+    },
+    {
+      "name": "Capital City Partnership 2024/25",
+      "file": "money-trail/CCP_audited_accounts_2024-25.pdf"
+    }
+  ],
+  "council_headlines_2024_25": {
+    "revenue_budget_planned_expenditure_m": 1361,
+    "revenue_budget_2025_26_m": 1496,
+    "outturn_underspend_m": 2.719,
+    "savings_required_2024_25_m": 28.5,
+    "savings_achieved_note": "\u00a323.9m of planned \u00a328.5m during 2024/25 (AAR)",
+    "directorate_net_pressures_m": 18.9,
+    "reserves_application_m": 12.889,
+    "corporate_savings_income_m": 8.766,
+    "unbudgeted_overspends_m": 18.936,
+    "general_fund_balance_31_mar_2025_m": 25.603,
+    "general_fund_balance_pct_of_net_budget": 1.88,
+    "council_tax_income_000s_note": "Income from Council Tax (330,188) \u00a3000 in one CIES extract line \u2014 verify in full statements",
+    "capital_expenditure_m": 304.244,
+    "general_capital_grant_m": 47.043,
+    "capital_programme_forecast_2024_30_bn": 3.163,
+    "borrowing_forecast_peak_bn": 2.879,
+    "debt_high_levels_note": "AAR: high levels of debt forecast to reach \u00a33bn",
+    "budget_gap_by_2030_m": 94.2,
+    "council_tax_rise_2025_26_pct": 8,
+    "council_tax_rise_extra_income_m": 29.3,
+    "savings_target_2025_26_m": 28.4,
+    "homelessness_demand_pressure_m": 20,
+    "eijb_savings_achieved_m": 42.6,
+    "eijb_additional_funding_from_cec_m": 12.1,
+    "nhs_lothian_extra_to_ijb_m": 2.4,
+    "ijb_commissioning_income_from_cec_000s": 415608,
+    "materiality_gross_expenditure_m": 55
+  },
+  "group_entities": [
+    {
+      "name": "City of Edinburgh Council",
+      "role": "parent",
+      "status": "accounts_downloaded"
+    },
+    {
+      "name": "Edinburgh Integration Joint Board",
+      "role": "associate/JV",
+      "status": "accounts_downloaded",
+      "notes": "In-year surplus ~\u00a31.5m 2024/25 (accounts narrative)"
+    },
+    {
+      "name": "Edinburgh Leisure",
+      "role": "ALEO / associate",
+      "status": "accounts_downloaded",
+      "management_fee_core_m": 8.0,
+      "additional_funding_2024_25_m": 4.2,
+      "one_off_additional_m": 3.2,
+      "covid_funding_last_year_m": 1.0,
+      "underlying_surplus_m": 0.38,
+      "total_income_m": 44.763,
+      "support_approved_2025_26_up_to_m": 2.5
+    },
+    {
+      "name": "Transport for Edinburgh Ltd",
+      "role": "subsidiary/group",
+      "status": "accounts_downloaded",
+      "notes": "Consolidated group; tram/network; revenue +\u00a39.3% to \u00a3226.7m narrative; loss after tax \u00a36.5m in one extract \u2014 verify"
+    },
+    {
+      "name": "CEC Holdings Limited",
+      "role": "subsidiary",
+      "status": "accounts_downloaded"
+    },
+    {
+      "name": "Edinburgh Living MMR LLP",
+      "role": "subsidiary",
+      "status": "accounts_downloaded",
+      "notes": "Net profit before tax \u00a37.741m includes valuation gain"
+    },
+    {
+      "name": "CEC Recovery Limited",
+      "role": "subsidiary",
+      "status": "link_available"
+    },
+    {
+      "name": "Capital City Partnership Ltd",
+      "role": "associate",
+      "status": "accounts_downloaded"
+    },
+    {
+      "name": "Capital Theatres",
+      "role": "associate",
+      "status": "accounts_on_own_site"
+    },
+    {
+      "name": "Lothian Valuation Joint Board",
+      "role": "JV",
+      "status": "accounts_on_own_site"
+    },
+    {
+      "name": "EDI Group Ltd",
+      "role": "related",
+      "status": "mentioned",
+      "notes": "Net loss \u00a30.114m to 31 Dec 2024"
+    }
+  ],
+  "money_trails_to_render": [
+    {
+      "from": "City of Edinburgh Council",
+      "to": "Edinburgh Leisure",
+      "type": "management_fee_plus_support",
+      "amount_2024_25_m": 12.2,
+      "note": "\u00a38.0m core management fee + \u00a34.2m additional (EL accounts)"
+    },
+    {
+      "from": "City of Edinburgh Council",
+      "to": "Edinburgh Integration Joint Board",
+      "type": "commissioning",
+      "amount_2024_25_m": 415.6,
+      "note": "Commissioning income received from IJB line \u00a3415.608m \u2014 verify direction in related-party note"
+    },
+    {
+      "from": "City of Edinburgh Council",
+      "to": "EIJB (extra in-year)",
+      "type": "budget_support",
+      "amount_2024_25_m": 12.1
+    },
+    {
+      "from": "NHS Lothian",
+      "to": "EIJB",
+      "type": "budget_support",
+      "amount_2024_25_m": 2.4
+    },
+    {
+      "from": "City of Edinburgh Council",
+      "to": "Capital programme",
+      "type": "capital_spend",
+      "amount_2024_25_m": 304.244
+    }
+  ],
+  "next_install_steps": [
+    "Re-key CIES service lines (Children/Education, Place, HSCP, Corporate) from full accounts into CSS money tables",
+    "Wire group ownership tree on Follow the Money",
+    "Publish ALEO cards with management fees and net results",
+    "Link Audit Scotland AAR findings (debt, budget gap \u00a394.2m by 2030, homelessness pressure)"
+  ]
+}
