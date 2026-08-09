@@ -1,0 +1,1690 @@
+--- page 1 ---
+ 
+ 
+The City of 
+Edinburgh Council 
+Proposed 2024/25 Annual Audit Report 
+ 
+ 
+ 
+Prepared for the Members of The City of Edinburgh Council and the Controller of Audit  
+September 2025 
+
+--- page 2 ---
+The City of Edinburgh Council: Proposed 2024/25 Annual Audit Report | 2 
+ 
+Contents 
+ 
+Key messages 3 
+Introduction 4 
+Audit scope and responsibilities 5 
+Audit of the annual accounts 7 
+Wider scope audit 21 
+Best Value audit 41 
+Appendix 1 47 
+Appendix 2 53 
+Appendix 3 61 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Accessibility 
+You can find out more and read this report using assistive technology on 
+our website www.audit.scot/accessibility. 
+--- page 3 ---
+Key messages | 3 
+ 
+Key messages  
+ 
+Audit of the annual accounts 
+1 All audit opinions stated that the annual accounts were free from material 
+misstatement. This means we consider the accounts to show a true and fair 
+view and follow relevant accounting standards and legislation.  
+2 There were a number of significant findings to report. All material audit 
+adjustments required to correct the financial statements were processed by 
+the council. 
+Wider scope audit 
+3 The council has broadly effective and appropriate arrangements in place for 
+Financial Management; Financial Sustainability; Vision, Leadership and 
+Governance; and Use of Resources to Improve Outcomes. 
+4 The scale of the council’s budget consultation with its residents has improved, 
+but there is scope to make financial reports more accessible to members and 
+the public. 
+5 The council has high levels of debt which are forecast to reach £3 billion by 
+2029/30. It is essential that members fully understand the implications of the 
+council’s external borrowing levels on future years budgets. 
+Best Value audit  
+6 The council has broadly effective and appropriate arrangements in place for 
+securing Best Value.  
+7 The Management Report on themes prescribed by the Accounts Commission 
+reported that the council is not yet demonstrating significant transformational 
+change activity to reduce demand for its services and secure longer-term 
+financial sustainability.   
+8 The council has appropriate arrangements in place for preparing and 
+publishing Statutory Performance information, with performance compared to 
+prior years and other councils presenting an improvement in many areas. 
+--- page 4 ---
+Introduction | 4 
+ 
+Introduction 
+ 
+Purpose of the Annual Audit Report 
+1.  The purpose of this Annual Audit Report is to report the significant 
+matters identified from the 2024/25 audit of the City of Edinburgh Council’s 
+annual accounts and the wider scope areas specified in the Code of Audit 
+Practice (2021). 
+2.  The Annual Audit Report is addressed to City of Edinburgh Council, 
+(hereafter referred to as ‘the council’) and the Auditor General for 
+Scotland, and will be published on Audit Scotland’s website in due course.  
+Appointed auditor and independence 
+3.  Michael Oliphant, of Audit Scotland, has been appointed as external 
+auditor of The City of Edinburgh Council for the period from 2022/23 until 
+2026/27. As reported in the Annual Audit Plan, the appointed auditor and 
+the audit team are independent of the council in accordance with relevant 
+ethical requirements, including the Financial Reporting Council’s Ethical 
+Standard. There have been no developments since the issue of the Annual 
+Audit Plan that impact on the continued independence of the engagement 
+lead or the rest of the audit team from the council, including no provision of 
+non-audit services.  
+Acknowledgements 
+4.  We would like to thank the council and its staff, particularly those 
+involved in preparation of the annual accounts, for their cooperation and 
+assistance during the audit.  
+--- page 5 ---
+Audit scope and responsibilities | 5 
+ 
+Audit scope and responsibilities 
+ 
+Scope of the audit  
+5.  Our audit of The City of Edinburgh Council and its group is performed in 
+accordance with the Code of Audit Practice, including supplementary 
+guidance, International Standards on Auditing (ISA) (UK), and relevant 
+legislation. These set out the requirements for the scope of the audit which 
+includes:  
+• An audit of the financial statements and an opinion on whether they 
+give a true and fair view and are free from material misstatement.  
+• An opinion on statutory other information published with the 
+financial statements in the annual accounts, namely the 
+Performance Report and Governance Statement. 
+• An opinion on the audited part of the Remuneration and Staff 
+Report.  
+• Conclusions on the council’s arrangements in relation to the wider 
+scope areas: Financial Management; Financial Sustainability; 
+Vision, Leadership and Governance; and Use of Resources to 
+Improve Outcomes.  
+• Reporting on the council’s arrangements for securing Best Value. 
+• providing assurance on the Housing Benefit Subsidy Claim, Non-
+Domestic Rates Return and the Whole of Government Accounts 
+(WGA) return  
+Responsibilities and reporting 
+6.  The Code of Audit Practice sets out the respective responsibilities of the 
+council and the auditor. A summary of the key responsibilities is outlined 
+below.  
+Auditor’s responsibilities 
+7.  The responsibilities of auditors in the public sector are established in 
+the Local Government (Scotland) Act 1973. These include providing an 
+independent opinion on the financial statements and other information 
+reported within the annual accounts, and concluding on the council’s 
+arrangements in place for the wider scope areas and Best Value. 
+8.  The matters reported in the Annual Audit Report are only those that 
+have been identified by the audit team during normal audit work and may 
+--- page 6 ---
+Audit scope and responsibilities | 6 
+ 
+not be all that exist. Communicating these does not absolve the council 
+from its responsibilities outlined below.  
+9.  The Annual Audit Report includes an agreed action plan at Appendix 1 
+setting out specific recommendations to address matters identified and 
+includes details of the responsible officer and dates for implementation. 
+Responsibilities of the City of Edinburgh Council 
+10.  The council has primary responsibility for ensuring proper financial 
+stewardship of public funds, compliance with relevant legislation and 
+establishing effective arrangements for governance, propriety, and 
+regularity that enables it to successfully deliver its objectives. The features 
+of proper financial stewardship include:  
+• Establishing arrangements to ensure the proper conduct of 
+its affairs.  
+• Preparation of an annual accounts, comprising financial statements 
+for the council and its group that gives a true and fair view and other 
+specified information.  
+• Establishing arrangements for the prevention and detection of 
+fraud, error and irregularities, and bribery and corruption.  
+• Implementing arrangements to ensure its financial position is 
+soundly based.  
+• Making arrangements to secure Best Value.  
+• Establishing an internal audit function. 
+National performance audit reporting 
+11.  The Auditor General for Scotland and the Accounts Commission 
+regularly publish national and performance audit reports. These cover a 
+range of matters, many of which may be of interest to the council. Details 
+of national and performance audit reports published over the last year can 
+be seen in Appendix 3. 
+--- page 7 ---
+Audit of the annual accounts | 7 
+ 
+Audit of the annual accounts 
+ 
+Main judgements 
+All audit opinions stated that the annual accounts were free from 
+material misstatement. This means we consider the accounts to show a 
+true and fair view and follow relevant accounting standards and 
+legislation. 
+ 
+There were no significant findings or key audit matters to report. All 
+material audit adjustments required to correct the financial statements 
+were processed by the council. 
+Audit opinions on the annual accounts 
+12.  The council and its group’s annual accounts were approved by 
+Finance & Resources Committee on 18 September 2025. The 
+Independent Auditor’s Report is included in the council’s annual accounts, 
+and this reports that, in the appointed auditor’s opinion, these were free 
+from material misstatement.  
+Audit timetable  
+13.  The unaudited annual accounts and all working papers were received 
+on 26 June 2025 in accordance with the agreed audit timetable. 
+Audit Fee 
+14.  The audit fee for the 2024/25 audit was reported in the Annual Audit 
+Plan and was set at £736,760. We determine our audit fee based on the 
+timely receipt of responses to our requests for audit evidence. We 
+experienced a significant delay during 2024/25 in relation to receiving 
+evidence for our best value report on transformation and in receiving 
+assurances in our assessment of the council's payroll system and controls. 
+As a result, we have increased our audit fee by £20,783. Our final audit 
+fee is £757,543. 
+Materiality 
+15.  The concept of materiality is applied by auditors in planning and 
+performing an audit, and in evaluating the effect of any uncorrected 
+misstatements on the financial statements or other information reported in 
+the annual accounts. 
+--- page 8 ---
+Audit of the annual accounts | 8 
+ 
+16.  Broadly, the concept of materiality is to determine whether 
+misstatements identified during the audit could reasonably be expected to 
+influence the decisions of users of the annual accounts. Auditors set a 
+monetary threshold when determining materiality, although some issues 
+may be considered material by their nature. Therefore, materiality is 
+ultimately a matter of the auditor’s professional judgement. 
+17.  Materiality levels for the audit of the council and its group were 
+determined at the risk assessment phase of the audit and were reported in 
+the Annual Audit Plan, which also reported the judgements made in 
+determining materiality levels. These were reassessed on receipt of the 
+unaudited annual accounts. Materiality levels were updated, and these 
+can be seen in Exhibit 1. 
+Exhibit 1 
+2024/25 Materiality levels for the council and its group 
+ 
+Materiality Value 
+Materiality – set at 2% of gross expenditure £55 million 
+Performance materiality – set at 65% of materiality. 
+As outlined in the Annual Audit Plan, this acts as a 
+trigger point. If the aggregate of misstatements 
+identified during the audit exceeds performance 
+materiality, this could indicate further audit procedures 
+are required.  
+£36 million 
+Reporting threshold   £0.5 million 
+Source: Audit Scotland 
+Significant findings and key audit matters  
+18.  ISA (UK) 260 requires auditors to communicate significant findings 
+from the audit to those charged with governance. The Code of Audit 
+Practice also requires public sector auditors to communicate key audit 
+matters. These are the matters that, in the auditor’s professional 
+judgement, are of most significance to the audit of the financial statements 
+and require most attention when performing the audit.  
+19.  In determining key audit matters, auditors consider: 
+• Areas of higher or significant risk of material misstatement.  
+• Areas where significant judgement is required, including accounting 
+estimates that are subject to a high degree of estimation 
+uncertainty.  
+--- page 9 ---
+Audit of the annual accounts | 9 
+ 
+• Significant events or transactions that occurred during the year. 
+20.  The significant findings and key audit matters to report are outlined in 
+Exhibit 2.  
+Exhibit 2  
+Significant findings and key audit matters 
+ 
+Significant findings and key audit matters Outcome 
+1. Non-current assets valuation 
+Our audit of the council’s disclosures around 
+non-current assets identified the following: 
+• Heritage assets: The council reported 
+heritage assets valued at £53.587 million. 
+However, this figure included an overall 
+total for collections held in museums and 
+galleries which was not itemised, and so 
+we could not verify this amount. 
+Additionally, it was estimated that some 
+items were owned by the charitable trusts 
+administered by the council, rather than by 
+the council itself. 
+• Asset categorisation: Assets with a net 
+book value of approximately £3 million 
+were incorrectly classified and should have 
+been reported under ‘Other Land and 
+Buildings’. 
+• Capital commitments: The total value of 
+capital commitments was overstated by 
+£50 million.  
+The revised set of accounts was adjusted to 
+correct these errors. The value of the 
+council’s group heritage assets was amended 
+to £64.739 million, based, in part, on recent 
+insurance valuations. 
+ 
+--- page 10 ---
+Audit of the annual accounts | 10 
+ 
+Significant findings and key audit matters Outcome 
+2. Valuation of IFRS16 ‘right of use’ assets 
+The council has a large number of lease 
+arrangements and uses a third-party provider 
+to supply information to meet IFRS 16 Leases 
+disclosure requirements. These are disclosed 
+in the accounts as ‘right of use’ assets, 
+increasing the value of the council’s assets 
+on the balance sheet.  
+The finance team identified a number of 
+inconsistencies in the figures supplied, and 
+raised several queries on the draft figures 
+provided by the external provider. Due to the 
+constraints of the accounts production 
+timetable, these were included in the initial 
+accounts presented to audit. Further figures 
+were provided and the accounts were 
+updated to reflect these.  
+ 
+Our audit testing confirmed the revised 
+figures used by the council.  
+The council recorded a late adjustment of 
+£2.476 million and an overall in-year 
+movement of £5.061 million for the net book 
+value of its ‘right-of-use’ assets.  
+3. Public Private Partnerships (PPP) - 
+inclusion of contingent rent 
+The council’s calculations for its longer-term 
+PPP liability included an estimated uplift on 
+rent expenditure derived from the underlying 
+accounting models. Accounting standards are 
+clear that liabilities should not include 
+estimated future indexation-linked increases.  
+The current and long-term liability for 2024/25 
+and the prior year were recalculated to 
+remove this assumption. The opening 
+balance for the liability was restated and 
+reduced by £26 million. The adjustment for 
+2024/25 was an increase of £1 million to the 
+PPP liability. 
+--- page 11 ---
+Audit of the annual accounts | 11 
+ 
+Significant findings and key audit matters Outcome 
+4. Common Good community assets 
+The Common Good account is separate to 
+the council’s financial statements and 
+represents those properties acquired by the 
+local authority which have been passed down 
+through time from former burghs.  
+The Common Good balance sheet disclosed 
+£20.568 million of long-term debtors, which 
+represented a significant group of assets of 
+local and national importance, including the 
+City Chambers, Princes St Gardens, the 
+Meadows and Calton Hill, among others. With 
+the introduction of IFRS 16, these assets are 
+no longer deemed to be leased by the council 
+(debtor balances) and should be disclosed as 
+community assets. Accounting standards also 
+give guidance that these should be valued at 
+historic cost, however due to the nature of 
+these assets such information is not 
+available. 
+The Common Good account in the final 
+audited statements was amended to disclose 
+£4.325 million of community assets at 
+historical cost, in line with accounting 
+standards. A value of £1000 has been 
+applied to each asset as a proxy for historic 
+cost, and the opening balance sheet position 
+has been restated to reflect this change. 
+  
+5. Payments to providers of social care 
+Swift is a social care case management 
+system which the council has agreed to 
+replace as an ‘end of life’ system, expected to 
+be completed in early 2026. In response to 
+our findings from 2023/24, we undertook 
+testing on a sample of payments. Our testing 
+focused on payments to providers of care 
+homes and at-home carers, to verify the 
+underlying basis for the payment. 
+Again, we found several cases where there 
+was no agreed payment plan or contract to 
+confirm the rate paid was correct. In these 
+cases, there may be potential under or 
+overpayments to suppliers, which the council 
+is investigating. 
+We concluded that, for all items we 
+examined, there existed a valid underlying 
+basis for the transaction and therefore that 
+the accounts are not materially misstated. 
+Following our audit findings reported in 
+September 2024, in December 2024, the 
+control was tightened to manually review 
+every invoice which did not match exactly the 
+amount expected in Swift. This resulted in a 
+backlog of payments. 
+The council established a temporary, multi-
+disciplinary team to investigate and address 
+differences between Swift (the council’s 
+records system) and the amounts invoiced by 
+care providers. By April 2025, approximately 
+£250,000 in overpayments had been 
+identified and were in the process of being 
+recovered from providers. 
+Due to the needs-based nature of the service, 
+changes to individual care arrangements 
+often take place, making it essential for the 
+council to have robust processes and controls 
+to maintain a clear audit trail. .  
+Paragraph 52.  
+ 
+--- page 12 ---
+Audit of the annual accounts | 12 
+ 
+Significant findings and key audit matters Outcome 
+6. Group accounting 
+The authority’s accounts also include its 
+share in other organisations which it has an 
+element of control, for example Edinburgh 
+Living and Transport for Edinburgh. The 
+Common Good account was previously  
+consolidated into the City of Edinburgh Group 
+accounts on an associate basis as it was 
+judged not to have significant control. As the 
+council administers the Common Good, we 
+concluded that it should be included in the 
+consolidation on a subsidiary basis. 
+In addition, our work identified that the 
+council’s consolidated group accounts had 
+not included Edinburgh Living’s purchase of 
+27 properties at a purchase price of £6.5 
+million, as this was a post balance sheet 
+event in Edinburgh Living’s accounts and 
+identified as part of our audit of the group 
+accounts.  
+The group accounts were adjusted to:  
+• Consolidate the Common Good account 
+into the group. 
+• Include an additional £6.5 million of non-
+current assets, as the purchase of 
+properties was before the council group 
+year end of 31 March 2025 
+7. Implementation of a new HR and payroll 
+system 
+The council implemented a new Oracle 
+Fusion HR and Payroll System in October 
+2024. As with any change of such a 
+significant system, there were potential risks 
+in the accurate processing and transfer of 
+data, which could result in incorrect staff 
+costs reported in the council's accounts. 
+We considered the governance arrangements 
+for the new system implementation project, 
+reviewed documentation of the data transfer 
+and inspected reconciliations between the 
+new payroll system and general ledger. 
+The delivery of the project was split into two 
+phases. Both phases were delivered late as 
+compared to original timescales. Phase 1 
+was initially scheduled to complete by end of 
+March 2024 and completed in October 2024. 
+Phase 2 was initially scheduled to complete 
+by October 2024 and after revisions to the 
+project timescales was implemented in March 
+2025.  
+We concluded that the council’s approach to 
+the data transfer exercise was appropriate. 
+The council identified issues with how the 
+data was feeding from the new payroll system 
+into the general ledger. This required 
+significant input from payroll and finance staff 
+to resolve. Our audit testing confirmed that 
+the ledger materially agrees with the payroll 
+system and therefore staff costs reported in 
+council's accounts are not misstated. 
+--- page 13 ---
+Audit of the annual accounts | 13 
+ 
+Significant findings and key audit matters Outcome 
+8. Errors in classification of balances 
+Our audit identified the following errors as a 
+result of our testing of transactions and 
+balances: 
+• There were compensating payables and 
+receivables balances relating to non-
+domestic rates which had not been 
+adjusted. A correction was required to net 
+off payables and receivables by £27.9 
+million.  
+• We also identified a negative prepayment 
+within the receivables balance of £2.065 
+million, having the effect of reducing the 
+value of receivables owed to the council. 
+This sum was based on information 
+provided by a third-party provider, but as 
+further evidence was not available, we 
+concluded this was an error.  
+Management processed all necessary 
+adjustments to correct the NDR payables and 
+receivables. 
+Adjustments were made to prepayments, but 
+management chose not to adjust the queried 
+balance in total, leaving a remainder of 
+£1.780 million. This falls below our materiality 
+threshold and is therefore classed as an 
+unadjusted error.  
+ 
+Source: Audit Scotland 
+Qualitative aspects of accounting practices  
+21.  ISA (UK) 260 also requires auditors to communicate their view about 
+qualitative aspects of the council’s accounting practices, including 
+accounting policies, accounting estimates, and disclosures in the financial 
+statements. 
+Accounting policies  
+22.  The appropriateness of accounting policies adopted by the council 
+was assessed as part of the audit. These were considered to be 
+appropriate to the circumstances of the council, and there were no 
+significant departures from the accounting policies set out in the Code of 
+Practice on Local Authority Accounting in the United Kingdom (the Code).  
+Accounting estimates  
+23.  Accounting estimates are used in number of areas in the council’s 
+financial statements, including the valuation of land and buildings assets 
+and the valuation of the pension liability. Audit work considered the 
+process management of the council has in place around making 
+accounting estimates, including the assumptions and data used in making 
+the estimates, and the use of any management experts. Audit work 
+concluded:   
+--- page 14 ---
+Audit of the annual accounts | 14 
+ 
+• There were no issues with the selection or application of methods, 
+assumptions, and data used to make the accounting estimates, and 
+these were considered to be reasonable.  
+• There was no evidence of management bias in making the 
+accounting estimates. 
+Group audit  
+24.  The council is part of a group and prepares group financial 
+statements. The group is made up of ten components, including the 
+council which is the parent of the group. As outlined in the Annual Audit 
+Plan, audit work was required on components material to the CEC group 
+for the purposes of the group audit, and this work was performed by a 
+combination of the audit team and the components’ audit teams. As group 
+auditor we placed reliance on the work of component auditors and where 
+the component was material we reviewed their risk assessment and work 
+to address significant risks identified. The audit work performed on the 
+group’s material components is summarised in Exhibit 3. 
+Exhibit 3 
+Summary of audit work on the group’s components 
+ 
+Group 
+component  Auditor and audit work required Summary of audit work performed  
+Transport for 
+Edinburgh 
+Azets 
+Work to address the significant risk 
+over fraud in revenue recognition 
+and also the significant risk over the 
+valuation of non-current assets, 
+including right of use assets 
+The specific audit procedures required 
+were performed by the component 
+auditor and these were evaluated and 
+reviewed by the group audit team. No 
+significant issues were identified. No 
+issues were identified in the audit 
+procedures performed by the 
+component auditor.  
+Edinburgh 
+Living MMR 
+Azets  
+Work involved in estimating updated 
+valuations for investment property 
+as at 31 March 2025 
+ 
+ 
+Additional work by the component 
+auditor confirmed that the valuation of 
+investment property had not been 
+significantly affected between 
+December 2024 and March 2025. 
+Source: Audit Scotland 
+--- page 15 ---
+Audit of the annual accounts | 15 
+ 
+Other matters to report  
+25.  Auditing standards require auditors to report a number of other matters 
+if they are identified or encountered during an audit. Other matters not 
+disclosed in Exhibit 2 include the following:  
+• The accounts presented to audit were adjusted from those 
+presented to the council to include data from more recently-
+available actuarial reports relating to IAS 19 pensions disclosures.  
+• The cash and cash equivalents balance was adjusted to properly 
+reflect unprocessed creditor payments and banking off-setting 
+arrangements.  
+• We have identified areas where financial controls could be 
+strengthened. These relate to payments to social care providers 
+and payroll validation procedures, refer Paragraph 52.   
+Significant matters discussed with management 
+26.  All significant matters identified during the audit and discussed with 
+officers have been reported in the Annual Audit Report.  
+Audit adjustments 
+27.  Audit adjustments were required to the financial statements to correct 
+misstatements that were identified from the audit. Details of all audit 
+adjustments greater than the reporting threshold of £0.5 million are 
+outlined in Exhibit 4, (page 18) 
+Exhibit 4 
+Significant audit adjustments  
+Details 
+Financial 
+statements lines 
+impacted 
+Comprehensive Income 
+and Expenditure 
+Statement (CIES) Balance Sheet 
+Audit adjustments to financial 
+statements Dr Cr Dr Cr 
+ £000 £000 £000 £000 
+1. Correction to reflect unprocessed 
+creditor payments and offsetting 
+arrangements. 
+   
+ 
+ 
+ Cash and cash 
+equivalents    35,028  
+ Trade Payables     (35,028) 
+--- page 16 ---
+Audit of the annual accounts | 16 
+ 
+Details 
+Financial 
+statements lines 
+impacted 
+Comprehensive Income 
+and Expenditure 
+Statement (CIES) Balance Sheet 
+2. Correction required relating to NDR 
+debtors and creditors.     
+ Receivables   27,941  
+ Payables    27,941 
+3. Public Private Partnerships (PPP) 
+restatement to remove an estimated 
+uplift to contingent rent from the liability.  
+    
+ Finance leases 
+(creditors)    26,026  
+ Right of use 
+assets     (26,026) 
+4. Post balance sheet event for 
+Edinburgh Living (Exhibit 2, point 6).     
+ Investment 
+Property   6,525  
+ Long term 
+liabilities (removed 
+on consolidation) 
+   (6,525) 
+5. Classification corrections for non-
+current assets      
+ Other land and 
+buildings   3,095  
+ Assets under 
+construction    (2,412) 
+ Dwellings    (683) 
+6. Recognising the Common Good 
+Fund as a subsidiary and not an 
+associate within the group 
+    
+ Surplus for the 
+year  (269)   
+ Assets   9,478  
+ Liabilities    (9,209) 
+--- page 17 ---
+Audit of the annual accounts | 17 
+ 
+Details 
+Financial 
+statements lines 
+impacted 
+Comprehensive Income 
+and Expenditure 
+Statement (CIES) Balance Sheet 
+7. Restating Common Good long term 
+debtors as non-current assets      
+ Community assets  1,304   
+ Other land and buildings  752   
+ Receivables   (20,658) 
+ Deferred income   (2,909) 
+ Revaluation reserve  21,511  
+Net impact on financial statements  (269) 105,645 (105,376) 
+     
+Source: Audit Scotland 
+28.  In addition to the corrected misstatements outlined in Exhibit 2, there 
+were other misstatements identified greater than the reporting threshold. 
+The value, nature, and circumstances of the uncorrected misstatements 
+were considered, individually and in aggregate, by the audit team, and it 
+was concluded these were not material to the financial statements. As a 
+result, these did not have any impact on the audit opinions given in the 
+Independent Auditor’s Report. 
+29.  It is the auditor’s responsibility to request that all misstatements 
+greater than the reporting threshold are corrected, even if they are not 
+material. Management has processed all audit adjustments to correct 
+these misstatements, with the exception of a £1.780 million balance, 
+detailed within item 8 in Exhibit 2 which cannot be agreed to sufficient 
+evidence. This uncorrected error does not have any impact on the audit 
+opinions given in the Independent Auditor’s Report. 
+Significant risks of material misstatement identified in the Annual 
+Audit Plan 
+30.  Audit work has been performed in response to the significant risks of 
+material misstatement identified in the Annual Audit Plan. The outcome of 
+audit work performed is summarised in Exhibit 5.   
+--- page 18 ---
+Audit of the annual accounts | 18 
+ 
+Exhibit 5 
+Significant risks of material misstatement to the financial statements 
+ 
+Risk of material 
+misstatement Planned audit response Outcome of audit work 
+Fraud caused by 
+management override of 
+controls  
+Management is in a unique 
+position to perpetrate fraud 
+because of management’s 
+ability to override controls 
+that otherwise appear to be 
+operating effectively. 
+The audit team will: 
+• Evaluate the design and 
+implementation of controls 
+over journal entry 
+processing. 
+• Make inquiries of 
+individuals involved in the 
+financial reporting process 
+about inappropriate or 
+unusual activity relating to 
+the processing of journal 
+entries. 
+• Test journals entries, 
+focusing on those that are 
+assessed as higher risk, 
+such as those affecting 
+revenue and expenditure 
+recognition around the 
+year-end.  
+• Evaluate significant 
+transactions outside the 
+normal course of business. 
+• Assess the adequacy of 
+controls in place for 
+identifying and disclosing 
+related party relationships 
+and transactions in the 
+financial statements.  
+• Assess changes to the 
+methods and underlying 
+assumptions used to 
+prepare accounting 
+estimates and assess 
+these for evidence of 
+management bias. 
+Audit work performed found: 
+• The design and 
+implementation of controls 
+over journal processing 
+were appropriate.  
+• No inappropriate or 
+unusual activity relating to 
+the processing of journal 
+entries was identified from 
+discussions with 
+individuals involved in 
+financial reporting.  
+• No significant issues were 
+identified from testing of 
+journal entries.  
+• No significant issues were 
+identified from transactions 
+outside the normal course 
+of business.  
+• The controls in place for 
+identifying and disclosing 
+related party relationships 
+and transactions were 
+adequate.  
+• No significant issues were 
+identified with changes to 
+methods and underlying 
+assumptions used to 
+prepare accounting 
+estimates and there was 
+no evidence of 
+management bias.  
+Conclusion: no evidence of 
+fraud caused by 
+management override of 
+controls.  
+--- page 19 ---
+Audit of the annual accounts | 19 
+ 
+Risk of material 
+misstatement Planned audit response Outcome of audit work 
+Valuation of property, plant 
+and equipment  
+The City of Edinburgh 
+Council disclosed more than 
+£5.7 billion of property, plant, 
+and equipment (PPE) at 31 
+March 2024, of which £4.4 
+billion was land and buildings.  
+There is a significant degree 
+of subjectivity in these 
+valuations which are based 
+on specialist assumptions, 
+and changes in the 
+assumptions can result in 
+material changes to 
+valuations and therefore 
+presenting a risk of 
+misstatement.  
+The audit team will:  
+• Evaluate the design and 
+implementation of controls 
+over the valuation process.  
+• Review the information 
+provided to the valuer and 
+assess this for 
+completeness and 
+accuracy.  
+• Evaluate the competence, 
+capabilities, and objectivity 
+of the valuer.  
+• Obtain an understanding 
+of management’s 
+involvement in the 
+valuation process to 
+assess if appropriate 
+oversight has occurred.  
+• Review the 
+appropriateness of the key 
+data and assumptions 
+used in the 2024/25 
+valuation process, and 
+challenge these where 
+required.  
+• Review management’s 
+assessment that the value 
+in the balance sheet of 
+assets not subject to a 
+valuation process in 
+2024/25 is not materially 
+different to current value at 
+the year-end, and 
+challenge this where 
+required.  
+•  
+Our work in this area is 
+summarised in Exhibit 2. 
+Conclusion: the valuation of 
+PPE is not materially 
+misstated in the adjusted 
+annual accounts.  
+--- page 20 ---
+Audit of the annual accounts | 20 
+ 
+Risk of material 
+misstatement Planned audit response Outcome of audit work 
+Risk of fraud over 
+expenditure recognition  
+In line with Practice Note 10: 
+Audit of financial statements 
+and regularity of public sector 
+bodies in the United 
+Kingdom, most public bodies 
+are net expenditure bodies 
+and therefore the risk of fraud 
+is more likely to occur in 
+expenditure.  
+We have evaluated the 
+council’s significant 
+expenditure streams. Some 
+significant expenditure areas, 
+including staff costs, interest 
+payments and depreciation, 
+amortisation and impairment, 
+are not considered areas of 
+risk. However, due to the 
+extent and complexity of the 
+council’s other service 
+expenses, we identified there 
+is a risk that expenditure may 
+be misstated.  
+The audit team will: 
+• Perform detailed testing of 
+expenditure transactions, 
+including cut-off testing, 
+focussing on the areas of 
+greatest risk to assess 
+completeness and 
+accuracy of expenditure.  
+• Monitor the budgetary 
+process and reporting.  
+• Carry out substantive 
+testing of accruals and 
+prepayments.  
+We carried out targeted 
+testing of higher-risk areas, 
+including substantive testing 
+of accruals and prepayments. 
+We did not identify evidence 
+of fraudulent expenditure.   
+Conclusion: The accounts 
+are not materially misstated 
+in respect of fraudulent 
+expenditure. 
+Source: Audit Scotland 
+Prior year recommendations  
+31.  The council has made good progress in implementing the agreed prior 
+year audit recommendations. For actions not yet implemented, revised 
+responses and timescales have been agreed with the council and are 
+outlined in Appendix 1. 
+ 
+ 
+--- page 21 ---
+Wider scope audit | 21 
+ 
+Wider scope audit  
+ 
+Conclusion 
+The council has broadly effective and appropriate arrangements in place 
+for Financial Management; Financial Sustainability, Vision, Leadership 
+and Governance; and Use of Resources to Improve Outcomes.  
+Audit approach to wider scope 
+Wider scope 
+32.  As reported in the Annual Audit Plan, the wider scope audit areas are:  
+• Financial Management. 
+• Financial Sustainability. 
+• Vision, Leadership and Governance. 
+• Use of Resources to Improve Outcomes.  
+33.  Audit work is performed on these four areas and a conclusion on the 
+effectiveness and appropriateness of arrangements the council has in 
+place for each of these is reported in this chapter.  
+Significant wider scope risk 
+34.  Audit work has been performed in response to the one significant 
+wider scope risk identified in the Annual Audit Plan, relating to financial 
+sustainability. The outcome of audit work performed is summarised below 
+in Exhibit 6 (page 22).  
+--- page 22 ---
+Wider scope audit | 22 
+ 
+Exhibit 6 
+Significant wider scope risk 
+ 
+Significant risk Planned audit response Outcome of audit work 
+Financial sustainability  
+The council’s budget for 
+2024/25 was approved with 
+financial balance dependent 
+upon delivery of savings and 
+additional income totalling 
+£28.5 million. In January 
+2025, the council reported 
+that, despite further 
+underlying pressures of £32.6 
+million, it was on track to 
+delivering 90% of planned 
+savings. The council is now 
+forecasting a balanced year-
+end position, with further 
+savings in corporate budgets 
+identified to offset the 
+additional cost pressures 
+which had arisen throughout 
+the year.  
+Financial sustainability 
+remains a risk for the council, 
+with its own financial plan 
+forecasting a £94.2 million 
+gap by 2029/30. Challenges 
+include pressures for frontline 
+services, delivery of almost 
+£48 million of approved 
+savings within the Edinburgh 
+Integration Joint Board and 
+proposals for a significant 
+increase in the level of capital 
+borrowing, which is forecast 
+to increase to £2.879 billion 
+by March 2029.  
+The audit team will:  
+Monitor the financial position 
+throughout the year and 
+provide an update in our 
+2024/25 Annual Audit Report.  
+Consider the council’s 
+progress in developing a 
+longer-term financial plan.  
+ 
+The council has reported in 
+its annual accounts that it 
+achieved an overall 
+underspend of £2.719 million, 
+delivering 84% of its savings 
+measures. There is a medium 
+term financial plan in place 
+which now forecasts a budget 
+gap of £94.2 million by 2030. 
+Source: Audit Scotland 
+  
+--- page 23 ---
+Wider scope audit | 23 
+ 
+Conclusions on wider scope audit 
+Financial Management  
+35.  The audit work performed on the arrangements the council has in 
+place for securing sound financial management found that these were 
+largely effective and appropriate, with areas for improvement highlighted 
+throughout this report. This judgement is evidenced by the council:  
+• having a system of internal control in place, with some areas 
+identified where key controls could be strengthened.  
+• having policies and procedures, for example, financial regulations 
+and scheme of delegation, in place 
+• having policies in place for preventing and detecting fraud and other 
+irregularities, and participation in fraud prevention and detection 
+activities such as the National Fraud Initiative (NFI).  
+• having suitably qualified and experienced staff leading the finance 
+function.  
+• having arrangements in place for the scrutiny of arrangements that 
+support sound financial management.   
+The council achieved an underspend of £2.719 million in 2024/25  
+36.  The council approved its revenue budget for 2024/25 in February 
+2024, with total planned expenditure of £1,361 million (2023/24: £1,282 
+million). The council did not increase council tax, utilising the Scottish 
+Government's offer of £16.1 million to compensate for the income which 
+would have been raised through a rise to residential taxpayers. 
+37.  The initial budget identified required savings and additional income 
+totalling £28.5 million, representing around two per cent of its total revenue 
+budget. In setting the 2024/25 budget, the council recognised there are 
+widespread financial pressures creating significant risks to the delivery of 
+a balanced budget. Key pressures included: 
+• Delivery of almost £47.8 million of savings across Edinburgh IJB, 
+with the joint board reporting that £42.6 million was achieved by 
+year-end. The council agreed to provide additional funding of £12.1 
+million to the IJB during 2024/25, alongside a £2.4m further 
+contribution from NHS Lothian, as a budget shortfall deteriorated, 
+and funding for the IJB has been a source of tension between the 
+two bodies. While financial pressures remain significant, we have 
+observed encouraging signs of improved communication and 
+collaboration between the council, the IJB and NHS Lothian. 
+• Demand-led pressures in services but particularly homelessness, 
+with an associated full-year pressure of £7.5 million.  
+--- page 24 ---
+Wider scope audit | 24 
+ 
+• Pay awards, with an average of 3% included in the approved 
+budget. 
+38.  The council has reported in its annual accounts that it achieved an 
+overall underspend of £2.719 million, made possible by a further 
+application of reserves (£12.889 million) and savings/additional income in 
+corporate budgets (£8.766 million). This is set against unbudgeted 
+overspends of £18.936 million. The underspend has been earmarked for 
+reinstatement of the council’s Innovation Fund.  
+The council delivered 84% of its planned savings measures 
+39.  The council also reports that 84% of approved savings were delivered 
+during 2024/25 (£23.9 million of the planned £28.5 million). Some of the savings 
+and increased income plans included: 
+• Homelessness initiatives including a reduction in void properties with an 
+estimated 191 households coming out of temporary accommodation - 
+£3.45 million 
+• Increased income from parking and bus camera lane enforcement - £3 
+million  
+• Non-domestic rates relief for empty properties – £7 million 
+• Rationalisation of the council’s property portfolio – £1 million. 
+40.  The council has a good track record of achieving planned savings. In 
+2023/24, it achieved £22.437 million (84% of its planned total), and 98% of its 
+measures in 2022/23. In addition to its savings plans, the council has benefitted 
+from time-limited, significant expenditure reductions through exercising 
+flexibilities in how it accounts for service-concessions, and reductions to the 
+amount it is required to pay to the pension fund as an employer contribution. 
+The council recognises that the scale of the budget gap in future years will 
+mean more difficult savings and income generation decisions will need to be 
+made. 
+The scale of budget consultation has improved 
+41.  The Accounts Commission has, for many years, highlighted the 
+importance of councils consulting communities as part of their budget 
+setting processes, including seeking the views of local citizens on priority 
+areas for investment or disinvestment. In 2024/25, 24 of Scotland’s 32 
+local authorities informed or consulted residents about the financial 
+pressures it faces. Of those, 20 consulted all residents and four consulted 
+only specific groups within their communities.  
+42.  In 2024/25, the council did not directly consult its residents prior to the 
+budget being approved. A consultation was launched in April 2024 to 
+inform decision-making for the 2025/26 and future budgets. The 
+consultation sought to communicate its overall budget position over 
+multiple years and strategic priorities to residents, emphasising the need 
+to create efficiencies and in some cases reduce services provided. 
+--- page 25 ---
+Wider scope audit | 25 
+ 
+Residents were asked for their views on how the council can save money, 
+which services could be reduced and where the council has done well. 
+Contributions were sought at drop-in sessions and an online consultation 
+hub, with a series of focus groups planned to explore subjects raised by 
+residents. 
+43.  The council’s recent consultation on the 2025/26 budget took place in two 
+phases: 
+• From April to June 2024 Phase One of the budget engagement 
+exercise with Edinburgh residents was conducted with the results of this 
+exercise reported to the Finance and Resources Committee (F&RC) on 
+19 September 2024.  
+• The same questions were repeated in a staff engagement exercise run 
+in October 2024, the results of which were reported on 4 February 2025 
+(F&RC) along with a summary of the budget consultation undertaken 
+with Edinburgh residents between 20 November 2024 and 14 January 
+2025, on officer proposals to balance the budget for financial year 
+2025/26. 
+44.  These results were communicated to members in February 2025 prior 
+to finalising the 2025/26 budget. The council reported that 3,260 residents 
+took part in the budget consultation. In June 2025, the council undertook 
+research to compare how it carried out budget consultations against other 
+local authorities in Scotland, the UK and internationally. It concluded that 
+Edinburgh exceeded standards in both methodology and timeframes, but 
+recognised areas to improve, such as in attracting views from younger 
+people.  
+45.  The council adopts a considered and appropriate approach to budget 
+consultations. However, the extent to which the consultation influenced the 
+final budget decisions made by members is less evident. The majority of 
+the budget is ‘rolled-forward’ as-is based on previous years’ spend, and 
+then further shaped by political groups’ priorities. As a consequence, this 
+leaves little further room for residents’ input. 
+46.  While we did not undertake a full assessment of the consultation’s 
+impact or effectiveness, the council should be able to evidence how 
+residents’ views shaped budget outcomes. This would demonstrate that 
+the council gives power to residents to shape its spending plans, and may 
+help boost participation in future consultations. 
+Financial reports should be improved to support good scrutiny  
+47.  Our briefing on local government budgets 2025/26 identified that budget 
+papers and financial monitoring reports provided to elected members should 
+include clear and understandable headline figures that state the impact of 
+specific budget decisions on the overall financial position of the council. It 
+identified that the way in which budget papers at some local authorities were 
+presented means that elected members and communities cannot easily 
+--- page 26 ---
+Wider scope audit | 26 
+ 
+determine the impact of budget decisions nor the overall financial position of the 
+council, highlighting a need to improve accessibility and transparency. 
+48.  Financial reports provided to members do not support good scrutiny as they 
+are often very technical in detail and are not tailored sufficiently to reflect that 
+not all members have a financial background. While members may receive a 
+degree of comfort from detailed reports, it is important that the council makes its 
+financial reports more accessible to better support members in their 
+understanding and scrutiny of council’s finances. This is particularly important 
+when members are expected and required to make difficult decisions that will 
+impact on the services delivered by the council both now and in the future.  
+49.  For example:  
+• The council's revenue budget monitoring report does not include 
+details of spending to date, with the focus being on year-end 
+forecasts. This does not allow scrutiny of spending levels during the 
+course of the year, including monitoring of variances between 
+budget and outturn across each area of council activity and the 
+subsequent impact on year-end forecasts. 
+• The council's capital budget monitoring report does not include 
+details of individual project performance against project budgets or 
+timescales. This limits scrutiny on how well individual projects are 
+performing against cost and time targets and the impact on the 
+overall capital programme. For example, an overspending project 
+may need targeted action to limit the cost overrun or where a 
+project faces delays, decisions can be taken about the impact on 
+the overall capital programme.  
+• The council's Treasury Management Strategy does not clearly 
+outline the issues, risks and options for the council. It is a very 
+detailed, technical document but more should be done to draw out 
+the key issues for members to consider, including the benefits and 
+risks of options and any underlying assumptions. This is particularly 
+important due to the significant sums involved and the technical 
+nature of treasury management. Members should be able to easily 
+determine from officer reports if there is scope to increase 
+borrowing, or if debt levels are a cause for concern. The current 
+strategy highlights that "The Council continues to have a substantial 
+borrowing requirement over the coming years leaving a significant 
+financing risk" but there is no further commentary to explain what 
+the council's options are to reduce or manage this risk, or the 
+implications for the council should the risk crystallise. 
+• The annual budget papers could be made more accessible to 
+members by summarising the key components of the budget. 
+Currently, the information provided is predominantly focused on 
+high-level policies in each area with detailed appendices and 
+supporting papers. While all relevant information is available, it 
+should be summarised to better support members’ consideration 
+--- page 27 ---
+Wider scope audit | 27 
+ 
+and scrutiny. For example, the budget information presented could 
+summarise proposed revenue and capital budgets; council tax 
+levels; funding gaps and savings required; funding sources; 
+utilisation of reserves; and outcomes from equality impact 
+assessments and community engagement processes, and how they 
+impacted budget development.  
+ 
+Recommendation 1 
+Clarity of reporting to elected members and the public 
+ 
+Budget papers, financial monitoring and treasury management reports 
+should present key information in a way that is accessible and 
+understandable to elected members and the public. The council should 
+improve reporting to present key financial information such as budget 
+reports, savings measures and borrowing in an understandable and 
+consistent way, including summary information, to better inform 
+decision-making. 
+Internal audit provided a reasonable level of assurance over the 
+council’s overall control environment 
+50.  The council’s internal audit service provides members and 
+management with independent assurance on risk management, internal 
+control and corporate governance processes as well as providing a 
+deterrent effect to potential fraud.  
+51.  Internal Audit’s annual report, presented to the September 2025 
+Governance, Risk and Best Value Committee, provided an opinion with a 
+“reasonable” level of overall assurance. It concluded that there is a 
+generally an overall sound system of governance, risk management and 
+control in place.  
+There are areas where financial controls could be strengthened  
+52.  From our high-level review of the design and implementation of 
+systems of internal control (including those relating to IT) and the testing of 
+the operating effectiveness of specific controls, we have identified areas 
+where key controls could be strengthened as below:  
+Payments to social care providers (carried forward from 2023/24): 
+We reported in Part 1 the results of our audit testing on the 
+payments which originate from Swift. We recommend the council 
+reviews the overall control environment around social care 
+transactions, from initiation to payment stages. This could include, 
+but not be limited to:  
+--- page 28 ---
+Wider scope audit | 28 
+ 
+• Appropriate agreed documentation/contracts between providers 
+and the council for each individual package of care, clearly setting 
+out rates, services, invoicing arrangements and any variations for 
+each individual receiving care.  
+• Regular reviews of care arrangements and budgetary checks to 
+confirm that supplier invoices are agreed to the terms of the 
+contract including values 
+• Secondary quality checks/spot checks to ensure care was delivered 
+in line with contracts, for example through care logs and attendance 
+records and that these match invoiced amounts 
+• Appropriate workflows and authorisation levels 
+• Exception reporting for overpayments, duplicate payments or 
+unusual variation in payments 
+• Ensuring an appropriate audit trail for transactions. 
+• The council should also consider if there are gaps in training, and 
+undertake risk-based audits of larger or higher-risk providers. 
+Payroll Validation (carried forward from 2023/24): Employee 
+validation checks to confirm the existence of employees provides 
+assurance on the completeness and accuracy of payroll records and is 
+an important control within any payroll system. In the prior year this 
+was done indirectly by the council through regular budget monitoring. 
+Our payroll work identified that during 2024/25 no budget monitoring at 
+a required level of detail to identify individual staff members was 
+prepared. For part of the year, this was due to the new payroll system 
+limitations. We recommend the council ensures that budget holders 
+confirm directly, on an annual basis, that the payroll establishment 
+listing for their business area was accurate and remained up to date.  
+ 
+Recommendation 2 
+Budget monitoring of payroll costs 
+ 
+The council should ensure all budget holders directly validate their 
+establishment list on a regular basis. This would provide assurance that 
+only genuine, active employees are paid and ensure accurate financial 
+reporting. 
+ 
+  
+--- page 29 ---
+Wider scope audit | 29 
+ 
+Financial Sustainability  
+53.  The audit work performed on the arrangements the council has in 
+place for securing financial sustainability found that these were effective 
+and appropriate. This judgement is evidenced by the council:  
+• making appropriate arrangement to develop medium and longer-
+term financial plans and linking these to its Corporate Plan and 
+priorities. 
+• having effective arrangements in place for identifying risks to 
+financial sustainability over the medium and longer-term, and 
+understanding medium and longer-term demand pressures that 
+could impact on available resources.  
+• having savings plans in place to manage forecast budget deficits, 
+and a reserves strategy in place to manage the use of reserves if 
+the required level of savings cannot be met. 
+54.  Key financial information considered in forming the judgement on the 
+council’s arrangements for securing financial sustainability is outlined in 
+Exhibit 10 (page 34). 
+The 2025/26 budget was set with a savings target of £28.4 million 
+55.  In February 2025, the council approved a revenue budget of £1,496 
+million for 2025/26 (2024/25: £1,361 million). In order to balance the 
+budget, the council increased council tax by 8%, raising an additional 
+£29.3 million, and identified savings of £28.4 million to be made across the 
+council.  
+56.  In setting the budget, the council recognised there were widespread 
+financial risks to delivering a balanced outturn, including: 
+• An underlying pressure of £35 million (including additional National 
+insurance liability) across the EIJB  
+• Demand-led pressures in homelessness of £20 million, with 
+assumed savings delivery of £8.2 million 
+• An impact resulting from the increase in National Insurance 
+contributions, estimated to be £18.9 million. 
+The financial plan forecasts a budget gap of £94.2 million by 2030 
+57.  The council has developed a Sustain and Reform strategy, which 
+takes a whole-organisation approach to financial sustainability, and 
+includes a high-level revenue budget-setting framework and medium-term 
+financial plan (MTFP). Progress is reported regularly to the Finance and 
+Resources Committee (F&RC). It forecasts the financial situation facing 
+the council to 2029/30, sets out the financial gap and outlines scenarios 
+for tackling the main financial challenges to sustainability.  
+--- page 30 ---
+Wider scope audit | 30 
+ 
+58.  In June 2025, the council reported that to deliver a balanced budget in 
+2025/26, it must deliver £22.8 million in budgeted savings and mitigate an 
+estimated further £20.4 million in unbudgeted pressures. The projected 
+budget gap for 2026/27 was £20.2 million, with a total cumulative budget 
+gap of £94.2 million projected by 2029/30.  
+59.  The council continues to explore savings options and has plans to 
+raise additional sources of income. These plans include the decision to 
+introduce a visitor levy, which is estimated could generate up to £50 million 
+annually, based on a 5% rate, and the creation of a Forth Green Freeport, 
+which the council could benefit from through retained NDR estimated at 
+£107 million.  
+60.  The council plans to apply a zero-based budgeting approach from 
+2026/27. This means that every item of expenditure is determined and 
+justified from ‘zero’ at the outset of the budget process – rather than rolling 
+forward expected spend from the previous year. To support this change in 
+approach the council is planning training for staff, developing an agreed 
+prioritisation approach and undertaking cost and performance 
+benchmarking. 
+The city has high levels of debt which are forecast to reach £3 billion 
+bringing significant financing risks 
+61.  The City of Edinburgh Council has £1.773 billion worth of debt relating 
+to borrowing (excluding PPP).. In recent years the council has benefited 
+from a prolonged period of low interest rates and continues to be within its 
+prudential indicator limits.  
+62.  The council borrows from external sources to fund its capital 
+programme, with 84% sourced from the UK Public Works Loans Board 
+and the remainder from financial markets. The council borrowed £290 
+million during the 2024/25 financial year, of which £170 million was for the 
+Housing Revenue Account. 
+63.  Much of the city’s capital programme is funded by borrowing. The 
+council’s annual treasury management strategy 2025/26 noted that total 
+capital expenditure is forecast to be £3.163 billion between 2024/25 and 
+2029/30 with an underlying need to borrow at 31 March 2030 forecast to 
+be £3.186 billion.  
+64.  The Capital Financing Requirement (CFR) is a key metric used by the 
+council and other local authorities which shows the need to borrow based 
+on its capital spending plans, i.e. the amount needed over and above any 
+asset sales, grants, or direct revenue funding. The treasury management 
+strategy warned that the council has reached the limit in resources for 
+funding its Capital Financing Requirement from temporary investment 
+balances and requires to undertake significant external borrowing. Exhibit 
+4 shows how the CFR is forecast to increase over the coming years to 
+£3.570 billion by 2029/30. 
+--- page 31 ---
+Wider scope audit | 31 
+ 
+Exhibit 7 
+City of Edinburgh Council – Capital Financing Requirement forecasts 2023/24 to 2029/30 
+ 
+ 
+Source: CEC Treasury Management Strategy 2025/26, March 2025 
+2,000
+2,200
+2,400
+2,600
+2,800
+3,000
+3,200
+3,400
+3,600
+3,800£m
+Capital
+Financing
+Requirem
+ent
+--- page 32 ---
+Wider scope audit | 32 
+ 
+Exhibit 8 
+City of Edinburgh Council - Ratio of Financing Costs to Net Revenue Stream  
+ 
+Source: CEC Treasury CEC Management Strategy 2025/26, March 2025.  
+Note: Figures for 2026/27 onwards are indicative as the council has not set a General Services 
+or HRA budget for these years.  
+65.  The indicator ‘financing costs to net revenue stream’ is used to show 
+how much of council income is used to pay borrowing and debt charges. 
+For councils with housing, in the case of Edinburgh, they must separately 
+calculate this indicator showing how much of housing rents income will be 
+required to finance housing-related borrowing and debt charges. Exhibit 6 
+shows that by 2029/30 the council forecasts that 60% of housing income 
+will be used to finance housing-related debt and borrowing charges. For 
+general services, this is lower at 7.8%.  
+66.  The Local Government Benchmarking Framework provides 
+comparative data on financing ratios across Scotland’s councils. In 
+2023/24, the Housing Revenue Account (HRA) financing costs ratio for 
+City of Edinburgh Council was 34.2%, compared to a Scottish average of 
+20%. Of Scotland's 26 councils which have an HRA and for which data is 
+available, only six councils report a higher ratio, ie spend more on 
+financing costs as a percentage of its income.  
+0%
+10%
+20%
+30%
+40%
+50%
+60%
+70%£m
+General
+Services
+HRA
+--- page 33 ---
+Wider scope audit | 33 
+ 
+67.  Each year, the council sets an affordable borrowing limit—also known 
+as the authorised limit for external debt—based on officer 
+recommendations. For 2029/30, this limit is set at £3.541 billion.  
+68.  In March 2025, members recognised in a motion to the full council the 
+financing pressure on the HRA in particular. It requested that the strategy 
+be considered as part of the zero-based budgeting process to investigate 
+alternative financial strategies to reduce debt requirements to more 
+sustainable levels in future and ensure a focus on improved ongoing 
+services to tenants. 
+69.  The council has acknowledged that such levels of borrowing will bring 
+significant financing risks. Given the associated risks, it is essential that 
+members fully understand the implications of the council’s external 
+borrowing levels. As recommended in paragraph 47. , reporting should 
+clearly outline these risks and present information in a straightforward and 
+accessible manner to indicate when members need to take action. 
+The council’s usable reserves have declined limiting its ability to 
+respond to unforeseen issues or to invest in services 
+70.  One of the key measures of the financial health of any local authority 
+is the level of reserves held. The total level of usable reserves held by the 
+council (Exhibit 5) reduced from £429 million in 2023/24 to £376 million in 
+2024/25. Most of this has been earmarked for specific purposes and a 
+residual £25.6 million is unallocated and available as revenue expenditure. 
+ 
+Exhibit 9 
+Analysis of committed and unallocated general fund balances 
+ 
+ 
+Source: City of Edinburgh Council annual audited accounts 
+ -
+ 50
+ 100
+ 150
+ 200
+ 250
+ 300
+ 350
+ 400
+2019/20 2020/21 2021/22 2022/23 2023/24 2024/25
+£ million
+Committed Uncommitted
+--- page 34 ---
+Wider scope audit | 34 
+ 
+Exhibit 10 
+Key financial information  
+ 
+ 
+Budget setting 
+2022/23 
+(£m) 
+2023/24 
+(£m) 
+2024/25 
+(£m) 
+2025/26 
+(£m) 
+Budget gap  28.6 62.0 28.5 70.3 
+Planned to be met via:      
+• Savings and flexibilities 19.2 45.6 28.5 35.0 
+• Use of reserves   - 6.0 
+• Additional council tax / funding 9.4 16.4 - 29.3 
+Actual 
+Savings delivered 18.9 41.3 23.9 n/a 
+Reserves  
+Use of / (contribution to) reserves 29.474 36.280 44.267 n/a 
+Total usable reserves carried forward  377.119 429.373 376.598  
+General Fund: 266.306 353.238 301,317 n/a 
+• Earmarked  240.475 327.485 275.714 n/a 
+• Uncommitted  25.831 25.753 25.603 n/a 
+• The council levied an additional 8% in council tax in 2025/26, which was included in the 
+original budget. Note that there are differences in the way councils approach and present 
+their budget and identify budget gaps. This means that direct comparison should be taken 
+with caution. 
+Source: The council’s 2024/25 annual accounts, Finance and Resources Committee papers 
+and Local Government Overview report returns 
+The IJB’s deficit will have a significant impact on council finances for 
+years to come  
+71.  Edinburgh IJB’s services are delivered by its two chief partners, City of 
+Edinburgh Council and NHS Lothian. The partnership’s integration scheme 
+‘directs’ budgets back to those partner bodies who provide the joint board’s 
+services, which are mostly delivered through the Edinburgh Health and Social 
+Care Partnership (EHSCP). 
+72.  Taking into account changes in costs and funding estimates, the IJB 
+projects a deficit of £31 million in 2025/26 rising to £87 million in 2027/28. It has 
+--- page 35 ---
+Wider scope audit | 35 
+ 
+prioritised delivering efficiencies through strategic change and transformation 
+measures, but warns that some proposals will have an impact on services, 
+performance, citizens and staff.  
+73.  The IJB reports in its strategic plan that it has never been in a stable and 
+sustainable financial position since inception in 2016, with a lack of funding 
+resulting in an underlying structural deficit. 
+74.  An all-party motion was passed unanimously by the council in November 
+2023 which sought to recalibrate the relationship between the Council and the 
+IJB, including a review of the integration scheme. The motion contained a list of 
+actions to be addressed, and a progress update was provided most recently in 
+March 2025 to the Policy and Sustainability Committee, which detailed work 
+done in response. The committee passed a further motion to request a detailed 
+timeline for the expected delivery of a revised Integration Scheme. 
+75.  The joint board recognises that further work is required to strengthen its 
+relationship with City of Edinburgh Council. There remains tension at a 
+governance level, with some elected members voicing significant concern at 
+further requests to the council for additional funding. There are indications of 
+improvement, and the IJB has worked more closely with senior leaders from the 
+council and NHS Lothian in forming the medium-term financial strategy.  
+ 
+  
+--- page 36 ---
+Wider scope audit | 36 
+ 
+Vision, Leadership and Governance  
+76.  The audit work performed on the arrangements the council has in 
+place around its Vision, Leadership and Governance found that these 
+were effective and appropriate. This judgement is evidenced by the 
+council: 
+• having a council business plan in place, supported by operational 
+plans, that set out its vision, strategy, and priorities and reflect the 
+pace and depth of improvement required to realise these in a 
+sustainable manner.  
+• having a system of financial and performance reporting in place, 
+both internally and externally, that is linked to its operational plans, 
+and effective scrutiny and challenge of performance provided by the 
+Governance, Risk and Best Value Committee.   
+77.  The council’s governance arrangements have been set out in the 
+annual governance statement in the annual accounts. We have reviewed 
+these arrangements and concluded that they are appropriate. Our 
+observations at committee meetings have found that these are conducted 
+in a professional manner and there is a reasonable level of scrutiny and 
+challenge by members.  
+78.  We continue to note, as we have in previous years, that some elected 
+members voice concern over how scrutiny and governance is exercised at 
+the council, particularly the balance of decision-making power held 
+between officers and councillors. The finely-balanced political share of 
+power continues to provide another challenging element to this 
+environment.  
+The council is changing its relationship with its arms-length bodies 
+79.  The council has several arm’s-length external organisations (ALEOs) 
+to provide services on its behalf, including Transport for Edinburgh Limited 
+and Edinburgh Leisure. While the ALEOs are responsible for the delivery 
+of some services, the council remains responsible for the public money it 
+provides to the ALEOs and the quality of services the ALEOs provide. 
+80.  In response to member requests, the council initiated a review of the 
+governance framework for ALEOs in 2023, culminating in the presentation 
+of the revised framework to the council in March 2025. This included: 
+• A definition of what the council considers an ALEO, 
+• A governance reporting structure for ALEOs, to support consistency 
+of governance arrangements  
+• Changing and developing the council observer role, and a 
+• A position on Board member appointments to reduce the risk of 
+elected member conflict of interests. 
+--- page 37 ---
+Wider scope audit | 37 
+ 
+81.  In order to minimise this potential conflict of interest, the council 
+agreed to restrict the number of elected members appointed to boards to 
+no more than 33% of the total number of directors; and that they should 
+not be appointed as chair of an ALEO Board.  
+The council has taken some steps to improve its organisational 
+culture following critical reports  
+82.  The council has faced significant criticism in recent years from reports 
+which have examined the impact of its organisational culture — for 
+example through the Tanner Inquiry, which examined how the council 
+handled serious allegations of abuse involving a senior officer, and more 
+recently through the Dunion Report, which reviewed how the council 
+responded to misconduct allegations against a former leader. A consistent 
+theme across both inquiries—and in discussions among elected 
+members—has been the need to build an open, positive, and supportive 
+environment where staff feel confident raising concerns and trust that 
+these will be taken seriously and acted upon. 
+83.  In response, the council has made some changes to create a safe and 
+supportive organisational culture. This includes improvements to its 
+whistleblowing and complaints procedures, expanded training for staff, and 
+strengthened policies and procedures. While these structural 
+improvements are essential, they represent only one aspect of building a 
+culture which actively identifies and addresses problems.  
+84.  Strong leadership, both at the executive and political levels, is critical 
+in building an organisation which is willing to learn from its mistakes and 
+address underperformance. A clear expectation should be set that 
+managers welcome early reporting of potential problems and respond to 
+them swiftly. The council should actively seek to identify areas of service 
+underperformance and commit to being open and transparent about where 
+it needs to address failures. Concerns raised by employees, scrutiny 
+bodies or the public should be taken as a chance to improve practice. 
+ 
+  
+--- page 38 ---
+Wider scope audit | 38 
+ 
+Use of Resources to Improve Outcomes  
+85.  The audit work performed on the arrangements the council has in 
+place around its Use of Resources to Improve Outcomes found that these 
+were effective and appropriate. This judgement is evidenced by the 
+council:   
+• being able to demonstrate a clear link between the use of resources 
+and delivery of its priorities.  
+• having arrangements in place to benchmark its performance to 
+identify areas of improvement.  
+• being able to demonstrate improvements in performance against 
+benchmarks and relative to other comparable organisations.  
+86.  The council participates in the Local Government Benchmarking 
+Framework (LGBF). The framework brings together a wide range of 
+information about how all Scottish councils perform in delivering services, 
+including the cost of services and how satisfied citizens are with them.  
+87.  The most recent National Benchmarking Overview Report 2023/24 by 
+the Improvement Service was published in March 2025 with the results 
+considered by the council’s GRBV committee. The data provides an 
+additional perspective on how the council is performing and informs the 
+council’s own Planning and Performance Framework.  
+88.  We expect councils to use the LGBF as part of their approach to self-
+evaluation and performance reporting using the underlying principles of: 
+• Transparency and clarity in the public information that shows 
+delivery of local priorities and the performance of services 
+• Comparison and benchmarking with councils with similar 
+populations and areas (family groups) to drive improvement 
+• Trends in performance over time so the direction of travel is clear. 
+• Decision-making using performance data to identify improvement 
+priorities, 
+• Effective scrutiny by councillors of service performance, delivery of 
+strategic priorities and improvement plans 
+89.  The council reported, that compared to 2022/23, it had improved its 
+relative position in 62 of the 96 indicators, declined in 32 and maintained 
+its relative position in two of the indicators.  
+90.  The council's analysis shows a mixed picture. It is in the top two 
+quartiles in Scotland for 58 of the indicators, and in the bottom two for 48 
+of these. Eleven indicators are in the lowest quartile, with five of these 
+within environmental services. 
+--- page 39 ---
+Wider scope audit | 39 
+ 
+• For primary schools measures, there was an increase in all 
+children’s rates of literacy and numeracy, and a reduced attainment 
+gap. 
+• The street cleanliness score increased to 90.6%, placing Edinburgh  
+slightly behind the Scottish average of 92.1%.  
+• The proportion of adults satisfied with libraries, parks, museums 
+and galleries and leisure facilities indicators are all above Scottish 
+and family group averages.  
+• The proportion of people earning less than the minimum wage is 
+well below the Scottish and family group averages. 
+• The percentage of people aged 65+ with long-term care needs who 
+are receiving personal care at home has reduced year on year 
+since 2021/22, from 67.9% to 55.4%. The Scotland-wide average is 
+62.6%.  
+• While there are improvements in housing indicators, Edinburgh 
+continues to underperform across all five key measures, remaining 
+below both the Scottish average and its family group benchmark. 
+This includes areas such as gross rent arrears, the average time 
+taken to complete non-emergency repairs, and the proportion of 
+energy-efficient dwellings. Notably, the percentage of council 
+homes meeting the Scottish Housing Quality Standard rose from 
+40.3% to 44.6% this year. However, this still falls short of the family 
+group average of 62.3% and the national average of 77.8%. 
+The council’s own measures largely show improvement in key areas 
+91.  The council's own Public Performance Scorecard covers core service-
+level KPIs and shows how performance is progressing. Updates are 
+provided on a quarterly basis and each year in the form of an annual 
+performance report. The council's Public Performance Scorecard annual 
+report 2024/25 was considered at the September 2025 meeting of the 
+GRBV Committee. Of the council's own 78 indicators, 6 were flagged as 
+red (behind target), while 28 were marked as green (on or ahead of 
+target).  
+92.  As with the LGBF indicators, a mixed picture of progress across the 
+council was presented, with indicators showing improvement in adult 
+social care measures, children, families and communities, customer 
+contact, planning and building standards and roads.  
+93.  Areas with concern included homelessness, and an increase in the 
+number of anti-social behaviour complaints. The Local Environmental 
+Audit and Management System score (LEAMS) assesses street 
+cleanliness and local environmental quality. Edinburgh reports that its 
+score decreased slightly to 89% in 2024/25 after some years of 
+improvement. The Scotland average is 91.7%, and compares favourably 
+--- page 40 ---
+Wider scope audit | 40 
+ 
+to Dundee (83.2%), Glasgow (86.3%) and is similar to Aberdeen (89.3%). 
+Domestic kerbside missed bin service requests rose in 2024/25 to more 
+than 30,000 and is behind the target of 21,516.  
+94.  Members also consider progress against council's business plan 
+through an annual update report. It provides an update on the council's 
+three core strategic priorities, and progress with actions under the ten 
+designated outcomes.  
