@@ -1,0 +1,92 @@
+{
+  "pack": "edinburgh-area-profile",
+  "priority": 2,
+  "status": "sources_downloaded_city_level_extracted",
+  "geography": {
+    "ward": "Power BI Area Profile dashboards (interactive \u2014 not bulk-exportable in this pass)",
+    "council": "Edinburgh by Numbers 2025 + SIMD 2020 report (downloaded)"
+  },
+  "sources": [
+    {
+      "name": "CEC Area Profile Dashboards (Power BI)",
+      "url": "https://app.powerbi.com/view?r=eyJrIjoiYzU5MmUxNjItYWNkNy00Mzg5LWEwMjctNzU2ZjA1YWNmMjNiIiwidCI6IjQ4MmE0ZWY5LTY2ZTQtNGU3Ni05ZjI0LTZkYTA5YTcxM2VkNCJ9",
+      "landing": "https://www.edinburgh.gov.uk/strategy-performance-research/area-profile-dashboard",
+      "geography": "17 wards + 4 localities + 47 community councils",
+      "themes": [
+        "population",
+        "health",
+        "housing",
+        "education",
+        "income",
+        "benefits"
+      ],
+      "note": "Interactive only. Manual export or Power BI API needed for bulk ward CSV. Benefits updated to 2026 (StatXplore); income Acorn to 2025; pop headline to 2024 NRS."
+    },
+    {
+      "name": "Edinburgh by Numbers 2025",
+      "file": "area-profile/Edinburgh_by_Numbers_2025.pdf",
+      "accessible": "area-profile/Edinburgh_by_Numbers_2025.docx",
+      "text_extract": "area-profile/Edinburgh_by_Numbers_2025.txt",
+      "url": "https://www.edinburgh.gov.uk/downloads/file/30669/edinburgh-by-numbers-2025",
+      "geography": "city (not ward)"
+    },
+    {
+      "name": "Edinburgh SIMD 2020 report",
+      "file": "area-profile/Edinburgh_SIMD_2020_report.pdf",
+      "url": "https://www.edinburgh.gov.uk/downloads/file/29520/social-index-of-multiple-deprivation-simd-report",
+      "geography": "city + ward summary"
+    }
+  ],
+  "city_level_indicators_extracted": {
+    "as_of": "Edinburgh by Numbers 2025 (editorial cut Feb 2025; property prices to Sep 2025)",
+    "population_2024": 530680,
+    "population_2014": 485270,
+    "population_growth_10y_pct": 9.4,
+    "population_density_per_km2_2024": 2015,
+    "pop_projection_2047": 585838,
+    "over_75_growth_to_2047_pct": 63.5,
+    "dependency_rate_2047_pct": 46.6,
+    "life_expectancy_women": 82.0,
+    "life_expectancy_men": 77.8,
+    "self_rated_health_good_pct": 81,
+    "activity_levels_pct": 74,
+    "relative_poverty_pct": 17,
+    "employment_rate_pct": 83.2,
+    "unemployment_rate_model_pct": 2.5,
+    "median_hourly_pay_gbp": 20.49,
+    "finance_insurance_jobs_pct": 11.3,
+    "finance_insurance_gva_gbp_bn": 8.8,
+    "high_skilled_occupations_pct": 42,
+    "gva_per_capita_gbp": 65516,
+    "business_survival_5y_pct": 39.6,
+    "staying_visits_2024_m": 5.0,
+    "visitor_spend_2024_gbp_bn": 2.57,
+    "hotel_occupancy_pct": 85.4,
+    "festival_attendance_m": 3.91,
+    "pupils_students_2024_25": 160000,
+    "university_enrolment": 72365,
+    "school_population": 60657,
+    "degree_level_workforce_pct": 73.2,
+    "ghg_emissions_fall_2013_2023_pct": 41.4,
+    "green_flag_parks": 36,
+    "green_space_5min_walk_pct": 76,
+    "avg_property_price_sep_2025_gbp": 294488,
+    "property_price_yoy_pct": 4.2,
+    "owner_occupied_pct": 59,
+    "private_rent_pct": 25,
+    "social_rent_pct": 16,
+    "property_sales_2024": 11341,
+    "property_sales_2023": 9820,
+    "airport_passengers_2024_m": 15.8,
+    "rail_passengers_2024_25_m": 28.3,
+    "walk_or_pt_trips_pct": 60,
+    "public_transport_satisfaction_pct": 86
+  },
+  "ward_load_status": "NOT YET \u2014 need Power BI export or scrape of Area Profile for each of 17 wards. CSS already holds SIMD/pop/crime/CiLIF/Census spine; Area Profile adds income/benefits/education extras.",
+  "next_install_steps": [
+    "Open Power BI Area Profile \u2192 Area comparison \u2192 export each thematic series by ward to CSV",
+    "Map ward names to CSS slugs",
+    "Merge income, benefits, education indicators not already in Census/SIMD spine",
+    "Cite CEC Area Profile + date of export on ward tiles"
+  ]
+}
